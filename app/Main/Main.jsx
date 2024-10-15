@@ -70,7 +70,7 @@ const Main = () => {
       <Section8 />
       <Section9 />
       <div className="main-experience">
-        <Experience />
+        {/* <Experience /> */}
       </div>
     </ReactLenis>
   );
