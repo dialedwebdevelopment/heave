@@ -45,13 +45,13 @@ export const Section1 = ({loadingAnimationFinished}) => {
         <div className="one-content-textbox">
           <h1 className="headline one-headline" ref={titleRef} >We Create <span className="blue" >Brands</span></h1>
         </div>
-        <div className="one-image">
+      </div>
+      <div className="one-image">
           <Image src="/images/main1.png" className="one-image-img" ref={imageRef1} width={2000} height={2000} alt="Main Image" />
           <Image src="/images/main3.png" className="one-image-img" ref={imageRef2} width={2000} height={2000} alt="Main Image" />
           <Image src="/images/main2.png" className="one-image-img" ref={imageRef3} width={2000} height={2000} alt="Main Image" />
           <Image src="/images/main4.png" className="one-image-img" ref={imageRef4} width={2000} height={2000} alt="Main Image" />
         </div>
-      </div>
       <div className="one-gradient-background" />
       <div className="one-image-trigger"></div>
     </section>

@@ -16,11 +16,11 @@ gsap.registerPlugin(SplitText, ScrollTrigger);
 export const Section2 = (options) => {
 
   // CAROUSEL
-  const [emblaRef, emblaApi] = useEmblaCarousel({axis: "y", loop: true, watchDrag: false}, [AutoScroll({speed: 5})] )
+  const [emblaRef, emblaApi] = useEmblaCarousel({axis: "y", loop: true, watchDrag: false}, [AutoScroll({speed: 2.5})] )
 
-  const [emblaRef2, emblaApi2] = useEmblaCarousel({axis: "y", loop: true, watchDrag: false}, [AutoScroll({speed: -5})] )
+  const [emblaRef2, emblaApi2] = useEmblaCarousel({axis: "y", loop: true, watchDrag: false}, [AutoScroll({speed: -2.5})] )
 
-  const [emblaRef3, emblaApi3] = useEmblaCarousel({axis: "y", loop: true, watchDrag: false}, [AutoScroll({speed: 7.5})] )
+  const [emblaRef3, emblaApi3] = useEmblaCarousel({axis: "y", loop: true, watchDrag: false}, [AutoScroll({speed: 2.5})] )
 
   // const {
   //   prevBtnDisabled,
@@ -31,11 +31,13 @@ export const Section2 = (options) => {
 
   return (
     <section className="section two">
+      <div className="two-border"></div>
+      <div className="two-wrapper">
       <div className="two-content">
         <div className="two-content-left">
           <div className="textbox">
-            <h1 className="small-subheadline white" >Making Short-Form Content That Captivates and Converts</h1>
-            <motion.button className="button">
+            <h1 className="subheadline white" >Making Short-Form <br /> Content That <span className="blue" >Engages</span> <br /> and <span className="blue" >Converts</span></h1>
+            <motion.button className="two-button">
               <p className="description" >Let us tell you more</p>
               <div className="button-iconbox">
                 <ChevronRight />
@@ -108,6 +110,7 @@ export const Section2 = (options) => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

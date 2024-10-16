@@ -35,6 +35,29 @@ body {
   background-color: #ffffff35;
 }
 
+.button {
+  width: fit-content;
+  height: 4vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1vw;
+  border-radius: 999px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  color: #141414;
+  background-color: white;
+  border: none;
+}
+
+.textbox {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vh;
+  height: fit-content;
+}
+
 /* COLORS */
 
 .white {
@@ -49,19 +72,6 @@ body {
   color: #5eafff;
 }
 
-.blue-background {
-  background-color: #e5fbff80;
-}
-.purple-background {
-  background-color: #ebe5ff80;
-}
-.yellow-background {
-  background-color: #fcffe580;
-}
-.red-background {
-  background-color: #ffe5ec80;
-}
-
 /* TEXTS */
 
 .headline {
@@ -72,9 +82,9 @@ body {
 }
 
 .subheadline {
-  font-size: 3.5vw;
+  font-size: 3vw;
   margin: 0;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 115%;
 }
 

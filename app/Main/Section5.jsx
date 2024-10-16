@@ -19,7 +19,7 @@ export const Section5 = () => {
   return (
     <section className="section five">
         <div className="five-content">
-            <h1 className="subheadline white" ref={textRef} >We are passionate about elevating brands by leveraging viral marketing strategies that we have meticulously mastered over the years. Our approach combines innovative techniques and data-driven insights, ensuring your content resonates with audiences and engages them meaningfully. By creating campaigns that capture attention and drive results, we transform your brand’s visibility and impact.</h1>
+            <h1 className="subheadline white" ref={textRef} >We don’t just create campaigns, we <span className="blue" > create movements</span>. With our <span className="blue" >extensive network</span> of influencers and pages, we take your brand from concept to<span className="blue" > viral sensation</span>, ensuring your audience stays engaged.</h1>
         </div>
         <div className="section-border" />
     </section>
