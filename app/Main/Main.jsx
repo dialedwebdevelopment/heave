@@ -62,9 +62,9 @@ const Main = () => {
       </section>
       <Section1 loadingAnimationFinished={loadingAnimationFinished} />
       <Section2 />
+      <Section3 />
       <Section4 />
       <Section5 />
-      <Section3 />
       {/* <Section6 /> */}
       <Section7 />
       <Section8 />

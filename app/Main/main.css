@@ -104,20 +104,16 @@
     align-self: center;
 }
 
-.two-wrapper {
-    display: flex;
-    position: relative;
-}
-
 .two-content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    height: 80vh;
+    height: 90vh;
     color: white;
     gap: 0;
     padding: 0 7.5vw;
+    position: relative;
 }
 
 .two-content-left {
@@ -148,7 +144,7 @@
 
 .two-content-right {
     width: 52.5%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: row;
     gap: 0;
@@ -236,59 +232,33 @@
 /* 3 */
 
 .three {
-    padding: 20vh 0;
-    overflow: hidden;
-    position: relative;
-} 
-
-.parallax {
-    overflow: hidden;
-    letter-spacing: 0;
-    line-height: 1.5;
-    margin: 0;
-    white-space: nowrap;
-    display: flex;
-    flex-wrap: nowrap;
-}
-  
-.parallax .scroller {
-    display: flex;
-    white-space: nowrap;
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-.scroller-div {
-    width: 20vw;
     height: fit-content;
-    margin-right: 2vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 7.5vw;
 }
 
-.scroller-image {
+.three-content {
+    display: flex;
     width: 100%;
     height: fit-content;
-    object-fit: cover;
+    text-align: center;
+    padding-bottom: 15vh;
 }
 
-.three-left-gradient {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 10vw;
-    height: 100%;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, black 100%);
-    z-index: 1;
+.three-image {
+    width: 3vw;
+    height: 2.75vw;
+    display: inline-block;
+    object-fit: contain;
 }
 
-.three-right-gradient {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 10vw;
-    height: 100%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, black 100%);
-    z-index: 1;
+.three-image-3 {
+    width: 6vw;
 }
+  
 
 /* 4 */
 
