@@ -1,67 +1,57 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
-import gsap from "gsap";
-import SplitText from "gsap/src/SplitText";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import Accordion from "./Accordion";  // Import the Accordion component
 import Image from "next/image";
 
-gsap.registerPlugin(SplitText, ScrollTrigger);
-
 export const Section7 = () => {
+  const [activeIndex, setActiveIndex] = useState(0);  // Track the active accordion
 
-  // ISMOBILE
-
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setIsMobile(window.innerWidth <= 768);
-    }
-  }, []);
-
-  const titleRef = useRef()
-  const descriptionRef = useRef()
-  const boxRef1 = useRef()
-  const boxRef2 = useRef()
-  const boxRef3 = useRef()
-  const boxRef4 = useRef()
-
-  useEffect(() => {
-    const titleSplitText = new SplitText(titleRef.current, { type: 'chars' });
-    gsap.fromTo(titleSplitText.chars, { opacity: 0 }, { opacity: 1, stagger: 0.01, scrollTrigger: { trigger: titleRef.current, start: "top bottom", end: "bottom center", scrub: true } })
-    gsap.fromTo(descriptionRef.current, { opacity: 0 }, { opacity: 1, scrollTrigger: { trigger: descriptionRef.current, start: "top 80%", end: "top 50%", scrub: true  } })
-    gsap.fromTo(boxRef1.current, { yPercent: 25, opacity: 0, willChange: 'filter, transform', filter: 'blur(8px)' }, { yPercent: 0, opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: boxRef1.current, start: "top bottom"  } })
-    gsap.fromTo(boxRef2.current, { yPercent: 25, opacity: 0, willChange: 'filter, transform', filter: 'blur(8px)' }, { delay: isMobile ? 0 : 0.25, yPercent: 0, opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: boxRef2.current, start: "top bottom"  } })
-    gsap.fromTo(boxRef3.current, { yPercent: 25, opacity: 0, willChange: 'filter, transform', filter: 'blur(8px)' }, { delay: isMobile ? 0 : 0.5, yPercent: 0, opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: boxRef3.current, start: "top bottom"  } })
-    gsap.fromTo(boxRef4.current, { yPercent: 25, opacity: 0, willChange: 'filter, transform', filter: 'blur(8px)' }, { delay: isMobile ? 0 : 0.75, yPercent: 0, opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: boxRef4.current, start: "top bottom"  } })
-  }, [])
+  // Function to toggle accordion state
+  const handleToggle = (index) => {
+    setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
 
   return (
     <section className="section seven">
       <div className="seven-content">
-        <div className="seven-content-item" ref={boxRef1} >
-          <div className="seven-content-item-box" >
-            <p className="small-description" >Clients</p>
-            <h1 className="small-subheadline blue" >340k+</h1>
+        <div className="seven-content-left">
+          <h1 className="subheadline white">
+            Transforming Simple Ideas into <span className="blue">Viral Sensations</span>
+          </h1>
+          <div className="seven-content-left-imagebox">
+            <Image src="/images/testimage.PNG" className="eight-card-image-img" width={2000} height={2000} alt="Main Image" />
+          </div>
+          <div className="seven-content-left-imagebox">
+            <Image src="/images/testimage2.PNG" className="eight-card-image-img" width={2000} height={2000} alt="Main Image" />
+          </div>
+          <div className="seven-content-left-imagebox">
+            <Image src="/images/testimage.PNG" className="eight-card-image-img" width={2000} height={2000} alt="Main Image" />
           </div>
         </div>
-        <div className="seven-content-item" ref={boxRef2} >
-          <div className="seven-content-item-box" >
-            <p className="small-description" >Reviews</p>
-            <h1 className="small-subheadline blue" >500k+</h1>
-          </div>
-        </div>
-        <div className="seven-content-item" ref={boxRef3} >
-          <div className="seven-content-item-box" >
-            <p className="small-description" >Views</p>
-            <h1 className="small-subheadline blue" >670k+</h1>
-          </div>
-        </div>
-        <div className="seven-content-item" ref={boxRef4} >
-          <div className="seven-content-item-box" >
-            <p className="small-description" >Followers</p>
-            <h1 className="small-subheadline blue" >120k+</h1>
-          </div>
+        <div className="seven-border"></div>
+        <div className="seven-content-right">
+          {/* Example accordion items */}
+          <Accordion
+            index={0}
+            isActive={activeIndex === 0}
+            onToggle={handleToggle}
+            title="Product Highlight"
+            content="We start by selecting and showcasing the product that will be at the center of the meme. The goal is to position it in a way that resonates with the audience, making it instantly recognizable and relatable."
+          />
+          <Accordion
+            index={1}
+            isActive={activeIndex === 1}
+            onToggle={handleToggle}
+            title="Meme Magic"
+            content="This is where the magic happens. We craft a clever, engaging, and humorous meme around the product, designed to tap into current trends and cultural moments, ensuring it catches the attention of your target audience."
+          />
+          <Accordion
+            index={2}
+            isActive={activeIndex === 2}
+            onToggle={handleToggle}
+            title="Going Viral"
+            content="Finally, we distribute the meme across platforms, leveraging our network of pages with more than 42 million followers to maximize exposure and engagement, ensuring the meme goes viral and reaches its full potential."
+          />
         </div>
       </div>
     </section>

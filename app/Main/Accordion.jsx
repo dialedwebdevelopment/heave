@@ -16,7 +16,7 @@ function Accordion({ index, isActive, onToggle, title, content }) {
         onClick={() => onToggle(index)}
       >
         <div className="accordion-top">
-          <h2 className="description white five-accordion-title-margin-mobile five-accordion-title-mobile-width">{title}</h2>
+          <h2 className="small-subheadline white five-accordion-title-margin-mobile five-accordion-title-mobile-width">{title}</h2>
           <div className="accordion-icon">
             <i className={`fa-solid fa-arrow-down ${isActive ? "rotate" : ""}`} style={{ transition: "transform 0.5s ease" }}></i>
           </div>

@@ -13,6 +13,15 @@ gsap.registerPlugin(SplitText, ScrollTrigger);
 
 export const Section2 = (options) => {
 
+  const titleRef = useRef()
+  const buttonRef = useRef()
+
+  useEffect(() => {
+    const titleSplitText = new SplitText(titleRef.current, { type: 'words' });
+    gsap.fromTo(titleSplitText.words, { opacity: 0 }, { opacity: 1, stagger: 0.05, duration: 1, scrollTrigger: { trigger: titleRef.current, start: "top 95%" } })
+    gsap.fromTo(buttonRef.current, { opacity: 0 }, { opacity: 1, duration: 1, scrollTrigger: { trigger: buttonRef.current, start: "top 95%" } })
+  }, [])
+
   // CAROUSEL
   const [emblaRef, emblaApi] = useEmblaCarousel({axis: "y", loop: true, watchDrag: false}, [AutoScroll({speed: 2.5})] )
 
@@ -26,8 +35,8 @@ export const Section2 = (options) => {
       <div className="two-content">
         <div className="two-content-left">
           <div className="textbox">
-            <h1 className="subheadline white" >Making Short-Form <br /> Content That <span className="blue" >Engages</span> <br /> and <span className="blue" >Converts</span></h1>
-            <motion.button className="two-button">
+            <h1 className="subheadline white" ref={titleRef} >Making Short-Form <br /> Content That <span className="blue" >Engages</span> <br /> and <span className="blue" >Converts</span></h1>
+            <motion.button className="two-button" ref={buttonRef} >
               <p className="description" >Let us tell you more</p>
               <div className="button-iconbox">
                 <ChevronRight />

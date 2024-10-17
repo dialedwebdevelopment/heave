@@ -17,9 +17,9 @@ export const Section3 = () => {
   useEffect(() => {
     const titleSplitText = new SplitText(textRef.current, { type: 'words' });
     gsap.fromTo(titleSplitText.words, { opacity: 0, }, { opacity: 1, stagger: 0.01, scrollTrigger: { trigger: ".three-content", start: "top bottom", end: "center center", scrub: true } })
-    gsap.fromTo(imageRef1.current, { opacity: 0, }, { opacity: 1, scrollTrigger: { trigger: imageRef1.current, start: "top bottom", end: "center center", scrub: true } })
-    gsap.fromTo(imageRef2.current, { opacity: 0, }, { opacity: 1, scrollTrigger: { trigger: imageRef2.current, start: "top bottom", end: "center center", scrub: true } })
-    gsap.fromTo(imageRef3.current, { opacity: 0, }, { opacity: 1, scrollTrigger: { trigger: imageRef3.current, start: "top bottom", end: "center center", scrub: true } })
+    gsap.fromTo(imageRef1.current, { opacity: 0, }, { opacity: 1, scrollTrigger: { trigger: imageRef1.current, start: "top 97.5%", end: "center center", scrub: true } })
+    gsap.fromTo(imageRef2.current, { opacity: 0, }, { opacity: 1, scrollTrigger: { trigger: imageRef2.current, start: "top 97.5%", end: "center center", scrub: true } })
+    gsap.fromTo(imageRef3.current, { opacity: 0, }, { opacity: 1, scrollTrigger: { trigger: imageRef3.current, start: "top 97.5%", end: "center center", scrub: true } })
   }, [])
 
   return (

@@ -263,98 +263,8 @@
 /* 4 */
 
 .four {
-    height: fit-content;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
     padding: 0 7.5vw;
-}
-
-.four-content {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    width: 100%;
-    height: fit-content;
-}
-
-.four-content-frame {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    border-radius: 15px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.four-video {
-    width: 100%;
-    height: 115%;
-    object-fit: cover;
-    position: absolute;
-    left: 0;
-}
-
-/* 4 */
-
-.five {
-    height: fit-content;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding: 0 7.5vw;
-    padding-top: 20vh;
-}
-
-.five-content {
-    display: flex;
-    width: 100%;
-    height: fit-content;
-    text-align: center;
-    padding-bottom: 20vh;
-}
-
-/* 6 */
-
-.six {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding: 20vh 0;
-  }
-  
-.six-content {
-    width: 100%;
-    height: 100%;
-}
-  
-.six-slider {
-    height: fit-content;
-}
-
-.six-slider-padding {
-    height: 100%;
-    width: 7.5vw;
-}
-  
-.six-slider-item {
-    width: 40vw;
-    height: 50vh;
-    margin-right: 2vw;
-    counter-increment: gallery-cell;
-    display: flex;
-    border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.075);
-}
-
-/* 7 */
-
-.seven {
-    padding: 0 7.5vw;
+    padding-top: 15vh;
     position: relative;
     height: fit-content;
     display: flex;
@@ -363,13 +273,13 @@
     overflow: hidden;
 }
 
-.seven-content {
+.four-content {
     display: flex;
     flex-direction: row;
     gap: 1vw;
 }
 
-.seven-content-item {
+.four-content-item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -379,10 +289,208 @@
     background-color: rgba(255, 255, 255, 0.075);
 }
 
-.seven-content-item-box {
+.four-content-item-box {
     display: flex;
     flex-direction: column;
     color: white;
+}
+
+/* 4 */
+
+.five {
+    padding: 0vh 0vw;
+    height: 275vh;
+    position: relative;
+    overflow: visible;
+}
+  
+.five-sticky {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    height: 100vh; /* h-screen */
+    padding-top: 30vh;
+    overflow: hidden; /* overflow-hidden */
+}
+  
+.five-sticky-text-contents {
+    position: absolute;
+    top: 15vh;
+    left: 7.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5vh;
+}
+  
+.five-sticky-content {
+    display: flex;
+    gap: 2vw;
+}
+  
+.five-card {
+    width: 40vw;
+    height: 60vh;
+    border-radius: 15px;
+    display: flex;
+    padding: 2vw;
+    background-color: rgba(255, 255, 255, 0.075);
+}
+
+.five-card-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2vw;
+}
+
+.five-card-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.five-card-image-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.five-card-invisible {
+    width: 6.5vw;
+}
+
+/* 6 */
+
+.six {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    padding-top: 5vh;
+    gap: 5vh;
+    height: fit-content;
+}
+
+.six-textbox {
+    padding: 0 7.5vw;
+}
+
+.six-row {
+    display: flex;
+}
+
+.six-carousel {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+}
+
+.six-item {
+    flex: 0 0 50vw;
+    height: 60vh;
+    padding: 10vw;
+    margin-left: 2.5vw;
+    background-color: rgba(255, 255, 255, 0.075);
+    border-radius: 25px;
+    position: relative;
+}
+
+.six-item-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+    position: relative;
+}
+
+.six-carousel-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+}
+.carousel-button {
+    width: 2vw;
+    height: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+.carousel-button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.carousel-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.carousel-button-icon {
+    width: 35%;
+    height: 35%;
+}
+
+/* 7 */
+
+.seven {
+    padding: 0 7.5vw;
+    padding-top: 15vh;
+    position: relative;
+    height: 300vh;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    overflow: visible;
+}
+
+.seven-content {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5vw;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.seven-border {
+    height: 100%;
+    width: 1px;
+    background-color: white;
+}
+
+.seven-content-left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.seven-content-left-imagebox {
+    width: 100%;
+    height: 75vh;
+    position: relative;
+}
+
+.seven-content-right {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
 }
 
 /* 8 */
@@ -393,29 +501,6 @@
     position: relative;
     overflow: visible;
 }
-  
-/* .eight-content-gradient {
-    width: 85vw;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 7.5vw;
-    right: 7.5vw;
-    z-index: 0;
-    pointer-events: none;
-}
-  
-.eight-content-gradient::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, black 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, black 100%);
-    pointer-events: none;
-    z-index: 1;
-} */
   
 .eight-sticky {
     position: sticky;
