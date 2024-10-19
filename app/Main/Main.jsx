@@ -66,7 +66,7 @@ const Main = () => {
       <Section4 />
       <Section5 />
       <Section6 />
-      <Section7 />
+      <Section7 lenis={lenis} />
       <Section8 />
       <Section9 />
       <div className="main-experience">

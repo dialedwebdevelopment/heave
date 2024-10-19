@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import './accordion.css';
+import { ArrowDown } from "lucide-react";
 
 function Accordion({ index, isActive, onToggle, title, content }) {
   const contentRef = useRef(null);
@@ -18,7 +19,7 @@ function Accordion({ index, isActive, onToggle, title, content }) {
         <div className="accordion-top">
           <h2 className="small-subheadline white five-accordion-title-margin-mobile five-accordion-title-mobile-width">{title}</h2>
           <div className="accordion-icon">
-            <i className={`fa-solid fa-arrow-down ${isActive ? "rotate" : ""}`} style={{ transition: "transform 0.5s ease" }}></i>
+            <ArrowDown className={`accordion-icon-icon ${isActive ? "rotate" : ""}`} style={{ transition: "transform 0.5s ease" }} />
           </div>
         </div>
         <div
@@ -27,7 +28,7 @@ function Accordion({ index, isActive, onToggle, title, content }) {
           className="accordion-content"
         >
           <div
-            className="small-description white"
+            className="small-description accordion-description white"
             dangerouslySetInnerHTML={{ __html: content }}
           />
         </div>
