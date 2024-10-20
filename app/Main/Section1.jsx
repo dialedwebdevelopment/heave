@@ -13,12 +13,18 @@ export const Section1 = ({loadingAnimationFinished}) => {
   const imageRef2 = useRef()
   const imageRef3 = useRef()
   const imageRef4 = useRef()
+  const typewriterRef1 = useRef()
+  const typewriterRef2 = useRef()
+  const typewriterRef3 = useRef()
 
   gsap.set(imageRef1.current, { yPercent: 50, zIndex: 1 });
   gsap.set(imageRef2.current, { yPercent: 50, zIndex: 1 });
   gsap.set(imageRef3.current, { yPercent: 50, zIndex: 1 });
   gsap.set(imageRef4.current, { yPercent: 50, zIndex: 1 });
   gsap.set(titleRef.current, { opacity: 0 });
+  gsap.set(typewriterRef1.current, { opacity: 0 });
+  gsap.set(typewriterRef2.current, { opacity: 0 });
+  gsap.set(typewriterRef3.current, { opacity: 0 });
 
   useEffect(() => {
     if (loadingAnimationFinished) {
@@ -39,11 +45,114 @@ export const Section1 = ({loadingAnimationFinished}) => {
     gsap.fromTo(imageRef4.current, { yPercent: 0 }, { yPercent: 15, scrollTrigger: { trigger: ".one-image-trigger", start: "top bottom", end: "bottom top", scrub: true } })
   }, [])
 
+  useEffect(() => {
+    if (loadingAnimationFinished) {
+      gsap.set(typewriterRef1.current, { opacity: 1 });
+      gsap.set(typewriterRef2.current, { opacity: 1, display: "none" });
+      gsap.set(typewriterRef3.current, { opacity: 1, display: "none" });
+
+      const typewriterLetters1 = new SplitText(typewriterRef1.current, { type: "chars" });
+      const typewriterLetters2 = new SplitText(typewriterRef2.current, { type: "chars" });
+      const typewriterLetters3 = new SplitText(typewriterRef3.current, { type: "chars" });
+
+      // Create a GSAP timeline
+      const tl = gsap.timeline({ repeat: -1, delay: 0.6 }); // Loop indefinitely
+
+      // Animation for typewriterLetters1
+      tl
+      .fromTo(typewriterLetters1.chars, {
+        'will-change': 'opacity, transform',
+        opacity: 0,
+        scale: 0.6,
+        rotationZ: () => gsap.utils.random(-20, 20)
+      }, {
+        ease: 'power4',
+        opacity: 1,
+        scale: 1,
+        rotation: 0,
+        stagger: 0.065
+      })
+      .to(typewriterLetters1.chars, {
+        delay: 2,
+        ease: 'power4',
+        opacity: 0,
+        scale: 0.6,
+        rotationZ: () => gsap.utils.random(-20, 20),
+        stagger: -0.065,
+        onComplete: () => {
+          gsap.set(typewriterRef1.current, { display: 'none' });
+          gsap.set(typewriterRef2.current, { display: 'flex' });
+        }
+      })
+
+      // Animation for typewriterLetters2
+      .fromTo(typewriterLetters2.chars, {
+        'will-change': 'opacity, transform',
+        opacity: 0,
+        scale: 0.6,
+        rotationZ: () => gsap.utils.random(-20, 20)
+      }, {
+        ease: 'power4',
+        opacity: 1,
+        scale: 1,
+        rotation: 0,
+        stagger: 0.065
+      }, "<+=0.7") // Start after typewriterLetters1 finishes
+
+      .to(typewriterLetters2.chars, {
+        delay: 2,
+        ease: 'power4',
+        opacity: 0,
+        scale: 0.6,
+        rotationZ: () => gsap.utils.random(-20, 20),
+        stagger: -0.065,
+        onComplete: () => {
+          gsap.set(typewriterRef2.current, { display: 'none' });
+          gsap.set(typewriterRef3.current, { display: 'flex' });
+        }
+      })
+
+      // Animation for typewriterLetters3
+      .fromTo(typewriterLetters3.chars, {
+        'will-change': 'opacity, transform',
+        opacity: 0,
+        scale: 0.6,
+        rotationZ: () => gsap.utils.random(-20, 20)
+      }, {
+        ease: 'power4',
+        opacity: 1,
+        scale: 1,
+        rotation: 0,
+        stagger: 0.065
+      }, "<+=0.7") // Start after typewriterLetters2 finishes
+
+      .to(typewriterLetters3.chars, {
+        delay: 2,
+        ease: 'power4',
+        opacity: 0,
+        scale: 0.6,
+        rotationZ: () => gsap.utils.random(-20, 20),
+        stagger: -0.065,
+        onComplete: () => {
+          gsap.set(typewriterRef3.current, { display: 'none' });
+          gsap.set(typewriterRef1.current, { display: 'flex' });
+        }
+      });
+    }
+  }, [loadingAnimationFinished]);
+
+
+
   return (
     <section className="section one">
       <div className="one-content">
         <div className="one-content-textbox">
-          <h1 className="headline one-headline" ref={titleRef} >We Create <span className="blue" >Brands</span></h1>
+          <h1 className="headline one-headline" ref={titleRef} >We Create</h1>
+          <div className="one-content-typewriter">
+            <h1 className="headline blue one-content-text" ref={typewriterRef1} >Brands</h1>
+            <h1 className="headline blue one-content-text" ref={typewriterRef2} >Shows</h1>
+            <h1 className="headline blue one-content-text" ref={typewriterRef3} >Content</h1>
+          </div>
         </div>
       </div>
       <div className="one-image">

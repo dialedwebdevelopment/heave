@@ -12,7 +12,7 @@ import { Section6 } from "./Section6";
 import { Section7 } from "./Section7";
 import { Section8 } from "./Section8";
 import { Experience } from "./Plane3D/Experience";
-import { Section9 } from "./Section9";
+import { SectionFooter } from "./SectionFooter";
 
 const Main = () => {
 
@@ -65,10 +65,10 @@ const Main = () => {
       <Section3 />
       <Section4 />
       <Section5 />
+      <Section8 />
       <Section6 />
       <Section7 lenis={lenis} />
-      <Section8 />
-      <Section9 />
+      <SectionFooter />
       <div className="main-experience">
         {/* <Experience /> */}
       </div>
