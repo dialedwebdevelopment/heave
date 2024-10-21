@@ -16,12 +16,14 @@ export const Section1 = ({loadingAnimationFinished}) => {
   const typewriterRef1 = useRef()
   const typewriterRef2 = useRef()
   const typewriterRef3 = useRef()
+  const boxTextRef = useRef()
 
   gsap.set(imageRef1.current, { yPercent: 50, zIndex: 1 });
   gsap.set(imageRef2.current, { yPercent: 50, zIndex: 1 });
   gsap.set(imageRef3.current, { yPercent: 50, zIndex: 1 });
   gsap.set(imageRef4.current, { yPercent: 50, zIndex: 1 });
   gsap.set(titleRef.current, { opacity: 0 });
+  gsap.set(boxTextRef.current, { opacity: 0 });
   gsap.set(typewriterRef1.current, { opacity: 0 });
   gsap.set(typewriterRef2.current, { opacity: 0 });
   gsap.set(typewriterRef3.current, { opacity: 0 });
@@ -29,8 +31,11 @@ export const Section1 = ({loadingAnimationFinished}) => {
   useEffect(() => {
     if (loadingAnimationFinished) {
       gsap.set(titleRef.current, { opacity: 1 });
+      gsap.set(boxTextRef.current, { opacity: 1 });
       const split = new SplitText(titleRef.current, { type: "chars" });
       gsap.fromTo(split.chars, { 'will-change': 'opacity, transform', opacity: 0, scale: 0.6, rotationZ: () => gsap.utils.random(-20,20)}, { ease: 'power4', opacity: 1, scale: 1, rotation: 0, stagger: 0.065 });
+      const boxTextRefSplit = new SplitText(boxTextRef.current, { type: "chars" });
+      gsap.fromTo(boxTextRefSplit.chars, { 'will-change': 'opacity, transform', opacity: 0, scale: 0.6, rotationZ: () => gsap.utils.random(-20,20)}, { delay: 0.5, ease: 'power4', opacity: 1, scale: 1, rotation: 0, stagger: 0.065 });
       gsap.fromTo(imageRef1.current, { yPercent: 50 }, { yPercent: 0, duration: 0.75, ease: "power2" })
       gsap.fromTo(imageRef2.current, { yPercent: 50 }, { delay: 0.2, yPercent: 0, duration: 0.5, ease: "power2" })
       gsap.fromTo(imageRef3.current, { yPercent: 50 }, { delay: 0.35, yPercent: 0, duration: 0.5, ease: "power2" })
@@ -148,11 +153,19 @@ export const Section1 = ({loadingAnimationFinished}) => {
       <div className="one-content">
         <div className="one-content-textbox">
           <h1 className="headline one-headline" ref={titleRef} >We Create</h1>
-          <div className="one-content-typewriter">
+          {/* <div className="one-content-typewriter">
             <h1 className="headline blue one-content-text" ref={typewriterRef1} >Brands</h1>
             <h1 className="headline blue one-content-text" ref={typewriterRef2} >Shows</h1>
             <h1 className="headline blue one-content-text" ref={typewriterRef3} >Content</h1>
-          </div>
+          </div> */}
+<div className="container">
+    <div className="text text-0">
+        <span className="span-0" ><h1 className="headline blue" ref={boxTextRef} >Brands</h1></span>
+        <span className="span-1">Shows</span>
+        <span className="span-2">Content</span>
+        <span className="span-3">Trends</span>
+    </div>
+</div>
         </div>
       </div>
       <div className="one-image">

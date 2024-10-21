@@ -53,57 +53,72 @@ export const Section2 = (options) => {
             <div className="two-carousel" ref={emblaRef} >
               <div className="two-row">
                 <div className="two-item" >
-                  <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} />
+                  {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
+                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
                 <div className="two-item" >
-                  <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} />
+                  {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
+                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
                 <div className="two-item" >
-                  <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} />
+                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
                 </div>
                 <div className="two-item" >
-                  <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} />
+                  {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
+                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
                 <div className="two-item" >
-                  <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} />
+                  {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
+                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
               </div>
             </div>
             <div className="two-carousel" ref={emblaRef2} >
               <div className="two-row">
                 <div className="two-item" >
-                  <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} />
+                  {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
+                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
                 <div className="two-item" >
-                  <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} />
+                  {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
+                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
                 <div className="two-item" >
-                  <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} />
+                  {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
+                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
                 <div className="two-item" >
-                  <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} />
+                  {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
+                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
                 <div className="two-item" >
-                  <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} />
+                  {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
+                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
               </div>
             </div>
             <div className="two-carousel" ref={emblaRef3} >
               <div className="two-row">
                 <div className="two-item" >
-                  <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} />
+                  {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
+                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
                 <div className="two-item" >
-                  <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} />
+                  {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
+                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
                 <div className="two-item" >
-                  <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} />
+                  {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
+                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
                 <div className="two-item" >
-                  <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} />
+                  {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
+                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
                 <div className="two-item" >
-                  <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} />
+                  {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
+                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
               </div>
             </div>

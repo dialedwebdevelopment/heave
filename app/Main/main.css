@@ -72,7 +72,7 @@
     left: 0;
     width: 100%;
     height: 30vh;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, black 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #010101 100%);
     z-index: 1;
 }
 
@@ -94,6 +94,100 @@
 
 .one-content-text-none {
     display: none;
+}
+
+.container {
+    display: flex;
+    transform-style: preserve-3d;
+    gap: 10px;
+}
+
+.container .text {
+    position: relative;
+    pointer-events: none;
+    width: 32vw;
+    height: 100px;
+    transform-style: preserve-3d;
+    /* Animating rotation */
+    animation: rotateText 11s infinite ease-in-out; /* Total time updated */
+    animation-delay: 3s;
+}
+
+/* Define the keyframes for rotation with pauses */
+@keyframes rotateText {
+    0%, 18% { /* Start and pause for 2s at 0 degrees */
+        transform: rotateX(0deg);
+    }
+    25%, 43% { /* Rotate to 90 degrees in 0.75s */
+        transform: rotateX(90deg);
+    }
+    50%, 68% { /* Rotate to 180 degrees in 0.75s */
+        transform: rotateX(180deg);
+    }
+    75%, 93% { /* Rotate to 270 degrees in 0.75s */
+        transform: rotateX(270deg);
+    }
+    100% { /* Complete the rotation to 360 degrees in 0.75s */
+        transform: rotateX(360deg);
+    }
+}
+
+
+.container .text::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #373737;
+    transform-origin: left;
+    transform: rotateY(90deg) translateX(-50px);
+}
+
+.container .text:last-child:before {
+    background: #010101;
+}
+
+.container .text span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#434343, #535353);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7.5vw;
+    margin: 0;
+    font-weight: 600;
+    line-height: 75%;
+    transform-style: preserve-3d;
+}
+
+/* Apply individual transformations based on class */
+.span-0 {
+    --i: 0;
+    transform: rotateX(calc(90deg * var(--i))) translateZ(50px);
+}
+
+.span-1 {
+    --i: 1;
+    transform: rotateX(calc(90deg * var(--i))) translateZ(50px);
+}
+
+.span-2 {
+    --i: 2;
+    transform: rotateX(calc(90deg * var(--i))) translateZ(50px);
+}
+
+.span-3 {
+    --i: 3;
+    transform: rotateX(calc(90deg * var(--i))) translateZ(50px);
+}
+
+.container .text:last-child span {
+    background: white;
+    color: #5eafff;
 }
 
 /* 2 */
@@ -209,7 +303,7 @@
     left: 0;
     width: 100%;
     height: 10vh;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, black 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #010101 100%);
     z-index: 1;
 }
 
@@ -219,7 +313,7 @@
     left: 0;
     width: 100%;
     height: 10vh;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, black 100%);
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #010101 100%);
     z-index: 1;
 }
 .left-fade {
@@ -228,7 +322,7 @@
     left: 0;
     width: 10vw;
     height: 100%;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, black 100%);
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, #010101 100%);
     z-index: 1;
 }
 .right-fade {
@@ -237,7 +331,7 @@
     right: 0;
     width: 10vw;
     height: 100%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, black 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #010101 100%);
     z-index: 1;
 }
 
@@ -599,7 +693,7 @@
     left: 0;
     width: 15vw;
     height: 100%;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, black 100%);
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, #010101 100%);
     z-index: 1;
 }
 .slider-right-fade {
@@ -608,7 +702,7 @@
     right: 0;
     width: 15vw;
     height: 100%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, black 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #010101 100%);
     z-index: 1;
 }
  
