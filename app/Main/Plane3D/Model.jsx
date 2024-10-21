@@ -27,6 +27,7 @@ export default function Model(props) {
         tl
         .to(model.current.position, {
             x: 8,
+            y: -1,
             scrollTrigger: {
               trigger: ".two",
               start: "top bottom",
@@ -35,6 +36,16 @@ export default function Model(props) {
               immediateRender: false,
             },
         })
+        .to(model.current.position, {
+          y: 2,
+          scrollTrigger: {
+            trigger: ".three",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+            immediateRender: false,
+          },
+      })
         .to(model.current.rotation, {
           y: Math.PI * 1,
           z: Math.PI * -0.1,
@@ -48,6 +59,7 @@ export default function Model(props) {
         })
         .to(model.current.position, {
           x: -8,
+          y: -3,
           scrollTrigger: {
             trigger: ".five",
             start: "top bottom",
@@ -56,6 +68,38 @@ export default function Model(props) {
             immediateRender: false,
           },
       })
+      .to(model.current.rotation, {
+        y: 0,
+        z: 0,
+        scrollTrigger: {
+          trigger: ".six",
+          start: "top bottom",
+          end: "center center",
+          scrub: true,
+          immediateRender: false,
+        },
+      })
+      .to(model.current.position, {
+        y: 2,
+        scrollTrigger: {
+          trigger: ".six",
+          start: "top bottom",
+          end: "center center",
+          scrub: true,
+          immediateRender: false,
+        },
+    })
+    .to(model.current.position, {
+      x: 8,
+      y: -3,
+      scrollTrigger: {
+        trigger: ".seven",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+        immediateRender: false,
+      },
+  })
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
@@ -68,7 +112,7 @@ export default function Model(props) {
         geometry={nodes.paper_plane_asset.geometry}
         material={materials.Paper_my}
         position={[0, 0, 0]}
-        scale={0.25}
+        scale={0.15}
       />
     </group>
   )

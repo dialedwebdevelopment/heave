@@ -70,7 +70,7 @@ const Main = () => {
       <Section7 lenis={lenis} />
       <SectionFooter />
       <div className="main-experience">
-        {/* <Experience /> */}
+        <Experience />
       </div>
     </ReactLenis>
   );
