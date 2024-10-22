@@ -58,19 +58,19 @@ export const Section2 = (options) => {
                 </div>
                 <div className="two-item" >
                   {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
-                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  <video src="/videos/heavevideo2.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
                 <div className="two-item" >
-                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  <video src="/videos/heavevideo3.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                   {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
                 </div>
                 <div className="two-item" >
                   {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
-                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  <video src="/videos/heavevideo4.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
                 <div className="two-item" >
                   {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
-                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  <video src="/videos/heavevideo5.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
               </div>
             </div>
@@ -78,19 +78,19 @@ export const Section2 = (options) => {
               <div className="two-row">
                 <div className="two-item" >
                   {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
-                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  <video src="/videos/heavevideo6.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
                 <div className="two-item" >
                   {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
-                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  <video src="/videos/heavevideo7.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
                 <div className="two-item" >
                   {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
-                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  <video src="/videos/heavevideo8.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
                 <div className="two-item" >
                   {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
-                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  <video src="/videos/heavevideo9.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
                 <div className="two-item" >
                   {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
@@ -102,19 +102,19 @@ export const Section2 = (options) => {
               <div className="two-row">
                 <div className="two-item" >
                   {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
-                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  <video src="/videos/heavevideo5.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
                 <div className="two-item" >
                   {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
-                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  <video src="/videos/heavevideo4.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
                 <div className="two-item" >
                   {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
-                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  <video src="/videos/heavevideo3.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
                 <div className="two-item" >
                   {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}
-                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  <video src="/videos/heavevideo2.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
                 <div className="two-item" >
                   {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}

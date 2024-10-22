@@ -44,6 +44,7 @@
 .one-content-textbox {
     display: flex;
     flex-direction: row;
+    padding-left: 5vw;
     align-items: center;
     gap: 1vw;
 }
@@ -117,18 +118,23 @@
 @keyframes rotateText {
     0%, 18% { /* Start and pause for 2s at 0 degrees */
         transform: rotateX(0deg);
+        animation-timing-function: ease-in-out;
     }
     25%, 43% { /* Rotate to 90 degrees in 0.75s */
         transform: rotateX(90deg);
+        animation-timing-function: ease-in-out;
     }
     50%, 68% { /* Rotate to 180 degrees in 0.75s */
         transform: rotateX(180deg);
+        animation-timing-function: ease-in-out;
     }
     75%, 93% { /* Rotate to 270 degrees in 0.75s */
         transform: rotateX(270deg);
+        animation-timing-function: ease-in-out;
     }
     100% { /* Complete the rotation to 360 degrees in 0.75s */
         transform: rotateX(360deg);
+        animation-timing-function: ease-in-out;
     }
 }
 
@@ -155,7 +161,7 @@
     height: 100%;
     background: linear-gradient(#434343, #535353);
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     font-size: 7.5vw;
     margin: 0;
@@ -186,7 +192,7 @@
 }
 
 .container .text:last-child span {
-    background: white;
+    background: #010101;
     color: #5eafff;
 }
 
