@@ -20,8 +20,6 @@ export const Experience = () => {
         </Suspense>
         {/* <ambientLight /> */}
         <Environment preset="studio" environmentIntensity={0.75} />
-        <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} enableRotate={false} enablePan={false} />
-        <ContactShadows scale={50} position={[0, -2, 0]} blur={1} far={10} opacity={0.5} />
     </Canvas>
   );
 };

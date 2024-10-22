@@ -13,6 +13,9 @@ import { Section7 } from "./Section7";
 import { Section8 } from "./Section8";
 import { Experience } from "./Plane3D/Experience";
 import { SectionFooter } from "./SectionFooter";
+import { Canvas } from "@react-three/fiber";
+import { Environment, Float } from "@react-three/drei";
+import Model from "./Plane3D/Model";
 
 const Main = () => {
 
@@ -60,6 +63,17 @@ const Main = () => {
           <video src="/videos/loadingvideo.mp4" className="loading-video-content-video" autoPlay="autoplay" muted playsInline="true" data-wf-ignore="true" preload="auto" />
         </div>
       </section>
+      <div className="experience">
+        <Canvas style={{ pointerEvents: 'none' }} camera={{ position: [2, 2, 5], fov: 35 }}>
+          <Suspense >
+            <Float floatingRange={0.5} >
+                <Model />
+            </Float>
+          </Suspense>
+          {/* <ambientLight /> */}
+          <Environment preset="studio" environmentIntensity={0.75} />
+        </Canvas>
+      </div>
       <Section1 loadingAnimationFinished={loadingAnimationFinished} />
       <Section2 />
       <Section3 />
@@ -69,9 +83,6 @@ const Main = () => {
       <Section6 />
       <Section7 lenis={lenis} />
       <SectionFooter />
-      <div className="main-experience">
-        <Experience />
-      </div>
     </ReactLenis>
   );
 };

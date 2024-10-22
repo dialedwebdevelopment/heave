@@ -15,19 +15,23 @@ export const Section2 = (options) => {
 
   const titleRef = useRef()
   const buttonRef = useRef()
+  const buttonRef2 = useRef()
+  const sliderWrapperRef = useRef()
 
   useEffect(() => {
     const titleSplitText = new SplitText(titleRef.current, { type: 'words' });
     gsap.fromTo(titleSplitText.words, { opacity: 0 }, { opacity: 1, stagger: 0.05, duration: 1, scrollTrigger: { trigger: titleRef.current, start: "top 95%" } })
     gsap.fromTo(buttonRef.current, { opacity: 0 }, { opacity: 1, duration: 1, scrollTrigger: { trigger: buttonRef.current, start: "top 95%" } })
+    gsap.fromTo(buttonRef2.current, { opacity: 0 }, { delay: 0.25, opacity: 1, duration: 1, scrollTrigger: { trigger: buttonRef.current, start: "top 95%" } })
+    gsap.fromTo(sliderWrapperRef.current, { rotate: "27.5deg", translateY: "-30vh", translateX: "2.5vw" }, { rotate: "0deg", translateY: "0vh", translateX: "0vw", scrollTrigger: { trigger: ".two-content-right", start: "top bottom", end: "bottom top", scrub: true } })
   }, [])
 
   // CAROUSEL
-  const [emblaRef, emblaApi] = useEmblaCarousel({axis: "y", loop: true, watchDrag: false}, [AutoScroll({speed: 2.5})] )
+  const [emblaRef, emblaApi] = useEmblaCarousel({axis: "y", loop: true, watchDrag: false}, [AutoScroll({speed: 2 })] )
 
-  const [emblaRef2, emblaApi2] = useEmblaCarousel({axis: "y", loop: true, watchDrag: false}, [AutoScroll({speed: -2.5})] )
+  const [emblaRef2, emblaApi2] = useEmblaCarousel({axis: "y", loop: true, watchDrag: false}, [AutoScroll({speed: -2 })] )
 
-  const [emblaRef3, emblaApi3] = useEmblaCarousel({axis: "y", loop: true, watchDrag: false}, [AutoScroll({speed: 2.5})] )
+  const [emblaRef3, emblaApi3] = useEmblaCarousel({axis: "y", loop: true, watchDrag: false}, [AutoScroll({speed: 2 })] )
 
   return (
     <section className="section two">
@@ -36,12 +40,14 @@ export const Section2 = (options) => {
         <div className="two-content-left">
           <div className="textbox">
             <h1 className="subheadline white" ref={titleRef} >Making Short-Form <br /> Content That <span className="blue" >Engages</span> <br /> and <span className="blue" >Converts</span></h1>
-            <motion.button className="two-button" ref={buttonRef} >
-              <p className="description" >Let us tell you more</p>
-              <div className="button-iconbox">
-                <ChevronRight />
-              </div>
-            </motion.button>
+            <div className="two-button-row">
+              <motion.button className="two-button" ref={buttonRef} whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} >
+                <p className="description" >Let us tell you more</p>
+              </motion.button>
+              <motion.button className="two-circle-button" ref={buttonRef2} whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} >
+                <ChevronRight className="two-icon" />
+              </motion.button>
+            </div>
           </div>
         </div>
         <div className="two-content-right">
@@ -49,7 +55,7 @@ export const Section2 = (options) => {
           <div className="right-fade" />
           <div className="top-fade" />
           <div className="bottom-fade" />
-          <div className="two-content-right-content">
+          <div className="two-content-right-content" ref={sliderWrapperRef} >
             <div className="two-carousel" ref={emblaRef} >
               <div className="two-row">
                 <div className="two-item" >

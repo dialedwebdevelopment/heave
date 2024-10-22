@@ -3,6 +3,7 @@ import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Image from "next/image";
+import { Experience } from "./Plane3D/Experience";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -158,14 +159,14 @@ export const Section1 = ({loadingAnimationFinished}) => {
             <h1 className="headline blue one-content-text" ref={typewriterRef2} >Shows</h1>
             <h1 className="headline blue one-content-text" ref={typewriterRef3} >Content</h1>
           </div> */}
-<div className="container">
-    <div className="text text-0">
-        <span className="span-0" ><h1 className="headline blue" ref={boxTextRef} >Brands</h1></span>
-        <span className="span-1">Shows</span>
-        <span className="span-2">Content</span>
-        <span className="span-3">Trends</span>
-    </div>
-</div>
+          <div className="container">
+            <div className="text text-0">
+              <span className="span-0" ><h1 className="headline blue" ref={boxTextRef} >Brands</h1></span>
+              <span className="span-1">Shows</span>
+              <span className="span-2">Content</span>
+              <span className="span-3">Trends</span>
+            </div>
+          </div>
         </div>
       </div>
       <div className="one-image">

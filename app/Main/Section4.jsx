@@ -41,25 +41,25 @@ export const Section4 = () => {
       <div className="four-content">
         <div className="four-content-item" ref={boxRef1} >
           <div className="four-content-item-box" >
-            <p className="description" >Clients</p>
+            <p className="description" >Likes</p>
             <h1 className="subheadline blue" >340k+</h1>
           </div>
         </div>
         <div className="four-content-item" ref={boxRef2} >
           <div className="four-content-item-box" >
-            <p className="description" >Reviews</p>
+            <p className="description" >Shares</p>
             <h1 className="subheadline blue" >500k+</h1>
           </div>
         </div>
         <div className="four-content-item" ref={boxRef3} >
           <div className="four-content-item-box" >
-            <p className="description" >Views</p>
+            <p className="description" >Follows</p>
             <h1 className="subheadline blue" >670k+</h1>
           </div>
         </div>
         <div className="four-content-item" ref={boxRef4} >
           <div className="four-content-item-box" >
-            <p className="description" >Followers</p>
+            <p className="description" >Impressions</p>
             <h1 className="subheadline blue" >120k+</h1>
           </div>
         </div>

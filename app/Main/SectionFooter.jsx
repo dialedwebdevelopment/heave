@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { TextPlugin, SplitText, ScrollTrigger } from "gsap/all";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Experience } from "./Plane3D/Experience";
 
 gsap.registerPlugin(SplitText, ScrollTrigger, TextPlugin);
 

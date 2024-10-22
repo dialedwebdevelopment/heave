@@ -13,6 +13,9 @@ export const Section3 = () => {
   const imageRef1 = useRef()
   const imageRef2 = useRef()
   const imageRef3 = useRef()
+  const floatingBoxRef1 = useRef();
+  const floatingBoxRef2 = useRef();
+  const floatingBoxRef3 = useRef();
 
   useEffect(() => {
     const titleSplitText = new SplitText(textRef.current, { type: 'words' });
@@ -21,6 +24,67 @@ export const Section3 = () => {
     gsap.fromTo(imageRef2.current, { opacity: 0, }, { opacity: 1, scrollTrigger: { trigger: imageRef2.current, start: "top 97.5%", end: "center center", scrub: true } })
     gsap.fromTo(imageRef3.current, { opacity: 0, }, { opacity: 1, scrollTrigger: { trigger: imageRef3.current, start: "top 97.5%", end: "center center", scrub: true } })
   }, [])
+
+    // CARDS MOUSE ANIMATION
+    useEffect(() => {
+      let mouseX = 0;
+      let mouseY = 0;
+    
+      let box1X = 0;
+      let box1Y = 0;
+      let box2X = 0;
+      let box2Y = 0;
+      let box3X = 0;
+      let box3Y = 0;
+    
+      const speed = 0.05; // Decrease this value for slower, more noticeable easing
+    
+      const handleMouseMove = (event) => {
+        mouseX = (event.clientX / window.innerWidth) * 100 - 50;
+        mouseY = (event.clientY / window.innerHeight) * 100 - 50;
+      };
+    
+      const animate = () => {
+        // Box 1 movement
+        const distX1 = (mouseX * -0.25) - box1X;
+        const distY1 = (mouseY * -0.25) - box1Y;
+        box1X += distX1 * speed;
+        box1Y += distY1 * speed;
+    
+        // Box 2 movement
+        const distX2 = (mouseX * 0.25) - box2X;
+        const distY2 = (mouseY * 0.25) - box2Y;
+        box2X += distX2 * speed;
+        box2Y += distY2 * speed;
+    
+        // Box 3 movement
+        const distX3 = (mouseX * -0.5) - box3X;
+        const distY3 = (mouseY * -0.5) - box3Y;
+        box3X += distX3 * speed;
+        box3Y += distY3 * speed;
+    
+        // Apply the calculated transforms
+        if (imageRef1.current) {
+          imageRef1.current.style.transform = `translate(${box1X}px, ${box1Y}px)`;
+        }
+        if (imageRef2.current) {
+          imageRef2.current.style.transform = `translate(${box2X}px, ${box2Y}px)`;
+        }
+        if (imageRef3.current) {
+          imageRef3.current.style.transform = `translate(${box3X}px, ${box3Y}px)`;
+        }
+    
+        requestAnimationFrame(animate); // Continue the animation loop
+      };
+    
+      animate();
+    
+      window.addEventListener('mousemove', handleMouseMove);
+    
+      return () => {
+        window.removeEventListener('mousemove', handleMouseMove);
+      };
+    }, []);
 
   return (
     <section className="section three">

@@ -75,10 +75,9 @@ export const Section7 = () => {
   return (
     <section className="section seven">
       <div className="seven-content">
+        <h1 className="subheadline white">Transforming Simple Ideas into <span className="blue">Viral Sensations</span></h1>
+        <div className="seven-content-row">
         <div className="seven-content-left">
-          <h1 className="subheadline white">
-            Transforming Simple Ideas into <span className="blue">Viral Sensations</span>
-          </h1>
           <div
             className="seven-content-left-imagebox"
             ref={imageRefs[0]}
@@ -143,6 +142,7 @@ export const Section7 = () => {
             title="Going Viral"
             content="Finally, we distribute the meme across platforms, leveraging our network of pages with more than 42 million followers to maximize exposure and engagement, ensuring the meme goes viral and reaches its full potential."
           />
+        </div>
         </div>
       </div>
     </section>

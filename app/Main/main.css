@@ -8,16 +8,6 @@
     z-index: 2;
 }
 
-.main-experience {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 2;
-}
-
 /* 1 */
 
 .one {
@@ -46,7 +36,7 @@
     flex-direction: row;
     padding-left: 5vw;
     align-items: center;
-    gap: 1vw;
+    gap: 1.5vw;
 }
 
 .one-image {
@@ -204,9 +194,10 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    pointer-events: all;
     padding: 15vh 0;
     gap: 15vh;
+    overflow: hidden;
+    pointer-events: all;
 }
 
 .two-border {
@@ -237,8 +228,14 @@
     gap: 5vh;
 }
 
-.two-button {
+.two-button-row {
     width: 100%;
+    display: flex;
+    gap: 1vw;
+}
+
+.two-button {
+    width: 60%;
     height: 5vh;
     display: flex;
     align-items: center;
@@ -247,11 +244,28 @@
     border-radius: 999px;
     cursor: pointer;
     position: relative;
-    z-index: 2;
     border: none;
-    background-color: rgba(255, 255, 255, 0.05);
-    color: white;
-    box-shadow: inset 0 0 0 0px #fff, inset 0 0 0 calc(1px + 0px) rgba(255, 255, 255, 0.15), 0 0 0 0 #0000;
+    background-color: white;
+    color: #010101;
+}
+
+.two-circle-button {
+    width: 5vh;
+    height: 5vh;
+    border-radius: 999px;
+    background-color: #5eafff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.two-icon {
+    width: 2vw;
+    height: 2vw;
+    color: #010101;
 }
 
 .two-content-right {
@@ -350,6 +364,7 @@
     flex-direction: column;
     position: relative;
     padding: 0 7.5vw;
+    perspective: 10000px;
 }
 
 .three-content {
@@ -365,6 +380,7 @@
     height: 2.75vw;
     display: inline-block;
     object-fit: contain;
+    transform-style: preserve-3d;
 }
 
 .three-image-3 {
@@ -561,7 +577,7 @@
     padding: 0 7.5vw;
     padding-top: 0vh;
     position: relative;
-    height: 325vh;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     gap: 5vh;
@@ -569,6 +585,15 @@
 }
 
 .seven-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    padding-top: 15vh;
+}
+
+.seven-content-row {
     display: flex;
     flex-direction: row;
     gap: 2.5vw;
@@ -581,7 +606,7 @@
     height: 310vh;
     width: 1px;
     background-color: grey;
-    margin-top: 15vh;
+    margin-top: 5vh;
 }
 
 .seven-content-left {
@@ -590,7 +615,7 @@
     display: flex;
     flex-direction: column;
     gap: 5vh;
-    padding-top: 15vh;
+    padding-top: 5vh;
 }
 
 .seven-content-left-imagebox {
@@ -609,8 +634,9 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-top: 15vh;
+    justify-content: space-evenly;
     gap: 5vh;
+    padding-top: 0;
 }
 
 /* 8 */
