@@ -41,7 +41,7 @@ export const Section4 = () => {
       <div className="four-content">
         <div className="four-content-item" ref={boxRef1} >
           <div className="four-content-item-box" >
-            <p className="description" >Likes</p>
+            <p className="description" >Likes test</p> 
             <h1 className="subheadline blue" >340k+</h1>
           </div>
         </div>
