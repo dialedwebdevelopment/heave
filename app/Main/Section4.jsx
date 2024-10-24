@@ -5,6 +5,7 @@ import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import MotionNumber from "motion-number";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -36,31 +37,53 @@ export const Section4 = () => {
     gsap.fromTo(boxRef4.current, { yPercent: 25, opacity: 0, willChange: 'filter, transform', filter: 'blur(10px)' }, { delay: isMobile ? 0 : 0.75, yPercent: 0, opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: boxRef4.current, start: "top bottom"  } })
   }, [])
 
+  const [numbers, setNumbers] = useState({
+    likes: 340200,
+    shares: 510450,
+    follows: 670900,
+    impressions: 120100,
+  });
+
+  // Randomly update numbers every 4 seconds
+  useEffect(() => {
+    const updateNumbers = () => {
+      setNumbers(prev => ({
+        likes: prev.likes + Math.floor(Math.random() * (250 - 100 + 1)) + 100,
+        shares: prev.shares + Math.floor(Math.random() * (250 - 100 + 1)) + 100,
+        follows: prev.follows + Math.floor(Math.random() * (250 - 100 + 1)) + 100,
+        impressions: prev.impressions + Math.floor(Math.random() * (250 - 100 + 1)) + 100,
+      }));
+    };
+
+    const interval = setInterval(updateNumbers, 4000); // Update every 4 seconds
+    return () => clearInterval(interval); // Cleanup interval on unmount
+  }, []);
+
   return (
     <section className="section four">
       <div className="four-content">
         <div className="four-content-item" ref={boxRef1} >
           <div className="four-content-item-box" >
-            <p className="description" >Likes test</p> 
-            <h1 className="subheadline blue" >340k+</h1>
+            <p className="description" >Likes</p> 
+            <MotionNumber value={numbers.likes} locales="fr-FR" className="subheadline blue" />
           </div>
         </div>
         <div className="four-content-item" ref={boxRef2} >
           <div className="four-content-item-box" >
             <p className="description" >Shares</p>
-            <h1 className="subheadline blue" >500k+</h1>
+            <MotionNumber value={numbers.shares} locales="fr-FR" className="subheadline blue" />
           </div>
         </div>
-        <div className="four-content-item" ref={boxRef3} >
+        {/* <div className="four-content-item" ref={boxRef3} >
           <div className="four-content-item-box" >
             <p className="description" >Follows</p>
-            <h1 className="subheadline blue" >670k+</h1>
+            <h1 className="subheadline blue" >670 900</h1>
           </div>
-        </div>
-        <div className="four-content-item" ref={boxRef4} >
+        </div> */}
+        <div className="four-content-item" ref={boxRef3} >
           <div className="four-content-item-box" >
             <p className="description" >Impressions</p>
-            <h1 className="subheadline blue" >120k+</h1>
+            <MotionNumber value={numbers.impressions} locales="fr-FR" className="subheadline blue" />
           </div>
         </div>
       </div>
