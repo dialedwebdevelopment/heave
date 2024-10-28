@@ -16,6 +16,8 @@ import { SectionFooter } from "./SectionFooter";
 import { Canvas } from "@react-three/fiber";
 import { Environment, Float } from "@react-three/drei";
 import Model from "./Plane3D/Model";
+import { Section9 } from "./section9";
+import { Section5Mobile } from "./Section5Mobile";
 
 const Main = () => {
 
@@ -71,7 +73,7 @@ const Main = () => {
             </Float>
           </Suspense>
           {/* <ambientLight /> */}
-          <Environment preset="studio" environmentIntensity={0.75} />
+          {/* <Environment preset="studio" environmentIntensity={0.75} /> */}
         </Canvas>
       </div>
       <Section1 loadingAnimationFinished={loadingAnimationFinished} />
@@ -79,9 +81,11 @@ const Main = () => {
       <Section3 />
       <Section4 />
       <Section5 />
+      <Section5Mobile />
       <Section8 />
-      <Section6 />
+      {/* <Section6 /> */}
       <Section7 lenis={lenis} />
+      <Section9 />
       <SectionFooter />
     </ReactLenis>
   );

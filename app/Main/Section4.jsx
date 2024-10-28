@@ -39,9 +39,8 @@ export const Section4 = () => {
 
   const [numbers, setNumbers] = useState({
     likes: 340200,
-    shares: 510450,
-    follows: 670900,
-    impressions: 120100,
+    shares: 123560,
+    impressions: 510450,
   });
 
   // Randomly update numbers every 4 seconds
@@ -62,31 +61,42 @@ export const Section4 = () => {
   return (
     <section className="section four">
       <div className="four-content">
-        <div className="four-content-item" ref={boxRef1} >
-          <div className="four-content-item-box" >
-            <p className="description" >Likes</p> 
-            <MotionNumber value={numbers.likes} locales="fr-FR" className="subheadline blue" />
+        <div className="textbox four-textbox">
+          <h1 className="subheadline white" ref={titleRef} >Our Live Statistics <span className="blue" > This Year </span></h1>
+        </div>
+        <div className="four-content-row">
+          <div className="four-content-item" ref={boxRef1} >
+            <div className="four-content-item-box" >
+              <p className="description" >Impressions</p> 
+              <div className="four-number">
+                <MotionNumber value={numbers.impressions} locales="fr-FR" className="subheadline blue" />
+                <p className="subheadline blue" >+</p>
+              </div>
+            </div>
+          </div>
+          <div className="four-divider" />
+          <div className="four-content-item" ref={boxRef2} >
+            <div className="four-content-item-box" >
+              <p className="description" >Likes</p>
+              <div className="four-number">
+                <MotionNumber value={numbers.likes} locales="fr-FR" className="subheadline blue" />
+                <p className="subheadline blue" >+</p>
+              </div>
+            </div>
+          </div>
+          <div className="four-divider" />
+          <div className="four-content-item" ref={boxRef3} >
+            <div className="four-content-item-box" >
+              <p className="description" >Shares</p>
+              <div className="four-number">
+                <MotionNumber value={numbers.shares} locales="fr-FR" className="subheadline blue" />
+                <p className="subheadline blue" >+</p>
+              </div>
+            </div>
+          </div>
           </div>
         </div>
-        <div className="four-content-item" ref={boxRef2} >
-          <div className="four-content-item-box" >
-            <p className="description" >Shares</p>
-            <MotionNumber value={numbers.shares} locales="fr-FR" className="subheadline blue" />
-          </div>
-        </div>
-        {/* <div className="four-content-item" ref={boxRef3} >
-          <div className="four-content-item-box" >
-            <p className="description" >Follows</p>
-            <h1 className="subheadline blue" >670 900</h1>
-          </div>
-        </div> */}
-        <div className="four-content-item" ref={boxRef3} >
-          <div className="four-content-item-box" >
-            <p className="description" >Impressions</p>
-            <MotionNumber value={numbers.impressions} locales="fr-FR" className="subheadline blue" />
-          </div>
-        </div>
-      </div>
+      <div className="section-border" />
     </section>
   );
 };

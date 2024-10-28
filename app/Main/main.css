@@ -398,11 +398,22 @@
     height: fit-content;
     display: flex;
     flex-direction: column;
-    gap: 5vh;
+    gap: 15vh;
     overflow: hidden;
 }
 
 .four-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.four-textbox {
+    align-items: center;
+    text-align: ce;
+}
+
+.four-content-row {
     display: flex;
     flex-direction: row;
     gap: 1vw;
@@ -415,7 +426,7 @@
     width: 100%;
     height: 30vh;
     border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.075);
+    /* background-color: rgba(255, 255, 255, 0.075); */
 }
 
 .four-content-item-box {
@@ -424,13 +435,27 @@
     color: white;
 }
 
-/* 4 */
+.four-number {
+    display: flex;
+}
+
+.four-divider {
+    height: 30vh;
+    width: 1px;
+    background-color: #ffffff35;
+}
+
+/* 5 */
 
 .five {
     padding: 0vh 0vw;
     height: 275vh;
     position: relative;
     overflow: visible;
+}
+
+.five-mobile {
+    display: none;
 }
   
 .five-sticky {
@@ -482,12 +507,13 @@
     height: 100%;
     border-radius: 15px;
     overflow: hidden;
+    background-color: black;
 }
 
 .five-card-image-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .five-card-invisible {
@@ -785,4 +811,90 @@
     display: flex;
     gap: 2.5vw;
     color: grey;
+}
+
+@media (max-width: 768px) {
+
+/* 5 */
+
+.five {
+    display: none;
+}
+
+.five-mobile {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    padding-top: 5vw;
+    gap: 5vw;
+    height: fit-content;
+}
+
+.five-mobile-textbox {
+    padding: 0 5vw;
+}
+
+.five-mobile-row {
+    display: flex;
+}
+
+.five-mobile-carousel {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+}
+
+.five-mobile-item {
+    flex: 0 0 90vw;
+    height: 100vw;
+    padding: 10vw;
+    margin-left: 2.5vw;
+    background-color: rgba(255, 255, 255, 0.075);
+    border-radius: 25px;
+    position: relative;
+}
+
+.five-mobile-item-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+    position: relative;
+}
+
+.five-mobile-carousel-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+}
+.carousel-button {
+    width: 2vw;
+    height: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+.carousel-button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.carousel-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.carousel-button-icon {
+    width: 35%;
+    height: 35%;
+}
+    
 }
