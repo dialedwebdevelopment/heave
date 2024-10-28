@@ -87,24 +87,21 @@
     display: none;
 }
 
-.container {
-    display: flex;
-    transform-style: preserve-3d;
-    gap: 10px;
-}
-
-.container .text {
+.one-item-changing-text {
     position: relative;
     pointer-events: none;
     width: 32vw;
-    height: 100px;
+    height: 15vh;
     transform-style: preserve-3d;
-    /* Animating rotation */
-    animation: rotateText 11s infinite ease-in-out; /* Total time updated */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    user-select: none;
+    animation: rotateText 11s infinite ease-in-out;
     animation-delay: 3s;
 }
 
-/* Define the keyframes for rotation with pauses */
 @keyframes rotateText {
     0%, 18% { /* Start and pause for 2s at 0 degrees */
         transform: rotateX(0deg);
@@ -128,22 +125,7 @@
     }
 }
 
-
-.container .text::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #373737;
-    transform-origin: left;
-    transform: rotateY(90deg) translateX(-50px);
-}
-
-.container .text:last-child:before {
-    background: #010101;
-}
-
-.container .text span {
+.one-item-changing-text span {
     position: absolute;
     top: 0;
     left: 0;
@@ -160,28 +142,27 @@
     transform-style: preserve-3d;
 }
 
-/* Apply individual transformations based on class */
-.span-0 {
+.one-item-changing-text-1 {
     --i: 0;
-    transform: rotateX(calc(90deg * var(--i))) translateZ(50px);
+    transform: rotateX(calc(90deg * var(--i))) translateZ(7.5vh);
 }
 
-.span-1 {
+.one-item-changing-text-2 {
     --i: 1;
-    transform: rotateX(calc(90deg * var(--i))) translateZ(50px);
+    transform: rotateX(calc(90deg * var(--i))) translateZ(7.5vh);
 }
 
-.span-2 {
+.one-item-changing-text-3 {
     --i: 2;
-    transform: rotateX(calc(90deg * var(--i))) translateZ(50px);
+    transform: rotateX(calc(90deg * var(--i))) translateZ(7.5vh);
 }
 
-.span-3 {
+.one-item-changing-text-4 {
     --i: 3;
-    transform: rotateX(calc(90deg * var(--i))) translateZ(50px);
+    transform: rotateX(calc(90deg * var(--i))) translateZ(7.5vh);
 }
 
-.container .text:last-child span {
+.one-item-changing-text:last-child span {
     background: #010101;
     color: #5eafff;
 }
@@ -814,6 +795,204 @@
 }
 
 @media (max-width: 768px) {
+
+/* 1 */
+
+.one {
+    height: 200vw;
+    width: 100%;
+    padding-top: 30vh;
+    overflow: hidden;
+}
+
+.one-content {
+    width: 100%;
+    height: fit-content;
+}
+
+.one-content-textbox {
+    flex-direction: column;
+    padding-left: 0;
+    gap: 2.5vw;
+}
+
+.one-image {
+    height: 110vw;
+}
+
+.one-image-trigger {
+    top: 150vw;
+    height: 200vw;
+}
+
+.one-item-changing-text {
+    width: 90vw;
+    height: 15vw;
+}
+
+.one-item-changing-text span {
+    justify-content: center;
+    font-size: 17.5vw;
+}
+
+.one-item-changing-text-1 {
+    --i: 0;
+    transform: rotateX(calc(90deg * var(--i))) translateZ(7.5vw);
+}
+
+.one-item-changing-text-2 {
+    --i: 1;
+    transform: rotateX(calc(90deg * var(--i))) translateZ(7.5vw);
+}
+
+.one-item-changing-text-3 {
+    --i: 2;
+    transform: rotateX(calc(90deg * var(--i))) translateZ(7.5vw);
+}
+
+.one-item-changing-text-4 {
+    --i: 3;
+    transform: rotateX(calc(90deg * var(--i))) translateZ(7.5vw);
+}
+
+/* 2 */
+
+.two {
+    height: fit-content;
+    width: 100%;
+    padding: 25vw 0;
+    gap: 25vw;
+}
+
+.two-border {
+    width: 90vw;
+    height: 1px;
+}
+
+.two-content {
+    flex-direction: column;
+    justify-content: space-between;
+    height: fit-content;
+    gap: 15vw;
+    padding: 0 5vw;
+}
+
+.two-content-left {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5vw;
+}
+
+.two-button {
+    width: 100%;
+    height: 7.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5vw;
+    padding-right: 1.5vw;
+    border-radius: 999px;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background-color: white;
+    color: #010101;
+}
+
+.two-circle-button {
+    width: 5vw;
+    height: 5vw;
+}
+
+.two-icon {
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+.two-content-right {
+    width: 100%;
+    height: 100vw;
+    position: relative;
+}
+
+.two-content-right-content {
+    width: 100%;
+    height: 100vw;
+    display: flex;
+    flex-direction: row;
+    transform: rotate(27.5deg) translateY(-30vh) translateX(2.5vw);
+}
+
+.two-carousel {
+    overflow: hidden;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.two-row {
+    display: flex;
+    touch-action: pan-x pinch-zoom;
+    height: 150vh;
+    flex-direction: column;
+}
+
+.two-item {
+    flex: 0 0 50vh;
+    height: 55vh;
+    padding: 2vh 0;
+    cursor: pointer;
+    transition: background-color 0.35s ease;
+    background-color: antiquewhite;
+}
+
+.two-item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.bottom-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #010101 100%);
+    z-index: 1;
+}
+
+.top-fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #010101 100%);
+    z-index: 1;
+}
+.left-fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10vw;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, #010101 100%);
+    z-index: 1;
+}
+.right-fade {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10vw;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #010101 100%);
+    z-index: 1;
+}
 
 /* 5 */
 
