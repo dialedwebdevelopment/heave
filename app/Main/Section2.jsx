@@ -43,9 +43,9 @@ export const Section2 = (options) => {
             <div className="two-button-row">
               <motion.button className="two-button" ref={buttonRef} whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} >
                 <p className="description" >Let us tell you more</p>
-              </motion.button>
-              <motion.button className="two-circle-button" ref={buttonRef2} whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} >
-                <ChevronRight className="two-icon" />
+                <div className="two-circle-button">
+                  <ChevronRight className="two-icon" />
+                </div>
               </motion.button>
             </div>
           </div>

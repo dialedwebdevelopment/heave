@@ -235,12 +235,13 @@
 }
 
 .two-button {
-    width: 60%;
-    height: 5vh;
+    width: 75%;
+    height: 2.75vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 1vw;
+    padding-right: 0.5vw;
     border-radius: 999px;
     cursor: pointer;
     position: relative;
@@ -250,8 +251,8 @@
 }
 
 .two-circle-button {
-    width: 5vh;
-    height: 5vh;
+    width: 2vw;
+    height: 2vw;
     border-radius: 999px;
     background-color: #5eafff;
     border: none;
@@ -263,8 +264,8 @@
 }
 
 .two-icon {
-    width: 2vw;
-    height: 2vw;
+    width: 1.5vw;
+    height: 1.5vw;
     color: #010101;
 }
 
