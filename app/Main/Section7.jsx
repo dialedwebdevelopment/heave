@@ -84,8 +84,8 @@ export const Section7 = () => {
             onClick={() => handleAccordionClick(0)}
           >
             <Image
-              src="/images/testimage.PNG"
-              className="eight-card-image-img"
+              src="/images/LEFT.jpg"
+              className="seven-image"
               width={2000}
               height={2000}
               alt="Image 1"
@@ -97,8 +97,8 @@ export const Section7 = () => {
             onClick={() => handleAccordionClick(1)}
           >
             <Image
-              src="/images/testimage2.PNG"
-              className="eight-card-image-img"
+              src="/images/CENTER.jpg"
+              className="seven-image"
               width={2000}
               height={2000}
               alt="Image 2"
@@ -110,8 +110,8 @@ export const Section7 = () => {
             onClick={() => handleAccordionClick(2)}
           >
             <Image
-              src="/images/testimage.PNG"
-              className="eight-card-image-img"
+              src="/images/RIGHT.jpg"
+              className="seven-image"
               width={2000}
               height={2000}
               alt="Image 3"
