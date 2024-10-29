@@ -67,6 +67,41 @@ body {
   z-index: 5;
 }
 
+.cursor {
+	width: 2vw;
+	height: 2vw;
+	border-radius: 50%;
+
+	position: fixed;
+	left: 0;
+	top: 0;
+	transform: translate(-50%, -50%);
+
+	background: white;
+	mix-blend-mode: difference;
+	pointer-events: none;
+  z-index: 100;
+}
+
+[data-hover] {
+	position: relative;
+
+	[data-hover-bounds] {
+		position: absolute;
+		left: 0;
+		top: 0;
+		inset: 0;
+
+		/* 		outline: 1px solid red; */
+	}
+
+	&:hover {
+		[data-hover-bounds] {
+			transform: scale(4);
+		}
+	}
+}
+
 /* COLORS */
 
 .white {

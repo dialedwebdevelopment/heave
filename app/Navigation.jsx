@@ -84,14 +84,16 @@ export const Navigation = () => {
                 <Image src="/images/heavelogo.png" className="navigation-image" width={500} height={500} onClick={scrollToTop} />
             </div>
             <div className="navigation-right">
-                <motion.button className="navigation-button" whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} onClick={() => handleClick('https://portal.revvideoproductions.com/book')}  >
+                <button data-hover className="navigation-button" whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} onClick={() => handleClick('https://portal.revvideoproductions.com/book')}  >
                     <h1 className="navigation-title" >Get In Touch</h1>
-                </motion.button>
-                <motion.button className="navigation-right-menu" onClick={handleMenuClick} whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} >
+                    <div data-hover-bounds></div>
+                </button>
+                <button data-hover className="navigation-right-menu" onClick={handleMenuClick} whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} >
                     <div className="navigation-right-menu-line" />
                     <div className="navigation-right-menu-line" />
                     <div className="navigation-right-menu-line" />
-                </motion.button>
+                    <div data-hover-bounds></div>
+                </button>
             </div>
         </div>
         <div className="navigation-menu" ref={navigationMenu} >
