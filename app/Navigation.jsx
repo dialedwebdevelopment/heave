@@ -1,10 +1,11 @@
 /* eslint-disable jsx-a11y/alt-text */
 "use client";
-import { Menu } from "lucide-react";
+import { ArrowDown, ChevronDown, Menu } from "lucide-react";
 import Image from "next/image";
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
+import Link from "next/link";
 
 export const Navigation = () => {
 
@@ -23,7 +24,7 @@ export const Navigation = () => {
     }, []);
 
     useLayoutEffect(() => {
-        gsap.fromTo(navigationBar.current, { yPercent: -100, opacity: 0 }, { delay: 3.5, yPercent: 0, opacity: 1, duration: 0.5 })
+        gsap.fromTo(navigationBar.current, { yPercent: -100, opacity: 0 }, { delay: 4, yPercent: 0, opacity: 1, duration: 0.5 })
     }, [])
 
     const handleMenuClick = () => {
@@ -77,50 +78,64 @@ export const Navigation = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
+    // SCROLLED
+
+    const [navScrolled, setNavScrolled] = useState(false);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        const scrollThreshold = 10;
+        if (window.scrollY > scrollThreshold) {
+          setNavScrolled(true);
+        } else {
+          setNavScrolled(false);
+        }
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+  
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, []);
+
   return (
-    <>
-        <div className="navigation" ref={navigationBar} >
-            <div className="navigation-left">
-                <Image src="/images/heavelogo.png" className="navigation-image" width={500} height={500} onClick={scrollToTop} />
+    <div className={`navigation ${navScrolled ? "scrolled" : ""}`} ref={navigationBar} >
+        <div className="navigation-left" >
+            <Link href="/" className="link" >
+                <div className="navigation-left-images">
+                    <Image src="/images/heavelogo.png" className="navigation-image" width={500} height={500} />
+                </div>
+            </Link>
+            <ul className="navigation-menu">
+                <li className="navigation-menu-row" >
+                    <h1 className="small-description white hover-text-white" >Home</h1>
+                </li>
+                <li className="navigation-menu-row" >
+                    <h1 className="small-description white hover-text-white" >Services</h1>
+                </li>
+                <li className="navigation-menu-row" >
+                    <h1 className="small-description white hover-text-white" >Case Studies</h1>
+                </li>
+                <li className="navigation-menu-row" >
+                    <h1 className="small-description white hover-text-white" >Process</h1>
+                </li>
+            </ul>
+        </div>
+        <div className="navigation-right">
+            <div data-hover className="navigation-button">
+                <div className="button-content">
+                    <span className="small-description">Contact Us</span>
+                    <span className="small-description">Contact Us</span>
+                </div>
+                <div data-hover-bounds></div>
             </div>
-            <div className="navigation-right">
-                <button data-hover className="navigation-button" whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} onClick={() => handleClick('https://portal.revvideoproductions.com/book')}  >
-                    <h1 className="navigation-title" >Get In Touch</h1>
-                    <div data-hover-bounds></div>
-                </button>
-                <button data-hover className="navigation-right-menu" onClick={handleMenuClick} whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} >
-                    <div className="navigation-right-menu-line" />
-                    <div className="navigation-right-menu-line" />
-                    <div className="navigation-right-menu-line" />
-                    <div data-hover-bounds></div>
-                </button>
+            <div className="navigation-round-button">
+                <div className="navigation-right-menu-line" />
+                <div className="navigation-right-menu-line" />
+                <div className="navigation-right-menu-line" />
             </div>
         </div>
-        <div className="navigation-menu" ref={navigationMenu} >
-            <div className="navigation-menu-content" ref={navigationMenuContent} >
-                <div className="menu-button">
-                    <span className="menu-text">Home</span>
-                    <span className="menu-text">Home</span>
-                </div>
-                <div className="menu-button">
-                    <span className="menu-text menu-text-not-active">About</span>
-                    <span className="menu-text menu-text-not-active">About</span>
-                </div>
-                <div className="menu-button">
-                    <span className="menu-text menu-text-not-active">Projects</span>
-                    <span className="menu-text menu-text-not-active">Projects</span>
-                </div>
-                <div className="menu-button">
-                    <span className="menu-text menu-text-not-active">Book</span>
-                    <span className="menu-text menu-text-not-active">Book</span> 
-                </div>
-                <div className="menu-button">
-                    <span className="menu-text menu-text-not-active">Contact</span>
-                    <span className="menu-text menu-text-not-active">Contact</span>
-                </div>
-            </div>
-        </div>
-        <div className="navigation-background" ref={navigationBackground} onClick={handleMenuClick} />
-    </>
+    </div>
   );
 };

@@ -222,32 +222,48 @@ body {
 
 /* NAVIGATION */
 
+/* NAVIGATION */
+
 .navigation {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 15vh;
+  height: 10vh;
   display: flex;
   justify-content: space-between;
-  padding: 0 7.5vw;
+  align-items: center;
+  padding: 0 10vw;
   z-index: 10;
   opacity: 0;
   pointer-events: none;
+  transition: background-color 0.3s ease, height 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.navigation.scrolled {
+  height: 8vh;
+  border-bottom: 1px solid #fcfeea25;
+  backdrop-filter: blur(5px);
 }
 
 .navigation-left, .navigation-right {
-  width: 50%;
-  height: 100%;
+  width: fit-content;
+  height: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1vw;
-  pointer-events: none;
+  pointer-events: all;
+  gap: 1.5vw;
+}
+
+.navigation-left-images {
+  display: flex;
+  width: fit-content;
 }
 
 .navigation-right {
   justify-content: end;
+  gap: 1vw;
 }
 
 .navigation-image {
@@ -259,80 +275,20 @@ body {
 
 .navigation-button {
   width: fit-content;
-  height: 5vh;
-  padding: 0 1.5vw;
-  background-color: white;
+  height: 4vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 1vw;
   border-radius: 999px;
-  color: #010101;
   cursor: pointer;
-  border: none;
-  pointer-events: auto;
-}
-
-.navigation-title {
-  font-size: 1vw;
-  font-weight: 400;
-  margin: 0;
-}
-
-.navigation-right-menu {
-  width: 5vh;
-  height: 5vh;
-  border-radius: 999px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  color: black;
   background-color: white;
-  padding: 0.75vw;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.075);
-  cursor: pointer;
-  border: none;
-  pointer-events: auto;
 }
 
-.navigation-right-menu-line {
-  width: 100%;
-  height: 2px;
-  background-color: #010101;
-}
-
-.navigation-background {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 4;
-  backdrop-filter: blur(5px);
-  opacity: 0;
-  pointer-events: none;
-  cursor: pointer;
-}
-
-.navigation-menu {
-  width: 35vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: #fefffe;
-  z-index: 5;
-  padding: 7.5vw;
-  opacity: 0;
-}
-
-.navigation-menu-content {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.menu-button {
+.navigation-button-content {
   transition: 0.5s ease;
   cursor: pointer;
   height: fit-content;
@@ -342,35 +298,97 @@ body {
   text-decoration: none;
 }
 
-.menu-text {
-  font-size: 3vw;
-  font-weight: 400;
-  margin: 0;
-  line-height: 125%;
-  cursor: pointer;
-  color: #010101;
-}
-
-.menu-text-not-active {
-  color: #bbb;
-}
-
-.menu-button span {
+.navigation-button span {
   display: block;
   transition: 0.75s transform cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.menu-button span:nth-child(2) {
+.navigation-button span:nth-child(2) {
   position: absolute;
 }
 
-.menu-button:hover span:nth-child(1) {
+.navigation-button:hover span:nth-child(1) {
   transform: translateY(-100%);
 }
 
-.menu-button:hover span:nth-child(2) {
+.navigation-button:hover span:nth-child(2) {
   transform: translateY(-100%);
 }
+
+.navigation-round-button {
+  display: none;
+}
+
+.navigation-menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 1vw;
+}
+
+.navigation-menu-row {
+  display: flex;
+  color: white;
+  gap: 0.25vw;
+  align-items: center;
+}
+
+.navigation-menu-icon {
+  width: 0.9vw;
+  height: 0.9vw;
+}
+
+.button-content {
+  transition: 0.5s ease;
+  cursor: pointer;
+  height: fit-content;
+  overflow: hidden;
+  position: relative;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.button span {
+  display: block;
+  transition: 0.75s transform cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.button span:nth-child(2) {
+  position: absolute;
+}
+
+.button:hover span:nth-child(1) {
+  transform: translateY(-100%);
+}
+
+.button:hover span:nth-child(2) {
+  transform: translateY(-100%);
+}
+
+.hover-text-white {
+  position: relative;
+  cursor: pointer;
+}
+
+.hover-text-white::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -0.15vh;
+  left: 0;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+
+.hover-text-white:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 
 /* OTHER */
 
