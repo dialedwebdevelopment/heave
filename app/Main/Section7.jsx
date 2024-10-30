@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState, useRef, useEffect, useMemo } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Accordion from "./Accordion"; // Import the Accordion component
 import Image from "next/image";
 import Lenis from "lenis"; // Import Lenis
 
 export const Section7 = () => {
   const [activeIndex, setActiveIndex] = useState(null); // Track the active accordion
-  const imageRefs = useMemo(() => [useRef(null), useRef(null), useRef(null)], []);
+  const imageRefs = [useRef(null), useRef(null), useRef(null)]; // Create refs for each image box
   const lenis = useRef(null); // Create a ref to hold Lenis instance
 
   useEffect(() => {
