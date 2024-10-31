@@ -35,7 +35,6 @@ export const Section2 = (options) => {
 
   return (
     <section className="section two">
-      <div className="two-border"></div>
       <div className="two-content">
         <div className="two-content-left">
           <div className="textbox">

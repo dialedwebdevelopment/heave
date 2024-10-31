@@ -109,7 +109,6 @@ export const Section4 = () => {
           </div>
           </div>
         </div>
-      <div className="section-border" />
     </section>
   );
 };

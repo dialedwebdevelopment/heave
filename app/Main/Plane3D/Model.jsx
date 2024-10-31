@@ -61,45 +61,45 @@ export default function Model(props) {
           x: -8,
           y: -3,
           scrollTrigger: {
-            trigger: ".five",
+            trigger: ".nine",
             start: "top bottom",
             end: "bottom top",
             scrub: true,
             immediateRender: false,
           },
       })
-      .to(model.current.rotation, {
-        y: 0,
-        z: 0,
-        scrollTrigger: {
-          trigger: ".six",
-          start: "top bottom",
-          end: "center center",
-          scrub: true,
-          immediateRender: false,
-        },
-      })
-      .to(model.current.position, {
-        y: 2,
-        scrollTrigger: {
-          trigger: ".six",
-          start: "top bottom",
-          end: "center center",
-          scrub: true,
-          immediateRender: false,
-        },
-    })
-    .to(model.current.position, {
-      x: 8,
-      y: -3,
-      scrollTrigger: {
-        trigger: ".seven",
-        start: "top bottom",
-        end: "bottom top",
-        scrub: true,
-        immediateRender: false,
-      },
-  })
+  //     .to(model.current.rotation, {
+  //       y: 0,
+  //       z: 0,
+  //       scrollTrigger: {
+  //         trigger: ".six",
+  //         start: "top bottom",
+  //         end: "center center",
+  //         scrub: true,
+  //         immediateRender: false,
+  //       },
+  //     })
+  //     .to(model.current.position, {
+  //       y: 2,
+  //       scrollTrigger: {
+  //         trigger: ".six",
+  //         start: "top bottom",
+  //         end: "center center",
+  //         scrub: true,
+  //         immediateRender: false,
+  //       },
+  //   })
+  //   .to(model.current.position, {
+  //     x: 8,
+  //     y: -3,
+  //     scrollTrigger: {
+  //       trigger: ".seven",
+  //       start: "top bottom",
+  //       end: "bottom top",
+  //       scrub: true,
+  //       immediateRender: false,
+  //     },
+  // })
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);

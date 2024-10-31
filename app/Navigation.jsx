@@ -114,16 +114,19 @@ export const Navigation = () => {
             </Link>
             <ul className="navigation-menu">
                 <li className="navigation-menu-row" onClick={() => scrollToSection("section1")} >
-                    <h1 className="small-description white hover-text-white" onClick={() => scrollToSection("section1")} >Home</h1>
+                    <h1 className="small-description white hover-text-white" >Home</h1>
                 </li>
                 <li className="navigation-menu-row" onClick={() => scrollToSection("section2")} >
                     <h1 className="small-description white hover-text-white" >Services</h1>
                 </li>
-                <li className="navigation-menu-row" >
+                <li className="navigation-menu-row" onClick={() => scrollToSection("section3")} >
                     <h1 className="small-description white hover-text-white" >Case Studies</h1>
                 </li>
-                <li className="navigation-menu-row" >
+                <li className="navigation-menu-row" onClick={() => scrollToSection("section4")} >
                     <h1 className="small-description white hover-text-white" >Process</h1>
+                </li>
+                <li className="navigation-menu-row" onClick={() => scrollToSection("section5")} >
+                    <h1 className="small-description white hover-text-white" >Contact</h1>
                 </li>
             </ul>
         </div>

@@ -3,11 +3,19 @@ import React, { useState, useRef, useEffect } from "react";
 import Accordion from "./Accordion"; // Import the Accordion component
 import Image from "next/image";
 import Lenis from "lenis"; // Import Lenis
+import gsap from "gsap";
+import SplitText from "gsap/src/SplitText";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(SplitText, ScrollTrigger);
 
 export const Section7 = () => {
   const [activeIndex, setActiveIndex] = useState(null); // Track the active accordion
   const imageRefs = [useRef(null), useRef(null), useRef(null)]; // Create refs for each image box
   const lenis = useRef(null); // Create a ref to hold Lenis instance
+  const accordionRef1 = useRef()
+  const accordionRef2 = useRef()
+  const accordionRef3 = useRef()
 
   useEffect(() => {
     // Initialize Lenis instance when component mounts
@@ -72,10 +80,29 @@ export const Section7 = () => {
     };
   }, [imageRefs]);
 
+  // REFS
+  const titleRef= useRef()
+
+  // GSAP ANIMATIONS
+  useEffect(() => {
+
+    const titleSplitText = new SplitText(titleRef.current, { type: 'words' });
+    gsap.fromTo(titleSplitText.words, { opacity: 0 }, { opacity: 1, stagger: 0.05, duration: 1, scrollTrigger: { trigger: titleRef.current, start: "top 95%" } })
+
+    gsap.fromTo(imageRefs[0].current, { opacity: 0, filter: 'blur(10px)' }, { opacity: 1, filter: 'blur(0px)', duration: 1, scrollTrigger: { trigger: imageRefs[0].current, start: "top 95%" } })
+    gsap.fromTo(imageRefs[1].current, { opacity: 0, filter: 'blur(10px)' }, { delay: 0, filter: 'blur(0px)', opacity: 1, duration: 1, scrollTrigger: { trigger: imageRefs[1].current, start: "top 95%" } })
+    gsap.fromTo(imageRefs[2].current, { opacity: 0, filter: 'blur(10px)' }, { delay: 0, filter: 'blur(0px)', opacity: 1, duration: 1, scrollTrigger: { trigger: imageRefs[2].current, start: "top 95%" } })
+
+    gsap.fromTo(accordionRef1.current, { yPercent: 25, opacity: 0, filter: 'blur(10px)' }, { opacity: 1, yPercent: 0, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: accordionRef1.current, start: "top 95%" } })
+    gsap.fromTo(accordionRef2.current, { yPercent: 25, opacity: 0, filter: 'blur(10px)' }, { delay: 0, yPercent: 0, filter: 'blur(0px)', opacity: 1, duration: 0.5, scrollTrigger: { trigger: accordionRef2.current, start: "top 95%" } })
+    gsap.fromTo(accordionRef3.current, { yPercent: 25, opacity: 0, filter: 'blur(10px)' }, { delay: 0, yPercent: 0, filter: 'blur(0px)', opacity: 1, duration: 0.5, scrollTrigger: { trigger: accordionRef3.current, start: "top 95%" } })
+
+  }, [])
+
   return (
     <section className="section seven">
       <div className="seven-content">
-        <h1 className="subheadline white">Transforming Simple Ideas into <span className="blue">Viral Sensations</span></h1>
+        <h1 className="subheadline white" ref={titleRef} >Transforming Simple Ideas into <span className="blue">Viral Sensations</span></h1>
         <div className="seven-content-row">
         <div className="seven-content-left">
           <div
@@ -121,6 +148,7 @@ export const Section7 = () => {
         <div className="seven-border"></div>
         <div className="seven-content-right">
           {/* Accordion components */}
+          <div ref={accordionRef1} >
           <Accordion
             index={0}
             isActive={activeIndex === 0}
@@ -128,6 +156,8 @@ export const Section7 = () => {
             title="Product Highlight"
             content="We start by selecting and showcasing the product that will be at the center of the meme. The goal is to position it in a way that resonates with the audience, making it instantly recognizable and relatable."
           />
+          </div>
+          <div ref={accordionRef2} >
           <Accordion
             index={1}
             isActive={activeIndex === 1}
@@ -135,6 +165,8 @@ export const Section7 = () => {
             title="Meme Magic"
             content="This is where the magic happens. We craft a clever, engaging, and humorous meme around the product, designed to tap into current trends and cultural moments, ensuring it catches the attention of your target audience."
           />
+          </div>
+          <div ref={accordionRef3} >
           <Accordion
             index={2}
             isActive={activeIndex === 2}
@@ -142,6 +174,7 @@ export const Section7 = () => {
             title="Going Viral"
             content="Finally, we distribute the meme across platforms, leveraging our network of pages with more than 42 million followers to maximize exposure and engagement, ensuring the meme goes viral and reaches its full potential."
           />
+          </div>
         </div>
         </div>
       </div>
