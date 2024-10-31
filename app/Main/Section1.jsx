@@ -9,7 +9,7 @@ gsap.registerPlugin(SplitText, ScrollTrigger);
 
 export const Section1 = ({loadingAnimationFinished}) => {
 
-  const titleRef= useRef()
+  const titleRef = useRef()
   const imageRef1 = useRef()
   const imageRef2 = useRef()
   const imageRef3 = useRef()

@@ -29,6 +29,12 @@ body {
   background-color: #fefffe;
 }
 
+.main-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 30vh;
+}
+
 .section-border {
   width: 100%;
   height: 1px;
@@ -385,6 +391,29 @@ body {
 }
 
 .hover-text-white:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.hover-text-grey {
+  position: relative;
+  cursor: pointer;
+}
+
+.hover-text-grey::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -0.15vh;
+  left: 0;
+  background-color: #ffffff35;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+
+.hover-text-grey:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }

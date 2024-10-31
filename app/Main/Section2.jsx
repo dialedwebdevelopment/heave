@@ -41,12 +41,13 @@ export const Section2 = (options) => {
           <div className="textbox">
             <h1 className="subheadline white" ref={titleRef} >Making Short-Form <br /> Content That <span className="blue" >Engages</span> <br /> and <span className="blue" >Converts</span></h1>
             <div className="two-button-row">
-              <motion.button className="two-button" ref={buttonRef} whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} >
+              <button data-hover className="two-button" ref={buttonRef} >
                 <p className="description" >Let us tell you more</p>
                 <div className="two-circle-button">
                   <ChevronRight className="two-icon" />
                 </div>
-              </motion.button>
+                <div data-hover-bounds></div>
+              </button>
             </div>
           </div>
         </div>

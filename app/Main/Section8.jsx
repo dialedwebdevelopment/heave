@@ -39,30 +39,36 @@ function ParallaxText({ children, baseVelocity = 100 }) {
   });
 
   const images = [
-    { src: "/logos/shopifywhite.png", alt: "Shopify Logo" },
-    { src: "/logos/amazonmarketplacewhite.png", alt: "Amazon Marketplace Logo" },
-    { src: "/logos/edraywhite.png", alt: "Edray Logo" },
-    { src: "/logos/dhlwhite.png", alt: "DHL Logo" },
-    { src: "/logos/upswhite.png", alt: "UPS Logo" },
-    { src: "/logos/roadonewhite.png", alt: "RoadOne Logo" },
-    { src: "/logos/acswhite.png", alt: "ACS Logo" },
-    { src: "/logos/targetwhite.png", alt: "Target Logo" },
-    { src: "/logos/walmartwhite.png", alt: "Walmart Logo" },
-    { src: "/logos/ebaywhite.png", alt: "Ebay Logo" },
-    { src: "/logos/fedexwhite.png", alt: "Fedex Logo" },
+    { src: "/logos/BUCKEDUP.png", alt: "BUCKEDUP Logo" },
+    { src: "/logos/DOORDASH.png", alt: "DOORDASH Logo" },
+    { src: "/logos/DUNKIN.png", alt: "DUNKIN Logo" },
+    { src: "/logos/FASHIONNOVA.png", alt: "FASHIONNOVA Logo" },
+    { src: "/logos/HEXCLAD.png", alt: "HEXCLAD Logo" },
+    { src: "/logos/HINGELOGO.png", alt: "HINGELOGO Logo" },
+    { src: "/logos/JELLYBELLY.png", alt: "JELLYBELLY Logo" },
+    { src: "/logos/JACKINTHEBOX.png", alt: "JACKINTHEBOX Logo" },
+    { src: "/logos/LIQUIDIV.png", alt: "LIQUIDIV Logo" },
+    { src: "/logos/POLYMARKET.png", alt: "POLYMARKET Logo" },
+    { src: "/logos/REEF.png", alt: "REEF Logo" },
+    { src: "/logos/SONIC.webp", alt: "SONIC Logo" },
+    { src: "/logos/TACO BELL.svg", alt: "TACO BELL Logo" },
+    { src: "/logos/TEMU.png", alt: "TEMU Logo" },
+    { src: "/logos/THAI EXPRESS.png", alt: "THAI EXPRESS Logo" },
+    { src: "/logos/LYFT.png", alt: "LYFT Logo" },
+    { src: "/logos/BEREAL.png", alt: "BEREAL Logo" },
   ];
   
   // Repeat images to not have issues
   const repeatedImages = [...images, ...images, ...images, ...images];
   
   return (
-    <div className="four-slider">
-      <motion.div className="four-slider-inside" style={{ x }}>
+    <div className="eight-slider">
+      <motion.div className="eight-slider-inside" style={{ x }}>
         {repeatedImages.map((image, index) => (
-          <div className="four-slider-item" key={index}>
+          <div className="eight-slider-item" key={index}>
             <NextImage
               src={image.src}
-              className="four-slider-item-image"
+              className="eight-slider-item-image"
               width={500}
               height={1000}
               alt={image.alt}
@@ -81,7 +87,7 @@ export const Section8 = () => {
       <div className="eight-content">
         <div className="slider-left-fade" />
         <ParallaxText baseVelocity={-1} />
-        <ParallaxText baseVelocity={1} />
+        {/* <ParallaxText baseVelocity={1} /> */}
         <div className="slider-right-fade" />
       </div>
       <div className="section-border" />

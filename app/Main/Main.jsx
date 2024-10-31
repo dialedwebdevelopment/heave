@@ -241,17 +241,36 @@ const Main = () => {
           <Environment preset="studio" environmentIntensity={0.75} />
         </Canvas>
       </div>
-      <Section1 loadingAnimationFinished={loadingAnimationFinished} />
-      <Section2 />
-      <Section3 />
-      <Section4 />
-      <Section5 />
-      <Section5Mobile />
-      <Section8 />
-      {/* <Section6 /> */}
-      <Section7 lenis={lenis} />
-      <Section9 />
-      <SectionFooter />
+      <div className="main-sections" >
+        <div id="section1" >
+          <Section1 loadingAnimationFinished={loadingAnimationFinished} />
+        </div>
+        <div id="section2" >
+          <Section2 />
+        </div>
+        <div id="section3" >
+          <Section3 />
+        </div>
+        <div id="section4" >
+          <Section4 />
+        </div>
+        <div id="section5" >
+          <Section5 />
+        </div>
+        <div id="section5" >
+          <Section5Mobile />
+        </div>
+        <div id="section8" >
+          <Section8 />
+        </div>
+        <div id="section7" >
+          <Section7 lenis={lenis} />
+        </div>
+        <div id="section9" >
+          <Section9 />
+        </div>
+        <SectionFooter />
+      </div>
     </ReactLenis>
   );
 };

@@ -99,6 +99,11 @@ export const Navigation = () => {
       };
     }, []);
 
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        section?.scrollIntoView({ behavior: "smooth" });
+      };
+
   return (
     <div className={`navigation ${navScrolled ? "scrolled" : ""}`} ref={navigationBar} >
         <div className="navigation-left" >
@@ -108,10 +113,10 @@ export const Navigation = () => {
                 </div>
             </Link>
             <ul className="navigation-menu">
-                <li className="navigation-menu-row" >
-                    <h1 className="small-description white hover-text-white" >Home</h1>
+                <li className="navigation-menu-row" onClick={() => scrollToSection("section1")} >
+                    <h1 className="small-description white hover-text-white" onClick={() => scrollToSection("section1")} >Home</h1>
                 </li>
-                <li className="navigation-menu-row" >
+                <li className="navigation-menu-row" onClick={() => scrollToSection("section2")} >
                     <h1 className="small-description white hover-text-white" >Services</h1>
                 </li>
                 <li className="navigation-menu-row" >
