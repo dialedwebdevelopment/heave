@@ -7,7 +7,7 @@ import Image from "next/image";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-export const Section9 = () => {
+export const Section9Mobile = () => {
 
   const titleRef = useRef()
   const formBox1 = useRef()
@@ -71,38 +71,11 @@ export const Section9 = () => {
   };
 
   return (
-    <section className="section nine">
+    <section className="section nine-mobile">
       <div className="section-border" />
       <div className="nine-content">
-        <div className="nine-content-left">
-          <p ref={leftRef1} className="description white" >If you want to contact us, feel free to drop us a line or your pitch deck...</p>
-          <div className="nine-content-left-bottom">
-            <div ref={leftRef2} className="nine-content-left-item">
-              <p className="description white">Socials:</p>
-              <div className="nine-content-left-item-column">
-                <a className="nine-content-left-item-column-text" href="https://tidycal.com/dialedweb/discoverycall" target="_blank" >
-                  <p className="description grey hover-text-grey">Instagram</p>
-                </a>
-                <a className="nine-content-left-item-column-text" href="https://tidycal.com/dialedweb/discoverycall" target="_blank" >
-                  <p className="description grey hover-text-grey">LinkedIn</p>
-                </a>
-                <a className="nine-content-left-item-column-text" href="https://tidycal.com/dialedweb/discoverycall" target="_blank" >
-                  <p className="description grey hover-text-grey">Twitter</p>
-                </a>
-              </div>
-            </div>
-            <div ref={leftRef3} className="nine-content-left-item">
-              <p className="description white">Email:</p>
-              <div className="nine-content-left-item-column">
-                <a className="nine-content-left-item-column-text" href="mailto:admin@dialedweb.com" >
-                  <p className="description grey hover-text-grey">info@heavecorp.com</p>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="nine-content-right">
-          <h1 className="subheadline white" ref={titleRef} >Let’s create the <span className="blue" >future together!</span></h1>
+          <h1 className="subheadline white form-mobile-text-center" ref={titleRef} >Let’s create the <span className="blue" >future together!</span></h1>
+          <p ref={leftRef1} className="description white form-mobile-text-center" >If you want to contact us, feel free to drop us a line or your pitch deck...</p>
           <form className="nine-contactbox" onSubmit={handleSubmit}>
             <input ref={formBox1} type="text" name="name" placeholder="Name..." required value={formData.name} onChange={handleChange} />
             <input ref={formBox2} type="tel" name="phone" placeholder="Phone number..." required value={formData.phone} onChange={handleChange} />
@@ -114,8 +87,32 @@ export const Section9 = () => {
               <div data-hover-bounds></div>
             </button>
           </form>
+          <div className="form-contact-box">
+            <div className="form-contact-box-content">
+                <p className="description white">Socials:</p>
+                <div className="nine-content-left-item-column">
+                    <a className="nine-content-left-item-column-text" href="https://tidycal.com/dialedweb/discoverycall" target="_blank" >
+                        <p className="description grey">Instagram</p>
+                    </a>
+                    <a className="nine-content-left-item-column-text" href="https://tidycal.com/dialedweb/discoverycall" target="_blank" >
+                        <p className="description grey">LinkedIn</p>
+                    </a>
+                    <a className="nine-content-left-item-column-text" href="https://tidycal.com/dialedweb/discoverycall" target="_blank" >
+                        <p className="description grey">Twitter</p>
+                    </a>
+                </div>
+            </div>
+            <div className="form-contact-box-border" />
+            <div className="form-contact-box-content">
+                <p className="description white">Socials:</p>
+                <div className="nine-content-left-item-column">
+                    <a className="nine-content-left-item-column-text" href="mailto:admin@dialedweb.com" >
+                        <p className="description grey">info@heavecorp.com</p>
+                    </a>
+                </div>
+            </div>
+          </div>
         </div>
-      </div>
     </section>
   );
 };

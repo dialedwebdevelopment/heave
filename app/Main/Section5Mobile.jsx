@@ -98,7 +98,7 @@ export const Section5Mobile = () => {
     <section className="five-mobile">
 
       <div className="textbox five-mobile-textbox">
-        <h1 className="subheadline white" ref={titleRef} >Some of the brands we&apos;ve worked with</h1>
+        <h1 className="subheadline white" ref={titleRef} >Some of the <span className="blue" >brands</span> we&apos;ve worked with</h1>
       </div>
 
       <div className="five-mobile-carousel" ref={emblaRef} >

@@ -19,6 +19,8 @@ import { Environment, Float } from "@react-three/drei";
 import Model from "./Plane3D/Model";
 import { Section9 } from "./section9";
 import { Section5Mobile } from "./Section5Mobile";
+import { Section7Mobile } from "./Section7Mobile";
+import { Section9Mobile } from "./Section9Mobile";
 
 const Main = () => {
 
@@ -232,7 +234,6 @@ const Main = () => {
                 <Model />
             </Float>
           </Suspense>
-          {/* <ambientLight /> */}
           <Environment preset="studio" environmentIntensity={0.75} />
         </Canvas>
       </div>
@@ -260,10 +261,12 @@ const Main = () => {
         </div>
         <div id="section7" >
           <Section7 lenis={lenis} />
+          <Section7Mobile />
         </div>
         <div id="section9" >
           <Section9 />
         </div>
+        <Section9Mobile />
         <SectionFooter />
       </div>
     </ReactLenis>

@@ -35,19 +35,18 @@ export const Section2 = (options) => {
 
   return (
     <section className="section two">
+      <div className="section-border"></div>
       <div className="two-content">
         <div className="two-content-left">
-          <div className="textbox">
+          <div className="textbox two-textbox">
             <h1 className="subheadline white" ref={titleRef} >Making Short-Form <br /> Content That <span className="blue" >Engages</span> <br /> and <span className="blue" >Converts</span></h1>
-            <div className="two-button-row">
-              <button data-hover className="two-button" ref={buttonRef} >
-                <p className="description" >Let us tell you more</p>
-                <div className="two-circle-button">
-                  <ChevronRight className="two-icon" />
-                </div>
-                <div data-hover-bounds></div>
-              </button>
-            </div>
+            <button data-hover className="two-button" ref={buttonRef} >
+              <p className="description" >Let us tell you more</p>
+              <div className="two-circle-button">
+                <ChevronRight className="two-icon" />
+              </div>
+              <div data-hover-bounds></div>
+            </button>
           </div>
         </div>
         <div className="two-content-right">

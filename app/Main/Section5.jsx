@@ -38,7 +38,7 @@ export const Section5 = () => {
     <section ref={targetRef} className="five">
       <div className="five-sticky">
         <div className="five-sticky-text-contents">
-          <h1 className="subheadline white" ref={titleRef} >Some of the brands we've worked with</h1>
+          <h1 className="subheadline white" ref={titleRef} >Some of the <span className="blue" >brands we've worked with</span></h1>
         </div>
         <motion.div style={{ x }} className="five-sticky-content">
           <div className="five-card-invisible" />

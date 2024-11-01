@@ -23,23 +23,19 @@ export const Section1 = ({loadingAnimationFinished}) => {
   gsap.set(imageRef2.current, { yPercent: 50, zIndex: 1 });
   gsap.set(imageRef3.current, { yPercent: 50, zIndex: 1 });
   gsap.set(imageRef4.current, { yPercent: 50, zIndex: 1 });
-  // gsap.set(titleRef.current, { opacity: 0 });
-  // gsap.set(boxTextRef.current, { opacity: 0 });
   gsap.set(typewriterRef1.current, { opacity: 0 });
   gsap.set(typewriterRef2.current, { opacity: 0 });
   gsap.set(typewriterRef3.current, { opacity: 0 });
 
   useEffect(() => {
-      // gsap.set(titleRef.current, { opacity: 1 });
-      // gsap.set(boxTextRef.current, { opacity: 1 });
-      const split = new SplitText(titleRef.current, { type: "chars" });
-      gsap.fromTo(split.chars, { 'will-change': 'opacity, transform', opacity: 0, scale: 0.6, rotationZ: () => gsap.utils.random(-20,20)}, { delay: 3, ease: 'power4', opacity: 1, scale: 1, rotation: 0, stagger: 0.065 });
-      const boxTextRefSplit = new SplitText(boxTextRef.current, { type: "chars" });
-      gsap.fromTo(boxTextRefSplit.chars, { 'will-change': 'opacity, transform', opacity: 0, scale: 0.6, rotationZ: () => gsap.utils.random(-20,20)}, { delay: 3.5, ease: 'power4', opacity: 1, scale: 1, rotation: 0, stagger: 0.065 });
-      gsap.fromTo(imageRef1.current, { yPercent: 50 }, { delay: 3, yPercent: 0, duration: 0.75, ease: "power2" })
-      gsap.fromTo(imageRef2.current, { yPercent: 50 }, { delay: 3.2, yPercent: 0, duration: 0.5, ease: "power2" })
-      gsap.fromTo(imageRef3.current, { yPercent: 50 }, { delay: 3.35, yPercent: 0, duration: 0.5, ease: "power2" })
-      gsap.fromTo(imageRef4.current, { yPercent: 50 }, { delay: 3.5, yPercent: 0, duration: 0.5, ease: "power2" })
+    const split = new SplitText(titleRef.current, { type: "chars" });
+    gsap.fromTo(split.chars, { 'will-change': 'opacity, transform', opacity: 0, scale: 0.6, rotationZ: () => gsap.utils.random(-20,20)}, { delay: 3, ease: 'power4', opacity: 1, scale: 1, rotation: 0, stagger: 0.065 });
+    const boxTextRefSplit = new SplitText(boxTextRef.current, { type: "chars" });
+    gsap.fromTo(boxTextRefSplit.chars, { 'will-change': 'opacity, transform', opacity: 0, scale: 0.6, rotationZ: () => gsap.utils.random(-20,20)}, { delay: 3.5, ease: 'power4', opacity: 1, scale: 1, rotation: 0, stagger: 0.065 });
+    gsap.fromTo(imageRef1.current, { yPercent: 50 }, { delay: 3, yPercent: 0, duration: 0.75, ease: "power2" })
+    gsap.fromTo(imageRef2.current, { yPercent: 50 }, { delay: 3.2, yPercent: 0, duration: 0.5, ease: "power2" })
+    gsap.fromTo(imageRef3.current, { yPercent: 50 }, { delay: 3.35, yPercent: 0, duration: 0.5, ease: "power2" })
+    gsap.fromTo(imageRef4.current, { yPercent: 50 }, { delay: 3.5, yPercent: 0, duration: 0.5, ease: "power2" })
   }, [])
 
   useEffect(() => {
@@ -48,100 +44,6 @@ export const Section1 = ({loadingAnimationFinished}) => {
     gsap.fromTo(imageRef3.current, { yPercent: 0 }, { yPercent: 0, scrollTrigger: { trigger: ".one-image-trigger", start: "top bottom", end: "bottom top", scrub: true } })
     gsap.fromTo(imageRef4.current, { yPercent: 0 }, { yPercent: 15, scrollTrigger: { trigger: ".one-image-trigger", start: "top bottom", end: "bottom top", scrub: true } })
   }, [])
-
-  useEffect(() => {
-      gsap.set(typewriterRef1.current, { opacity: 1 });
-      gsap.set(typewriterRef2.current, { opacity: 1, display: "none" });
-      gsap.set(typewriterRef3.current, { opacity: 1, display: "none" });
-
-      const typewriterLetters1 = new SplitText(typewriterRef1.current, { type: "chars" });
-      const typewriterLetters2 = new SplitText(typewriterRef2.current, { type: "chars" });
-      const typewriterLetters3 = new SplitText(typewriterRef3.current, { type: "chars" });
-
-      // Create a GSAP timeline
-      const tl = gsap.timeline({ repeat: -1, delay: 0.6 }); // Loop indefinitely
-
-      // Animation for typewriterLetters1
-      tl
-      .fromTo(typewriterLetters1.chars, {
-        'will-change': 'opacity, transform',
-        opacity: 0,
-        scale: 0.6,
-        rotationZ: () => gsap.utils.random(-20, 20)
-      }, {
-        ease: 'power4',
-        opacity: 1,
-        scale: 1,
-        rotation: 0,
-        stagger: 0.065
-      })
-      .to(typewriterLetters1.chars, {
-        delay: 2,
-        ease: 'power4',
-        opacity: 0,
-        scale: 0.6,
-        rotationZ: () => gsap.utils.random(-20, 20),
-        stagger: -0.065,
-        onComplete: () => {
-          gsap.set(typewriterRef1.current, { display: 'none' });
-          gsap.set(typewriterRef2.current, { display: 'flex' });
-        }
-      })
-
-      // Animation for typewriterLetters2
-      .fromTo(typewriterLetters2.chars, {
-        'will-change': 'opacity, transform',
-        opacity: 0,
-        scale: 0.6,
-        rotationZ: () => gsap.utils.random(-20, 20)
-      }, {
-        ease: 'power4',
-        opacity: 1,
-        scale: 1,
-        rotation: 0,
-        stagger: 0.065
-      }, "<+=0.7") // Start after typewriterLetters1 finishes
-
-      .to(typewriterLetters2.chars, {
-        delay: 2,
-        ease: 'power4',
-        opacity: 0,
-        scale: 0.6,
-        rotationZ: () => gsap.utils.random(-20, 20),
-        stagger: -0.065,
-        onComplete: () => {
-          gsap.set(typewriterRef2.current, { display: 'none' });
-          gsap.set(typewriterRef3.current, { display: 'flex' });
-        }
-      })
-
-      // Animation for typewriterLetters3
-      .fromTo(typewriterLetters3.chars, {
-        'will-change': 'opacity, transform',
-        opacity: 0,
-        scale: 0.6,
-        rotationZ: () => gsap.utils.random(-20, 20)
-      }, {
-        ease: 'power4',
-        opacity: 1,
-        scale: 1,
-        rotation: 0,
-        stagger: 0.065
-      }, "<+=0.7") // Start after typewriterLetters2 finishes
-
-      .to(typewriterLetters3.chars, {
-        delay: 2,
-        ease: 'power4',
-        opacity: 0,
-        scale: 0.6,
-        rotationZ: () => gsap.utils.random(-20, 20),
-        stagger: -0.065,
-        onComplete: () => {
-          gsap.set(typewriterRef3.current, { display: 'none' });
-          gsap.set(typewriterRef1.current, { display: 'flex' });
-        }
-      });
-  }, []);
 
 
 
