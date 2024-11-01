@@ -28,13 +28,9 @@ const Main = () => {
     window.scrollTo(0, 0);
   }, [])
 
-  const [loadingAnimationFinished, setLoadingAnimationFinished] = useState(null);
   const sectionRef = useRef()
 
   useLayoutEffect(() => {
-    setTimeout(() => {
-      setLoadingAnimationFinished(true)
-    }, [3000])
     gsap.fromTo(sectionRef.current, { opacity: 1 }, { opacity: 0, pointerEvents: "none", duration: 0.5, delay: 3, onComplete: () => {sectionRef.current.style.display = "none";} })
   }, [])
 
@@ -49,12 +45,10 @@ const Main = () => {
   }, [lenis]);
 
   useEffect(() => {
-    if (loadingAnimationFinished) {
-      setTimeout(() => {
-        lenis?.start();
-      }, 100);
-    }
-  }, [loadingAnimationFinished, lenis]);
+    setTimeout(() => {
+      lenis?.start();
+    }, 100);
+  }, [lenis]);
 
   useEffect(() => {
     class Cursor {
@@ -221,9 +215,10 @@ const Main = () => {
 
   return (
     <ReactLenis root>
-      <div class="cursor"></div>
+      <div class="cursor" />
       <section className="loading-video" ref={sectionRef} >
         <div className="loading-video-content">
+          <div className="loading-video-top-fade" />
           <div className="loading-video-bottom-fade" />
           <div className="loading-video-left-fade" />
           <div className="loading-video-right-fade" />
@@ -243,7 +238,7 @@ const Main = () => {
       </div>
       <div className="main-sections" >
         <div id="section1" >
-          <Section1 loadingAnimationFinished={loadingAnimationFinished} />
+          <Section1 />
         </div>
         <div id="section2" >
           <Section2 />

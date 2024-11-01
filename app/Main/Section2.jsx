@@ -104,7 +104,7 @@ export const Section2 = (options) => {
                 </div>
               </div>
             </div>
-            <div className="two-carousel" ref={emblaRef3} >
+            <div className="two-carousel two-carousel-hidden" ref={emblaRef3} >
               <div className="two-row">
                 <div className="two-item" >
                   {/* <Image src="/images/heavephone.png" className="two-item-image" alt="alt" width={1000} height={1000} /> */}

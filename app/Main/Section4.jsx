@@ -42,7 +42,7 @@ export const Section4 = () => {
 
   useEffect(() => {
     const titleSplitText = new SplitText(titleRef.current, { type: 'chars' });
-    gsap.fromTo(titleSplitText.chars, { opacity: 0 }, { opacity: 1, stagger: 0.01, scrollTrigger: { trigger: titleRef.current, start: "top bottom", end: "bottom center", scrub: true } })
+    gsap.fromTo(titleSplitText.words, { opacity: 0 }, { opacity: 1, stagger: 0.05, duration: 1, scrollTrigger: { trigger: titleRef.current, start: "top 95%" } })
     gsap.fromTo(descriptionRef.current, { opacity: 0 }, { opacity: 1, scrollTrigger: { trigger: descriptionRef.current, start: "top 80%", end: "top 50%", scrub: true  } })
     gsap.fromTo(boxRef1.current, { yPercent: 25, opacity: 0, willChange: 'filter, transform', filter: 'blur(10px)' }, { yPercent: 0, opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: boxRef1.current, start: "top bottom"  } })
     gsap.fromTo(boxRef2.current, { yPercent: 25, opacity: 0, willChange: 'filter, transform', filter: 'blur(10px)' }, { delay: isMobile ? 0 : 0.25, yPercent: 0, opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: boxRef2.current, start: "top bottom"  } })
@@ -109,6 +109,7 @@ export const Section4 = () => {
           </div>
           </div>
         </div>
+      <div className="section-border"></div>
     </section>
   );
 };

@@ -1,6 +1,5 @@
 import "./globals.css";
 import { Navigation } from "./Navigation";
-import { LoadingVideo } from "./LoadingVideo";
 
 export const metadata = {
   title: "Heave",

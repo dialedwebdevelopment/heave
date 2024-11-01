@@ -1,9 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 "use client";
-import { ArrowDown, ChevronDown, Menu } from "lucide-react";
 import Image from "next/image";
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
 import gsap from "gsap";
 import Link from "next/link";
 
@@ -11,10 +9,7 @@ export const Navigation = () => {
 
     const navigationBar = useRef()
     const navigationMenu = useRef()
-    const navigationMenuContent = useRef()
     const navigationBackground = useRef()
-    const [menuOpen, setMenuOpen] = useState(false);
-    const [isAnimating, setIsAnimating] = useState(false);
 
     // GSAP ANIMATIONS
 
@@ -24,59 +19,8 @@ export const Navigation = () => {
     }, []);
 
     useLayoutEffect(() => {
-        gsap.fromTo(navigationBar.current, { yPercent: -100, opacity: 0 }, { delay: 4, yPercent: 0, opacity: 1, duration: 0.5 })
+        gsap.fromTo(navigationBar.current, { yPercent: -100, opacity: 0 }, { delay: 3.5, yPercent: 0, opacity: 1, duration: 0.5 })
     }, [])
-
-    const handleMenuClick = () => {
-        if (isAnimating) return;
-
-        setMenuOpen(prevMenuOpen => {
-            const newMenuOpen = !prevMenuOpen;
-
-            setIsAnimating(true); // Start animating
-
-            if (newMenuOpen) {
-                // Open Menu Animation
-                gsap.fromTo(
-                    navigationMenu.current,
-                    { xPercent: 100 },
-                    { xPercent: 0, pointerEvents: "auto", duration: 0.5, ease: "power2.out", onComplete: () => setIsAnimating(false) }
-                );
-                gsap.fromTo(
-                    navigationMenuContent.current,
-                    { opacity: 0 },
-                    { opacity: 1, duration: 1.5, ease: "power2.out" }
-                );
-                gsap.fromTo(
-                    navigationBackground.current,
-                    { opacity: 0, pointerEvents: "none" },
-                    { opacity: 1, pointerEvents: "auto", duration: 0.5, ease: "power2.out" }
-                );
-            } else {
-                // Close Menu Animation
-                gsap.to(navigationMenu.current, {
-                    xPercent: 100,
-                    duration: 0.5,
-                    ease: "power2.in",
-                    onComplete: () => setIsAnimating(false)
-                });
-                gsap.to(navigationMenuContent.current, { opacity: 0, duration: 0.5, ease: "power2.in" });
-                gsap.to(navigationBackground.current, { opacity: 0, pointerEvents: "none", duration: 0.5, ease: "power2.in" });
-            }
-
-            return newMenuOpen;
-        });
-    };
-
-    // NAVIGATION
-
-    const handleClick = (linkUrl) => {
-        window.open(linkUrl, '_blank');
-    };
-
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
 
     // SCROLLED
 
@@ -99,10 +43,25 @@ export const Navigation = () => {
       };
     }, []);
 
-    const scrollToSection = (sectionId) => {
+    const scrollToSectionCenter = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          const sectionRect = section.getBoundingClientRect();
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          const offset = sectionRect.top + scrollTop - (window.innerHeight / 2) + (sectionRect.height / 2);
+      
+          window.scrollTo({
+            top: offset,
+            behavior: "smooth",
+          });
+        }
+    };
+
+    const scrollToSectionTop = (sectionId) => {
         const section = document.getElementById(sectionId);
         section?.scrollIntoView({ behavior: "smooth" });
-      };
+    };
+      
 
   return (
     <div className={`navigation ${navScrolled ? "scrolled" : ""}`} ref={navigationBar} >
@@ -113,19 +72,19 @@ export const Navigation = () => {
                 </div>
             </Link>
             <ul className="navigation-menu">
-                <li className="navigation-menu-row" onClick={() => scrollToSection("section1")} >
+                <li className="navigation-menu-row" onClick={() => scrollToSectionTop("section1")} >
                     <h1 className="small-description white hover-text-white" >Home</h1>
                 </li>
-                <li className="navigation-menu-row" onClick={() => scrollToSection("section2")} >
+                <li className="navigation-menu-row" onClick={() => scrollToSectionCenter("section2")} >
                     <h1 className="small-description white hover-text-white" >Services</h1>
                 </li>
-                <li className="navigation-menu-row" onClick={() => scrollToSection("section3")} >
+                <li className="navigation-menu-row" onClick={() => scrollToSectionCenter("section3")} >
                     <h1 className="small-description white hover-text-white" >Case Studies</h1>
                 </li>
-                <li className="navigation-menu-row" onClick={() => scrollToSection("section4")} >
+                <li className="navigation-menu-row" onClick={() => scrollToSectionCenter("section4")} >
                     <h1 className="small-description white hover-text-white" >Process</h1>
                 </li>
-                <li className="navigation-menu-row" onClick={() => scrollToSection("section5")} >
+                <li className="navigation-menu-row" onClick={() => scrollToSectionTop("section5")} >
                     <h1 className="small-description white hover-text-white" >Contact</h1>
                 </li>
             </ul>
@@ -137,11 +96,6 @@ export const Navigation = () => {
                     <span className="small-description">Contact Us</span>
                 </div>
                 <div data-hover-bounds></div>
-            </div>
-            <div className="navigation-round-button">
-                <div className="navigation-right-menu-line" />
-                <div className="navigation-right-menu-line" />
-                <div className="navigation-right-menu-line" />
             </div>
         </div>
     </div>

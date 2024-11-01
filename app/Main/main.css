@@ -613,7 +613,7 @@
 .seven-border {
     height: 310vh;
     width: 1px;
-    background-color: rgba(255, 255, 255, 0.075);
+    background-color: #ffffff35;
     margin-top: 5vh;
 }
 
@@ -920,7 +920,7 @@ input::placeholder {
 .one {
     height: 200vw;
     width: 100%;
-    padding-top: 30vh;
+    padding-top: 40vw;
     overflow: hidden;
 }
 
@@ -951,7 +951,7 @@ input::placeholder {
 
 .one-item-changing-text span {
     justify-content: center;
-    font-size: 17.5vw;
+    font-size: 15vw;
 }
 
 .one-item-changing-text-1 {
@@ -1035,6 +1035,7 @@ input::placeholder {
     width: 100%;
     height: 100vw;
     position: relative;
+    pointer-events: none;
 }
 
 .two-content-right-content {
@@ -1047,10 +1048,14 @@ input::placeholder {
 
 .two-carousel {
     overflow: hidden;
-    width: 33%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     height: fit-content;
+}
+
+.two-carousel-hidden {
+    display: none;
 }
 
 .two-row {
@@ -1061,12 +1066,11 @@ input::placeholder {
 }
 
 .two-item {
-    flex: 0 0 50vh;
-    height: 55vh;
+    flex: 0 0 40vw;
+    height: 80vw;
     padding: 2vh 0;
     cursor: pointer;
     transition: background-color 0.35s ease;
-    background-color: antiquewhite;
 }
 
 .two-item-image {
