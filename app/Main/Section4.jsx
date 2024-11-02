@@ -60,7 +60,7 @@ export const Section4 = () => {
       }));
     };
 
-    const interval = setInterval(updateNumbers, 4000); // Update every 4 seconds
+    const interval = setInterval(updateNumbers, 1500); // Update every 4 seconds
     return () => clearInterval(interval); // Cleanup interval on unmount
   }, []);
 

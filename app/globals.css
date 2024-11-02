@@ -540,11 +540,13 @@ body {
 
 .loading-video {
   height: 225vw;
+  justify-content: start;
+  padding-top: 70vw;
 }
 
 .loading-video-content {
   width: 75%;
-  height: 75%;
+  height: auto;
 }
 
 .loading-video-bottom-fade {
@@ -563,7 +565,7 @@ body {
 .loading-video-content-video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* TEXTS */

@@ -675,6 +675,10 @@
     padding-bottom: 0vh;
 }
 
+.eight-mobile {
+    display: none;
+}
+
 .eight-content {
     display: flex;
     flex-direction: column;
@@ -1030,7 +1034,7 @@ input::placeholder {
 }
 
 .two-button {
-    width: 90%;
+    width: 60%;
     height: 7.5vw;
     padding: 0 2.5vw;
     padding-right: 1.5vw;
@@ -1075,7 +1079,7 @@ input::placeholder {
 
 .two-row {
     flex-direction: column;
-    height: 100vw;
+    height: 300vw;
 }
 
 .two-item {
@@ -1119,11 +1123,15 @@ input::placeholder {
 
 .three-image {
     width: 5vw;
-    height: 5vw;
+    height: 4vw;
 }
 
 .three-image-3 {
-    width: 15vw;
+    width: 10vw;
+}
+
+.three-subheadline {
+    font-size: 5vw;
 }
 
 /* 4 */
@@ -1310,13 +1318,21 @@ input::placeholder {
 /* 8 */
 
 .eight {
+    display: none;
+}
+
+.eight-mobile {
+    display: flex;
+    flex-direction: column;
     height: fit-content;
-    padding-bottom: 0;
+    position: relative;
+    width: 100%;
 }
 
 .eight-content {
     gap: 2.5vw;
     padding: 25vw 0;
+    width: 100%;
 }
 
 .eight-slider-item {
