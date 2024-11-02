@@ -53,6 +53,7 @@ const Main = () => {
   }, [lenis]);
 
   useEffect(() => {
+    if (window.innerWidth > 768) {
     class Cursor {
       constructor(targetEl) {
         this.el = targetEl;
@@ -213,7 +214,9 @@ const Main = () => {
     gsap.ticker.add(update);
     window.addEventListener("pointermove", onMouseMove);
     window.addEventListener("resize", onResize);
-  })
+
+    }
+  }, [])
 
   return (
     <ReactLenis root>

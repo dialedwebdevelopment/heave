@@ -447,7 +447,7 @@ body {
 
 .navigation-image {
   height: 5vw;
-  width: fit-content;
+  width: auto;
   pointer-events: auto;
   cursor: pointer;
 }
