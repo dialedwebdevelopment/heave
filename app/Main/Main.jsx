@@ -21,6 +21,7 @@ import { Section9 } from "./section9";
 import { Section5Mobile } from "./Section5Mobile";
 import { Section7Mobile } from "./Section7Mobile";
 import { Section9Mobile } from "./Section9Mobile";
+import { Section2Mobile } from "./Section2Mobile";
 
 const Main = () => {
 
@@ -247,6 +248,7 @@ const Main = () => {
         <div id="section2" >
           <Section2 />
         </div>
+        <Section2Mobile />
         <div id="section3" >
           <Section3 />
         </div>
