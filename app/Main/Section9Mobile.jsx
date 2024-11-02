@@ -19,7 +19,6 @@ export const Section9Mobile = () => {
 
   const leftRef1 = useRef()
   const leftRef2 = useRef()
-  const leftRef3 = useRef()
 
   // GSAP ANIMATIONS
   useEffect(() => {
@@ -33,9 +32,8 @@ export const Section9Mobile = () => {
     gsap.fromTo(formBox5.current, { opacity: 0, filter: 'blur(10px)' }, { delay: 0, filter: 'blur(0px)', opacity: 1, duration: 0.5, scrollTrigger: { trigger: formBox5.current, start: "top 95%" } })
     gsap.fromTo(formButton.current, { opacity: 0, filter: 'blur(10px)' }, { delay: 0, filter: 'blur(0px)', opacity: 1, duration: 0.5, scrollTrigger: { trigger: formButton.current, start: "top 95%" } })
 
-    gsap.fromTo(leftRef1.current, { opacity: 0, filter: 'blur(10px)' }, { delay: 0.5, filter: 'blur(0px)', opacity: 1, duration: 1, scrollTrigger: { trigger: leftRef1.current, start: "top 95%" } })
-    gsap.fromTo(leftRef2.current, { opacity: 0, filter: 'blur(10px)' }, { delay: 0.5, filter: 'blur(0px)', opacity: 1, duration: 1, scrollTrigger: { trigger: leftRef2.current, start: "top 95%" } })
-    gsap.fromTo(leftRef3.current, { opacity: 0, filter: 'blur(10px)' }, { delay: 0.5, filter: 'blur(0px)', opacity: 1, duration: 1, scrollTrigger: { trigger: leftRef3.current, start: "top 95%" } })
+    gsap.fromTo(leftRef1.current, { opacity: 0, filter: 'blur(10px)' }, { filter: 'blur(0px)', opacity: 1, duration: 1, scrollTrigger: { trigger: leftRef1.current, start: "top 95%" } })
+    gsap.fromTo(leftRef2.current, { opacity: 0, filter: 'blur(10px)' }, { filter: 'blur(0px)', opacity: 1, duration: 1, scrollTrigger: { trigger: leftRef2.current, start: "top 95%" } })
   }, [])
 
   // NAVIGATION
@@ -82,12 +80,11 @@ export const Section9Mobile = () => {
             <input ref={formBox3} type="text" name="company" placeholder="Company..." required value={formData.company} onChange={handleChange} />
             <input ref={formBox4} type="text" name="position" placeholder="Position..." required value={formData.position} onChange={handleChange} />
             <input ref={formBox5} type="text" name="message" placeholder="Anything else to add?" required value={formData.message} onChange={handleChange} />
-            <button data-hover ref={formButton} className="form-button" type="submit">
+            <button ref={formButton} className="form-button" type="submit">
               <p className="description">Submit</p>
-              <div data-hover-bounds></div>
             </button>
           </form>
-          <div className="form-contact-box">
+          <div className="form-contact-box" ref={leftRef2} >
             <div className="form-contact-box-content">
                 <p className="description white">Socials:</p>
                 <div className="nine-content-left-item-column">

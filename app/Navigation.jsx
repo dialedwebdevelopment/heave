@@ -76,21 +76,21 @@ export const Navigation = () => {
                     <h1 className="small-description white hover-text-white" >Home</h1>
                 </li>
                 <li className="navigation-menu-row" onClick={() => scrollToSectionCenter("section2")} >
-                    <h1 className="small-description white hover-text-white" >Services</h1>
-                </li>
-                <li className="navigation-menu-row" onClick={() => scrollToSectionCenter("section3")} >
-                    <h1 className="small-description white hover-text-white" >Case Studies</h1>
-                </li>
-                <li className="navigation-menu-row" onClick={() => scrollToSectionCenter("section4")} >
-                    <h1 className="small-description white hover-text-white" >Process</h1>
+                    <h1 className="small-description white hover-text-white" >About</h1>
                 </li>
                 <li className="navigation-menu-row" onClick={() => scrollToSectionTop("section5")} >
+                    <h1 className="small-description white hover-text-white" >Case Studies</h1>
+                </li>
+                <li className="navigation-menu-row" onClick={() => scrollToSectionTop("section7")} >
+                    <h1 className="small-description white hover-text-white" >Process</h1>
+                </li>
+                <li className="navigation-menu-row" onClick={() => scrollToSectionCenter("section9")} >
                     <h1 className="small-description white hover-text-white" >Contact</h1>
                 </li>
             </ul>
         </div>
         <div className="navigation-right">
-            <div data-hover className="navigation-button">
+            <div data-hover className="navigation-button" onClick={() => scrollToSectionCenter("section9")} >
                 <div className="button-content">
                     <span className="small-description">Contact Us</span>
                     <span className="small-description">Contact Us</span>
