@@ -1010,7 +1010,7 @@ input::placeholder {
     flex-direction: column;
     justify-content: space-between;
     height: fit-content;
-    gap: 15vw;
+    gap: 0vw;
     padding: 0 5vw;
 }
 
@@ -1074,12 +1074,13 @@ input::placeholder {
 }
 
 .two-row {
-    height: 300vw;
+    flex-direction: row;
+    height: 100vw;
 }
 
 .two-item {
-    flex: 0 0 40vw;
-    height: 80vw;
+    flex: 0 0 50vw;
+    height: 100vw;
     padding: 0;
     cursor: pointer;
     transition: background-color 0.35s ease;
