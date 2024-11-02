@@ -1058,12 +1058,12 @@ input::placeholder {
     height: 100vw;
     display: flex;
     flex-direction: row;
-    transform: rotate(0) translateY(0) translateX(0);
+    transform: rotate(27.5deg) translateY(0) translateX(2.5vw);
 }
 
 .two-carousel {
     overflow: hidden;
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     height: fit-content;

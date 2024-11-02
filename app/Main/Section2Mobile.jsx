@@ -13,11 +13,13 @@ export const Section2Mobile = () => {
 
   const titleRef = useRef()
   const buttonRef = useRef()
+  const sliderWrapperRef = useRef()
 
   useEffect(() => {
     const titleSplitText = new SplitText(titleRef.current, { type: 'words' });
     gsap.fromTo(titleSplitText.words, { opacity: 0 }, { opacity: 1, stagger: 0.05, duration: 1, scrollTrigger: { trigger: titleRef.current, start: "top 95%" } })
     gsap.fromTo(buttonRef.current, { opacity: 0 }, { opacity: 1, duration: 1, scrollTrigger: { trigger: buttonRef.current, start: "top 95%" } })
+    gsap.fromTo(sliderWrapperRef.current, { rotate: "27.5deg", translateY: "-30vh", translateX: "2.5vw" }, { rotate: "0deg", translateY: "0vh", translateX: "0vw", scrollTrigger: { trigger: ".two-content-right", start: "top bottom", end: "bottom top", scrub: true } })
   }, [])
 
   // CAROUSEL
@@ -45,7 +47,7 @@ export const Section2Mobile = () => {
           <div className="right-fade" />
           <div className="top-fade" />
           <div className="bottom-fade" />
-          <div className="two-content-right-content" >
+          <div className="two-content-right-content" ref={sliderWrapperRef} >
             <div className="two-carousel" ref={emblaRef} >
               <div className="two-row">
                 <div className="two-item" >
