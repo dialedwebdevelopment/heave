@@ -21,9 +21,9 @@ export const Section2Mobile = () => {
   }, [])
 
   // CAROUSEL
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, watchDrag: false}, [AutoScroll({speed: 2 })] )
+  const [emblaRef, emblaApi] = useEmblaCarousel({axis: "y", loop: true, watchDrag: false}, [AutoScroll({speed: 2 })] )
 
-//   const [emblaRef2, emblaApi2] = useEmblaCarousel({axis: "y", loop: true, watchDrag: false}, [AutoScroll({speed: -2 })] )
+  const [emblaRef2, emblaApi2] = useEmblaCarousel({axis: "y", loop: true, watchDrag: false}, [AutoScroll({speed: -2 })] )
 
   return (
     <section className="section two-mobile">
@@ -65,7 +65,7 @@ export const Section2Mobile = () => {
                 </div>
               </div>
             </div>
-            {/* <div className="two-carousel" ref={emblaRef2} >
+            <div className="two-carousel" ref={emblaRef2} >
               <div className="two-row">
                 <div className="two-item" >
                   <video src="/videos/heavevideo6.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
@@ -83,7 +83,7 @@ export const Section2Mobile = () => {
                   <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>

@@ -1010,7 +1010,7 @@ input::placeholder {
     flex-direction: column;
     justify-content: space-between;
     height: fit-content;
-    gap: 0vw;
+    gap: 10vw;
     padding: 0 5vw;
 }
 
@@ -1074,7 +1074,7 @@ input::placeholder {
 }
 
 .two-row {
-    flex-direction: row;
+    flex-direction: column;
     height: 100vw;
 }
 
