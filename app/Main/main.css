@@ -1141,10 +1141,12 @@ input::placeholder {
     padding-top: 25vw;
     height: fit-content;
     gap: 25vw;
+    overflow: hidden;
 }
 
 .four-content {
     gap: 5vw;
+    overflow: hidden;
 }
 
 .four-textbox {
@@ -1155,6 +1157,7 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     gap: 2.5vw;
+    overflow: hidden;
 }
 
 .four-content-item {
@@ -1260,6 +1263,7 @@ input::placeholder {
     padding: 0 5vw;
     gap: 2.5vw;
     display: flex;
+    overflow: hidden;
 }
 
 .seven-content {
@@ -1270,6 +1274,7 @@ input::placeholder {
     overflow: visible;
     padding-top: 25vw;
     gap: 5vw;
+    overflow: hidden;
 }
 
 .seven-mobile-subtitle {
@@ -1282,6 +1287,7 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     gap: 2.5vw;
+    overflow: hidden;
 }
 
 .seven-mobile-item {
@@ -1361,6 +1367,9 @@ input::placeholder {
     padding: 0 5vw;
     padding-top: 25vw;
     height: fit-content;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
 .nine-content {

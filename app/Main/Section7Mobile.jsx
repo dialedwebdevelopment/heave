@@ -22,9 +22,9 @@ export const Section7Mobile = () => {
         const titleSplitText = new SplitText(titleRef.current, { type: 'words' });
         gsap.fromTo(titleSplitText.words, { opacity: 0 }, { opacity: 1, stagger: 0.05, duration: 1, scrollTrigger: { trigger: titleRef.current, start: "top 95%" } })
 
-        gsap.fromTo(boxRef1.current, { opacity: 0, filter: 'blur(10px)' }, { opacity: 1, filter: 'blur(0px)', duration: 1, scrollTrigger: { trigger: boxRef1.current, start: "top 95%" } })
-        gsap.fromTo(boxRef2.current, { opacity: 0, filter: 'blur(10px)' }, { opacity: 1, filter: 'blur(0px)', duration: 1, scrollTrigger: { trigger: boxRef2.current, start: "top 95%" } })
-        gsap.fromTo(boxRef3.current, { opacity: 0, filter: 'blur(10px)' }, { opacity: 1, filter: 'blur(0px)', duration: 1, scrollTrigger: { trigger: boxRef3.current, start: "top 95%" } })
+        gsap.fromTo(boxRef1.current, { opacity: 0, willChange: 'filter, transform', filter: 'blur(10px)' }, { opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: boxRef1.current, start: "top 95%" } })
+        gsap.fromTo(boxRef2.current, { opacity: 0, willChange: 'filter, transform', filter: 'blur(10px)' }, { opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: boxRef2.current, start: "top 95%" } })
+        gsap.fromTo(boxRef3.current, { opacity: 0, willChange: 'filter, transform', filter: 'blur(10px)' }, { opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: boxRef3.current, start: "top 95%" } })
 
     }, [])
 

@@ -61,10 +61,10 @@ export const Section1 = ({loadingAnimationFinished}) => {
         </div>
       </div>
       <div className="one-image">
-          <Image src="/images/main1.png" className="one-image-img" ref={imageRef1} width={2000} height={2000} alt="Main Image" />
-          <Image src="/images/main3.png" className="one-image-img" ref={imageRef2} width={2000} height={2000} alt="Main Image" />
-          <Image src="/images/main2.png" className="one-image-img" ref={imageRef3} width={2000} height={2000} alt="Main Image" />
-          <Image src="/images/main4.png" className="one-image-img" ref={imageRef4} width={2000} height={2000} alt="Main Image" />
+          <Image src="/images/main1.png" className="one-image-img one-image-img-1" ref={imageRef1} width={2000} height={2000} alt="Main Image" />
+          <Image src="/images/main3.png" className="one-image-img one-image-img-2" ref={imageRef2} width={2000} height={2000} alt="Main Image" />
+          <Image src="/images/main2.png" className="one-image-img one-image-img-3" ref={imageRef3} width={2000} height={2000} alt="Main Image" />
+          <Image src="/images/main4.png" className="one-image-img one-image-img-4" ref={imageRef4} width={2000} height={2000} alt="Main Image" />
         </div>
       <div className="one-gradient-background" />
       <div className="one-image-trigger"></div>
