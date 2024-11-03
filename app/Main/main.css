@@ -1382,6 +1382,7 @@ input::placeholder {
     flex-direction: column;
     gap: 5vw;
     padding: 25vw 0;
+    height: fit-content;
 }
 
 .nine-content-left {
@@ -1390,6 +1391,7 @@ input::placeholder {
     flex-direction: column;
     gap: 5vw;
     padding: 0;
+    height: fit-content;
 }
 
 .form-mobile-text-center {

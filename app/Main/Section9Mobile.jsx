@@ -25,12 +25,12 @@ export const Section9Mobile = () => {
     const titleSplitTextMobile = new SplitText(titleRefMobile.current, { type: 'words' });
     gsap.fromTo(titleSplitTextMobile.words, { opacity: 0 }, { opacity: 1, stagger: 0.05, duration: 1, scrollTrigger: { trigger: titleRefMobile.current, start: "top 95%" } })
 
-    gsap.fromTo(formBox1Mobile.current, { opacity: 0, filter: 'blur(10px)' }, { opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: formBox1Mobile.current, start: "top 95%" } })
-    gsap.fromTo(formBox2Mobile.current, { opacity: 0, filter: 'blur(10px)' }, { delay: 0, filter: 'blur(0px)', opacity: 1, duration: 0.5, scrollTrigger: { trigger: formBox2Mobile.current, start: "top 95%" } })
-    gsap.fromTo(formBox3Mobile.current, { opacity: 0, filter: 'blur(10px)' }, { delay: 0, filter: 'blur(0px)', opacity: 1, duration: 0.5, scrollTrigger: { trigger: formBox3Mobile.current, start: "top 95%" } })
-    gsap.fromTo(formBox4Mobile.current, { opacity: 0, filter: 'blur(10px)' }, { delay: 0, filter: 'blur(0px)', opacity: 1, duration: 0.5, scrollTrigger: { trigger: formBox4Mobile.current, start: "top 95%" } })
-    gsap.fromTo(formBox5Mobile.current, { opacity: 0, filter: 'blur(10px)' }, { delay: 0, filter: 'blur(0px)', opacity: 1, duration: 0.5, scrollTrigger: { trigger: formBox5Mobile.current, start: "top 95%" } })
-    gsap.fromTo(formButtonMobile.current, { opacity: 0, filter: 'blur(10px)' }, { delay: 0, filter: 'blur(0px)', opacity: 1, duration: 0.5, scrollTrigger: { trigger: formButtonMobile.current, start: "top 95%" } })
+    gsap.fromTo(formBox1Mobile.current, { opacity: 0, filter: 'blur(10px)' }, { opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: formBox1Mobile.current, start: "top 75%" } })
+    gsap.fromTo(formBox2Mobile.current, { opacity: 0, filter: 'blur(10px)' }, { delay: 0, filter: 'blur(0px)', opacity: 1, duration: 0.5, scrollTrigger: { trigger: formBox2Mobile.current, start: "top 75%" } })
+    gsap.fromTo(formBox3Mobile.current, { opacity: 0, filter: 'blur(10px)' }, { delay: 0, filter: 'blur(0px)', opacity: 1, duration: 0.5, scrollTrigger: { trigger: formBox3Mobile.current, start: "top 75%" } })
+    gsap.fromTo(formBox4Mobile.current, { opacity: 0, filter: 'blur(10px)' }, { delay: 0, filter: 'blur(0px)', opacity: 1, duration: 0.5, scrollTrigger: { trigger: formBox4Mobile.current, start: "top 75%" } })
+    gsap.fromTo(formBox5Mobile.current, { opacity: 0, filter: 'blur(10px)' }, { delay: 0, filter: 'blur(0px)', opacity: 1, duration: 0.5, scrollTrigger: { trigger: formBox5Mobile.current, start: "top 75%" } })
+    gsap.fromTo(formButtonMobile.current, { opacity: 0, filter: 'blur(10px)' }, { delay: 0, filter: 'blur(0px)', opacity: 1, duration: 0.5, scrollTrigger: { trigger: formButtonMobile.current, start: "top 75%" } })
 
     gsap.fromTo(leftRef1Mobile.current, { opacity: 0, filter: 'blur(10px)' }, { filter: 'blur(0px)', opacity: 1, duration: 1, scrollTrigger: { trigger: leftRef1Mobile.current, start: "top 95%" } })
     gsap.fromTo(leftRef2Mobile.current, { opacity: 0, filter: 'blur(10px)' }, { filter: 'blur(0px)', opacity: 1, duration: 1, scrollTrigger: { trigger: leftRef2Mobile.current, start: "top 95%" } })
@@ -76,7 +76,9 @@ export const Section9Mobile = () => {
           <h1 className="subheadline white form-mobile-text-center" ref={titleRefMobile} >Let’s create the <span className="blue" >future together!</span></h1>
           <p ref={leftRef1Mobile} className="description white form-mobile-text-center" >If you want to contact us, feel free to drop us a line or your pitch deck...</p>
           <form className="nine-contactbox" onSubmit={handleSubmit}>
-            <input ref={formBox1Mobile} type="text" name="name" placeholder="Name..." required value={formData.name} onChange={handleChange} />
+            <div ref={formBox1Mobile} >
+            <input type="text" name="name" placeholder="Name..." required value={formData.name} onChange={handleChange} />
+            </div>
             <input ref={formBox2Mobile} type="tel" name="phone" placeholder="Phone number..." required value={formData.phone} onChange={handleChange} />
             <input ref={formBox3Mobile} type="text" name="company" placeholder="Company..." required value={formData.company} onChange={handleChange} />
             <input ref={formBox4Mobile} type="text" name="position" placeholder="Position..." required value={formData.position} onChange={handleChange} />
