@@ -26,11 +26,24 @@ import { Section8Mobile } from "./Section8Mobile";
 
 const Main = () => {
 
+  const [isMobile, setIsMobile] = useState(false);
+
   // SCROLL TO TOP
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [])
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize(); // Check on mount
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const sectionRef = useRef()
 
@@ -232,6 +245,7 @@ const Main = () => {
           <video src="/videos/loadingvideo.mp4" className="loading-video-content-video" autoPlay="autoplay" muted playsInline="true" data-wf-ignore="true" preload="auto" />
         </div>
       </section>
+      {!isMobile && (
       <div className="experience">
         <Canvas style={{ pointerEvents: 'none' }} camera={{ position: [2, 2, 5], fov: 35 }}>
           <Suspense >
@@ -242,6 +256,7 @@ const Main = () => {
           <Environment preset="studio" environmentIntensity={0.75} />
         </Canvas>
       </div>
+      )}
         <div id="section1" >
           <Section1 />
         </div>
