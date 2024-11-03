@@ -1263,15 +1263,14 @@ input::placeholder {
     padding: 0 5vw;
     gap: 2.5vw;
     display: flex;
-    overflow: hidden;
 }
 
 .seven-content {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
-    overflow: visible;
+    height: fit-content;
+    overflow: hidden;
     padding-top: 25vw;
     gap: 5vw;
     overflow: hidden;
@@ -1292,7 +1291,7 @@ input::placeholder {
 
 .seven-mobile-item {
     width: 100%;
-    height: fit-content;
+    height: 75vh;
     padding: 10vw;
     overflow: hidden;
     border-radius: 15px;
@@ -1377,6 +1376,14 @@ input::placeholder {
     flex-direction: column;
     gap: 5vw;
     padding: 25vw 0;
+}
+
+.nine-content-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    padding: 0;
 }
 
 .form-mobile-text-center {

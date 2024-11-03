@@ -268,8 +268,8 @@ const Main = () => {
         <Section8Mobile />
         <div id="section7" >
           <Section7 lenis={lenis} />
-          <Section7Mobile />
         </div>
+        <Section7Mobile />
         <div id="section9" >
           <Section9 />
         </div>

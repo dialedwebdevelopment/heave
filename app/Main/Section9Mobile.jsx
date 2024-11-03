@@ -25,7 +25,7 @@ export const Section9Mobile = () => {
     const titleSplitTextMobile = new SplitText(titleRefMobile.current, { type: 'words' });
     gsap.fromTo(titleSplitTextMobile.words, { opacity: 0 }, { opacity: 1, stagger: 0.05, duration: 1, scrollTrigger: { trigger: titleRefMobile.current, start: "top 95%" } })
 
-    gsap.fromTo(formBox1Mobile.current, { opacity: 0, filter: 'blur(10px)' }, { opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: formBox1Mobile.current, start: "top 95%", markers: false } })
+    gsap.fromTo(formBox1Mobile.current, { opacity: 0, filter: 'blur(10px)' }, { opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: formBox1Mobile.current, start: "top 95%" } })
     gsap.fromTo(formBox2Mobile.current, { opacity: 0, filter: 'blur(10px)' }, { delay: 0, filter: 'blur(0px)', opacity: 1, duration: 0.5, scrollTrigger: { trigger: formBox2Mobile.current, start: "top 95%" } })
     gsap.fromTo(formBox3Mobile.current, { opacity: 0, filter: 'blur(10px)' }, { delay: 0, filter: 'blur(0px)', opacity: 1, duration: 0.5, scrollTrigger: { trigger: formBox3Mobile.current, start: "top 95%" } })
     gsap.fromTo(formBox4Mobile.current, { opacity: 0, filter: 'blur(10px)' }, { delay: 0, filter: 'blur(0px)', opacity: 1, duration: 0.5, scrollTrigger: { trigger: formBox4Mobile.current, start: "top 95%" } })
@@ -72,6 +72,7 @@ export const Section9Mobile = () => {
     <section className="section nine-mobile">
       <div className="section-border" />
       <div className="nine-content">
+        <div className="nine-content-left">
           <h1 className="subheadline white form-mobile-text-center" ref={titleRefMobile} >Let’s create the <span className="blue" >future together!</span></h1>
           <p ref={leftRef1Mobile} className="description white form-mobile-text-center" >If you want to contact us, feel free to drop us a line or your pitch deck...</p>
           <form className="nine-contactbox" onSubmit={handleSubmit}>
@@ -110,6 +111,7 @@ export const Section9Mobile = () => {
             </div>
           </div>
         </div>
+      </div>
     </section>
   );
 };
