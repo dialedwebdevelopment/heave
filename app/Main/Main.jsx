@@ -245,7 +245,7 @@ const Main = () => {
           <video src="/videos/loadingvideo.mp4" className="loading-video-content-video" autoPlay="autoplay" muted playsInline="true" data-wf-ignore="true" preload="auto" />
         </div>
       </section>
-      {!isMobile && (
+      {/* {!isMobile && (
       <div className="experience">
         <Canvas style={{ pointerEvents: 'none' }} camera={{ position: [2, 2, 5], fov: 35 }}>
           <Suspense >
@@ -256,7 +256,7 @@ const Main = () => {
           <Environment preset="studio" environmentIntensity={0.75} />
         </Canvas>
       </div>
-      )}
+      )} */}
         <div id="section1" >
           <Section1 />
         </div>
