@@ -34,9 +34,9 @@ const Main = () => {
 
   const sectionRef = useRef()
 
-  useLayoutEffect(() => {
-    gsap.fromTo(sectionRef.current, { opacity: 1 }, { opacity: 0, pointerEvents: "none", duration: 0.5, delay: 3, onComplete: () => {sectionRef.current.style.display = "none";} })
-  }, [])
+  // useLayoutEffect(() => {
+  //   gsap.fromTo(sectionRef.current, { opacity: 1 }, { opacity: 0, pointerEvents: "none", duration: 0.5, delay: 3, onComplete: () => {sectionRef.current.style.display = "none";} })
+  // }, [])
 
   // LENIS
 

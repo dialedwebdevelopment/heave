@@ -29,13 +29,13 @@ export const Section1 = ({loadingAnimationFinished}) => {
 
   useEffect(() => {
     const split = new SplitText(titleRef.current, { type: "chars" });
-    gsap.fromTo(split.chars, { 'will-change': 'opacity, transform', opacity: 0, scale: 0.6, rotationZ: () => gsap.utils.random(-20,20)}, { delay: 3, ease: 'power4', opacity: 1, scale: 1, rotation: 0, stagger: 0.065 });
+    gsap.fromTo(split.chars, { 'will-change': 'opacity, transform', opacity: 0, scale: 0.6, rotationZ: () => gsap.utils.random(-20,20)}, { delay: 3.25, ease: 'power4', opacity: 1, scale: 1, rotation: 0, stagger: 0.065 });
     const boxTextRefSplit = new SplitText(boxTextRef.current, { type: "chars" });
-    gsap.fromTo(boxTextRefSplit.chars, { 'will-change': 'opacity, transform', opacity: 0, scale: 0.6, rotationZ: () => gsap.utils.random(-20,20)}, { delay: 3.5, ease: 'power4', opacity: 1, scale: 1, rotation: 0, stagger: 0.065 });
-    gsap.fromTo(imageRef1.current, { yPercent: 50 }, { delay: 3, yPercent: 0, duration: 0.75, ease: "power2" })
-    gsap.fromTo(imageRef2.current, { yPercent: 50 }, { delay: 3.2, yPercent: 0, duration: 0.5, ease: "power2" })
-    gsap.fromTo(imageRef3.current, { yPercent: 50 }, { delay: 3.35, yPercent: 0, duration: 0.5, ease: "power2" })
-    gsap.fromTo(imageRef4.current, { yPercent: 50 }, { delay: 3.5, yPercent: 0, duration: 0.5, ease: "power2" })
+    gsap.fromTo(boxTextRefSplit.chars, { 'will-change': 'opacity, transform', opacity: 0, scale: 0.6, rotationZ: () => gsap.utils.random(-20,20)}, { delay: 3.75, ease: 'power4', opacity: 1, scale: 1, rotation: 0, stagger: 0.065 });
+    gsap.fromTo(imageRef1.current, { yPercent: 50 }, { delay: 3.25, yPercent: 0, duration: 0.75, ease: "power2" })
+    gsap.fromTo(imageRef2.current, { yPercent: 50 }, { delay: 3.45, yPercent: 0, duration: 0.5, ease: "power2" })
+    gsap.fromTo(imageRef3.current, { yPercent: 50 }, { delay: 3.55, yPercent: 0, duration: 0.5, ease: "power2" })
+    gsap.fromTo(imageRef4.current, { yPercent: 50 }, { delay: 3.75, yPercent: 0, duration: 0.5, ease: "power2" })
   }, [])
 
   useEffect(() => {
