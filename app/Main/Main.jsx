@@ -51,7 +51,7 @@ const Main = () => {
   useEffect(() => {
     setTimeout(() => {
       lenis?.start();
-    }, 100);
+    }, 4000);
   }, [lenis]);
 
   useEffect(() => {
@@ -242,7 +242,6 @@ const Main = () => {
           <Environment preset="studio" environmentIntensity={0.75} />
         </Canvas>
       </div>
-      <div className="main-sections" >
         <div id="section1" >
           <Section1 />
         </div>
@@ -275,7 +274,6 @@ const Main = () => {
           <Section9Mobile />
         </div>
         <SectionFooter />
-      </div>
     </ReactLenis>
   );
 };

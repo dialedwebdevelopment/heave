@@ -133,14 +133,14 @@ body {
 .subheadline {
   font-size: 3vw;
   margin: 0;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 115%;
 }
 
 .small-subheadline {
   font-size: 2vw;
   margin: 0;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 110%;
 }
 
