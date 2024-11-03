@@ -310,6 +310,13 @@ body {
   background-color: white;
 }
 
+.navigation-button-mobile-hidden {
+  display: flex;
+}
+.navigation-button-desktop-hidden {
+  display: none;
+}
+
 .navigation-button-content {
   transition: 0.5s ease;
   cursor: pointer;
@@ -481,6 +488,13 @@ body {
   height: 7.5vw;
   display: flex;
   padding: 0 2.5vw;
+}
+
+.navigation-button-mobile-hidden {
+  display: none;
+}
+.navigation-button-desktop-hidden {
+  display: flex;
 }
 
 .navigation-button:hover span:nth-child(1) {

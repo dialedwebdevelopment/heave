@@ -51,7 +51,7 @@ export const Section7Mobile = () => {
                         <p className="description white" >This is where the magic happens. We craft a clever, engaging, and humorous meme around the product, designed to tap into current trends and cultural moments, ensuring it catches the attention of your target audience.</p>
                     </div>
                 </div>
-                <div className="seven-mobile-item" ref={boxRef3} >
+                <div className="seven-mobile-item seven-mobile-item-big" ref={boxRef3} >
                     <div className="seven-mobile-item-content">
                         <div className="seven-mobile-item-imageframe">
                             <Image src="/images/RIGHT.jpg" className="seven-image" width={2000} height={2000} alt="Image 1" />

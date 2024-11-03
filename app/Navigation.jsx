@@ -90,12 +90,18 @@ export const Navigation = () => {
             </ul>
         </div>
         <div className="navigation-right">
-            <div data-hover className="navigation-button" onClick={() => scrollToSectionCenter("section9")} >
-                <div className="button-content">
-                    <span className="small-description">Contact Us</span>
-                    <span className="small-description">Contact Us</span>
-                </div>
-                <div data-hover-bounds></div>
+            <div data-hover className="navigation-button navigation-button-mobile-hidden" onClick={() => scrollToSectionCenter("section9")} >
+              <div className="button-content">
+                <span className="small-description">Contact Us</span>
+                <span className="small-description">Contact Us</span>
+              </div>
+              <div data-hover-bounds></div>
+            </div>
+            <div className="navigation-button navigation-button-desktop-hidden" onClick={() => scrollToSectionTop("section9")} >
+              <div className="button-content">
+                <span className="small-description">Contact Us</span>
+                <span className="small-description">Contact Us</span>
+              </div>
             </div>
         </div>
     </div>

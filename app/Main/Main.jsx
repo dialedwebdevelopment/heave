@@ -272,8 +272,8 @@ const Main = () => {
         <Section7Mobile />
         <div id="section9" >
           <Section9 />
+          <Section9Mobile />
         </div>
-        <Section9Mobile />
         <SectionFooter />
       </div>
     </ReactLenis>
