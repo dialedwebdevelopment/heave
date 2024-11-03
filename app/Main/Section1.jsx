@@ -3,7 +3,6 @@ import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Image from "next/image";
-import { Experience } from "./Plane3D/Experience";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 

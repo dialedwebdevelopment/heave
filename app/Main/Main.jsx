@@ -12,7 +12,6 @@ import { Section5 } from "./Section5";
 import { Section6 } from "./Section6";
 import { Section7 } from "./Section7";
 import { Section8 } from "./Section8";
-import { Experience } from "./Plane3D/Experience";
 import { SectionFooter } from "./SectionFooter";
 import { Canvas } from "@react-three/fiber";
 import { Environment, Float } from "@react-three/drei";
@@ -47,9 +46,9 @@ const Main = () => {
 
   const sectionRef = useRef()
 
-  // useLayoutEffect(() => {
-  //   gsap.fromTo(sectionRef.current, { opacity: 1 }, { opacity: 0, pointerEvents: "none", duration: 0.5, delay: 3, onComplete: () => {sectionRef.current.style.display = "none";} })
-  // }, [])
+  useLayoutEffect(() => {
+    gsap.fromTo(sectionRef.current, { opacity: 1 }, { opacity: 0, pointerEvents: "none", duration: 0.5, delay: 3, onComplete: () => {sectionRef.current.style.display = "none";} })
+  }, [])
 
   // LENIS
 
@@ -67,175 +66,177 @@ const Main = () => {
     }, 4000);
   }, [lenis]);
 
-  useEffect(() => {
-    if (window.innerWidth > 768) {
-    class Cursor {
-      constructor(targetEl) {
-        this.el = targetEl;
+  // useEffect(() => {
+  //   // if (window.innerWidth > 768) {
+  //   class Cursor {
+  //     constructor(targetEl) {
+  //       this.el = targetEl;
     
-        this.position = {
-          previous: vec2(-100, -100),
-          current: vec2(-100, -100),
-          target: vec2(-100, -100),
-          lerpAmount: 0.1
-        };
-        this.scale = {
-          previous: 1,
-          current: 1,
-          target: 1,
-          lerpAmount: 0.1
-        };
+  //       this.position = {
+  //         previous: vec2(-100, -100),
+  //         current: vec2(-100, -100),
+  //         target: vec2(-100, -100),
+  //         lerpAmount: 0.1
+  //       };
+  //       this.scale = {
+  //         previous: 1,
+  //         current: 1,
+  //         target: 1,
+  //         lerpAmount: 0.1
+  //       };
     
-        this.isHovered = false;
-        this.hoverEl = null;
+  //       this.isHovered = false;
+  //       this.hoverEl = null;
     
-        this.addListeners();
-      }
+  //       this.addListeners();
+  //     }
     
-      update() {
-        this.position.current.lerp(this.position.target, this.position.lerpAmount);
-        this.scale.current = gsap.utils.interpolate(
-          this.scale.current,
-          this.scale.target,
-          this.scale.lerpAmount
-        );
+  //     update() {
+  //       this.position.current.lerp(this.position.target, this.position.lerpAmount);
+  //       this.scale.current = gsap.utils.interpolate(
+  //         this.scale.current,
+  //         this.scale.target,
+  //         this.scale.lerpAmount
+  //       );
     
-        const delta = this.position.current.clone().sub(this.position.previous);
+  //       const delta = this.position.current.clone().sub(this.position.previous);
     
-        this.position.previous.copy(this.position.current);
-        this.scale.previous = this.scale.current;
+  //       this.position.previous.copy(this.position.current);
+  //       this.scale.previous = this.scale.current;
     
-        gsap.set(this.el, {
-          x: this.position.current.x,
-          y: this.position.current.y
-        });
+  //       gsap.set(this.el, {
+  //         x: this.position.current.x,
+  //         y: this.position.current.y
+  //       });
     
-        if (!this.isHovered) {
-          const angle = Math.atan2(delta.y, delta.x) * (180 / Math.PI);
-          const distance = Math.sqrt(delta.x * delta.x + delta.y * delta.y) * 0.04;
+  //       if (!this.isHovered) {
+  //         const angle = Math.atan2(delta.y, delta.x) * (180 / Math.PI);
+  //         const distance = Math.sqrt(delta.x * delta.x + delta.y * delta.y) * 0.04;
     
-          gsap.set(this.el, {
-            rotate: angle,
-            scaleX: this.scale.current + Math.min(distance, 1),
-            scaleY: this.scale.current - Math.min(distance, 0.3)
-          });
-        }
-      }
+  //         gsap.set(this.el, {
+  //           rotate: angle,
+  //           scaleX: this.scale.current + Math.min(distance, 1),
+  //           scaleY: this.scale.current - Math.min(distance, 0.3)
+  //         });
+  //       }
+  //     }
     
-      updateTargetPosition(x, y) {
-        if (this.isHovered) {
-          const bounds = this.hoverEl.getBoundingClientRect();
+  //     updateTargetPosition(x, y) {
+  //       if (this.isHovered) {
+  //         const bounds = this.hoverEl.getBoundingClientRect();
     
-          const cx = bounds.x + bounds.width / 2;
-          const cy = bounds.y + bounds.height / 2;
+  //         const cx = bounds.x + bounds.width / 2;
+  //         const cy = bounds.y + bounds.height / 2;
     
-          const dx = x - cx;
-          const dy = y - cy;
+  //         const dx = x - cx;
+  //         const dy = y - cy;
     
-          this.position.target.x = cx + dx * 0.15;
-          this.position.target.y = cy + dy * 0.15;
-          this.scale.target = 2;
+  //         this.position.target.x = cx + dx * 0.15;
+  //         this.position.target.y = cy + dy * 0.15;
+  //         this.scale.target = 2;
     
-          const angle = Math.atan2(dy, dx) * (180 / Math.PI);
-          const distance = Math.sqrt(dx * dx + dy * dy) * 0.01;
+  //         const angle = Math.atan2(dy, dx) * (180 / Math.PI);
+  //         const distance = Math.sqrt(dx * dx + dy * dy) * 0.01;
     
-          gsap.set(this.el, { rotate: angle });
-          gsap.to(this.el, {
-            scaleX: this.scale.target + Math.pow(Math.min(distance, 0.6), 3) * 3,
-            scaleY: this.scale.target - Math.pow(Math.min(distance, 0.3), 3) * 3,
-            duration: 0.5,
-            ease: "power4.out",
-            overwrite: true
-          });
-        } else {
-          this.position.target.x = x;
-          this.position.target.y = y;
-          this.scale.target = 1;
-        }
-      }
+  //         gsap.set(this.el, { rotate: angle });
+  //         gsap.to(this.el, {
+  //           scaleX: this.scale.target + Math.pow(Math.min(distance, 0.6), 3) * 3,
+  //           scaleY: this.scale.target - Math.pow(Math.min(distance, 0.3), 3) * 3,
+  //           duration: 0.5,
+  //           ease: "power4.out",
+  //           overwrite: true
+  //         });
+  //       } else {
+  //         this.position.target.x = x;
+  //         this.position.target.y = y;
+  //         this.scale.target = 1;
+  //       }
+  //     }
     
-      addListeners() {
-        gsap.utils.toArray("[data-hover]").forEach((hoverEl) => {
-          // set hover states
-          {
-            const hoverBoundsEl = hoverEl.querySelector("[data-hover-bounds]");
-            hoverBoundsEl.addEventListener("pointerover", () => {
-              this.isHovered = true;
-              this.hoverEl = hoverBoundsEl;
-            });
-            hoverBoundsEl.addEventListener("pointerout", () => {
-              this.isHovered = false;
-              this.hoverEl = null;
-            });
-          }
+  //     addListeners() {
+  //       gsap.utils.toArray("[data-hover]").forEach((hoverEl) => {
+  //         // set hover states
+  //         {
+  //           const hoverBoundsEl = hoverEl.querySelector("[data-hover-bounds]");
+  //           hoverBoundsEl.addEventListener("pointerover", () => {
+  //             this.isHovered = true;
+  //             this.hoverEl = hoverBoundsEl;
+  //           });
+  //           hoverBoundsEl.addEventListener("pointerout", () => {
+  //             this.isHovered = false;
+  //             this.hoverEl = null;
+  //           });
+  //         }
     
-          // magnetic effect
-          {
-            const xTo = gsap.quickTo(hoverEl, "x", {
-              duration: 1,
-              ease: "elastic.out(1, 0.3)"
-            });
-            const yTo = gsap.quickTo(hoverEl, "y", {
-              duration: 1,
-              ease: "elastic.out(1, 0.3)"
-            });
+  //         // magnetic effect
+  //         {
+  //           const xTo = gsap.quickTo(hoverEl, "x", {
+  //             duration: 1,
+  //             ease: "elastic.out(1, 0.3)"
+  //           });
+  //           const yTo = gsap.quickTo(hoverEl, "y", {
+  //             duration: 1,
+  //             ease: "elastic.out(1, 0.3)"
+  //           });
     
-            hoverEl.addEventListener("pointermove", (event) => {
-              const { clientX: cx, clientY: cy } = event;
-              const { height, width, left, top } = hoverEl.getBoundingClientRect();
-              const x = cx - (left + width / 2);
-              const y = cy - (top + height / 2);
-              xTo(x * 0.2);
-              yTo(y * 0.2);
-            });
+  //           hoverEl.addEventListener("pointermove", (event) => {
+  //             const { clientX: cx, clientY: cy } = event;
+  //             const { height, width, left, top } = hoverEl.getBoundingClientRect();
+  //             const x = cx - (left + width / 2);
+  //             const y = cy - (top + height / 2);
+  //             xTo(x * 0.2);
+  //             yTo(y * 0.2);
+  //           });
     
-            hoverEl.addEventListener("pointerout", () => {
-              xTo(0);
-              yTo(0);
-            });
-          }
-        });
-      }
-    }
+  //           hoverEl.addEventListener("pointerout", () => {
+  //             xTo(0);
+  //             yTo(0);
+  //           });
+  //         }
+  //       });
+  //     }
+  //   }
     
-    const cursor = new Cursor(document.querySelector(".cursor"));
+  //   const cursor = new Cursor(document.querySelector(".cursor"));
     
-    const cta = document.querySelector(".cta");
-    const menuBtn = document.querySelector(".menu-btn");
+  //   const cta = document.querySelector(".cta");
+  //   const menuBtn = document.querySelector(".menu-btn");
     
-    onResize();
+  //   onResize();
     
-    function update() {
-      cursor.update();
-    }
+  //   function update() {
+  //     cursor.update();
+  //   }
     
-    function onMouseMove(event) {
-      const x = event.clientX;
-      const y = event.clientY;
+  //   function onMouseMove(event) {
+  //     const x = event.clientX;
+  //     const y = event.clientY;
     
-      cursor.updateTargetPosition(x, y);
-    }
+  //     cursor.updateTargetPosition(x, y);
+  //   }
     
-    function onResize() {
-      if (menuBtn) {
-        const { x, y, width, height } = menuBtn.getBoundingClientRect();
-        gsap.set(menuBtn, {
-          left: x - width,
-          top: y + height,
-        });
-      }
-    }
+  //   function onResize() {
+  //     if (menuBtn) {
+  //       const { x, y, width, height } = menuBtn.getBoundingClientRect();
+  //       gsap.set(menuBtn, {
+  //         left: x - width,
+  //         top: y + height,
+  //       });
+  //     }
+  //   }
     
-    gsap.ticker.add(update);
-    window.addEventListener("pointermove", onMouseMove);
-    window.addEventListener("resize", onResize);
+  //   gsap.ticker.add(update);
+  //   window.addEventListener("pointermove", onMouseMove);
+  //   window.addEventListener("resize", onResize);
 
-    }
-  }, [])
+  //   // }
+  // }, [])
 
   return (
     <ReactLenis root>
-      <div class="cursor" />
+      {/* {!isMobile && (
+        <div class="cursor" />
+      )} */}
       <section className="loading-video" ref={sectionRef} >
         <div className="loading-video-content">
           <div className="loading-video-top-fade" />
@@ -263,7 +264,7 @@ const Main = () => {
         <div id="section2" >
           <Section2 />
         </div>
-        <Section2Mobile />
+        {/* <Section2Mobile /> */}
         <div id="section3" >
           <Section3 />
         </div>
@@ -280,10 +281,10 @@ const Main = () => {
           <Section8 />
         </div>
         <Section8Mobile />
-        <div id="section7" >
+        {/* <div id="section7" >
           <Section7 lenis={lenis} />
         </div>
-        <Section7Mobile />
+        <Section7Mobile /> */}
         <div id="section9" >
           <Section9 />
           <Section9Mobile />
