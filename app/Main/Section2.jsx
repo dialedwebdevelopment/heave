@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { Suspense, useEffect, useLayoutEffect, useRef } from "react";
+import React, { Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -27,6 +27,66 @@ export const Section2 = (options) => {
       gsap.fromTo(sliderWrapperRef.current, { rotate: "27.5deg", translateY: "-30vh", translateX: "2.5vw" }, { rotate: "0deg", translateY: "0vh", translateX: "0vw", scrollTrigger: { trigger: ".two-content-right", start: "top bottom", end: "bottom top", scrub: true } })
     }
   }, [])
+
+  const [video1, setVideo1] = useState(null);
+  const [video2, setVideo2] = useState(null);
+  const [video3, setVideo3] = useState(null);
+  const [video4, setVideo4] = useState(null);
+  const [video5, setVideo5] = useState(null);
+
+  useEffect(() => {
+    // Preload video elements individually
+    setVideo1(
+      <video
+        src="/videos/heavevideo1.mp4"
+        muted
+        playsInline
+        loop
+        preload="auto"
+      />
+    );
+
+    setVideo2(
+      <video
+        src="/videos/heavevideo2.mp4"
+        muted
+        playsInline
+        loop
+        preload="auto"
+      />
+    );
+
+    setVideo3(
+      <video
+        src="/videos/heavevideo3.mp4"
+        muted
+        playsInline
+        loop
+        preload="auto"
+      />
+    );
+
+    setVideo4(
+      <video
+        src="/videos/heavevideo4.mp4"
+        muted
+        playsInline
+        loop
+        preload="auto"
+      />
+    );
+
+    setVideo5(
+      <video
+        src="/videos/heavevideo5.mp4"
+        muted
+        playsInline
+        loop
+        preload="auto"
+      />
+    );
+  }, []);
+
 
   // CAROUSEL
   const [emblaRef, emblaApi] = useEmblaCarousel({axis: "y", loop: true, watchDrag: false}, [AutoScroll({speed: 2 })] )
@@ -60,57 +120,117 @@ export const Section2 = (options) => {
             <div className="two-carousel" ref={emblaRef} >
               <div className="two-row">
                 <div className="two-item" >
-                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  {video1 && React.cloneElement(video1, {
+                    className: 'two-item-image',
+                    autoPlay: true,
+                    'data-wf-ignore': 'true'
+                  })}
                 </div>
                 <div className="two-item" >
-                  <video src="/videos/heavevideo2.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  {video2 && React.cloneElement(video2, {
+                    className: 'two-item-image',
+                    autoPlay: true,
+                    'data-wf-ignore': 'true'
+                  })}
                 </div>
                 <div className="two-item" >
-                  <video src="/videos/heavevideo3.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  {video3 && React.cloneElement(video3, {
+                    className: 'two-item-image',
+                    autoPlay: true,
+                    'data-wf-ignore': 'true'
+                  })}
                 </div>
                 <div className="two-item" >
-                  <video src="/videos/heavevideo4.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  {video4 && React.cloneElement(video4, {
+                    className: 'two-item-image',
+                    autoPlay: true,
+                    'data-wf-ignore': 'true'
+                  })}
                 </div>
                 <div className="two-item" >
-                  <video src="/videos/heavevideo5.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  {video5 && React.cloneElement(video5, {
+                    className: 'two-item-image',
+                    autoPlay: true,
+                    'data-wf-ignore': 'true'
+                  })}
                 </div>
               </div>
             </div>
             <div className="two-carousel" ref={emblaRef2} >
               <div className="two-row">
-                <div className="two-item" >
-                  <video src="/videos/heavevideo6.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+              <div className="two-item" >
+                  {video1 && React.cloneElement(video1, {
+                    className: 'two-item-image',
+                    autoPlay: true,
+                    'data-wf-ignore': 'true'
+                  })}
                 </div>
                 <div className="two-item" >
-                  <video src="/videos/heavevideo7.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  {video2 && React.cloneElement(video2, {
+                    className: 'two-item-image',
+                    autoPlay: true,
+                    'data-wf-ignore': 'true'
+                  })}
                 </div>
                 <div className="two-item" >
-                  <video src="/videos/heavevideo8.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  {video3 && React.cloneElement(video3, {
+                    className: 'two-item-image',
+                    autoPlay: true,
+                    'data-wf-ignore': 'true'
+                  })}
                 </div>
                 <div className="two-item" >
-                  <video src="/videos/heavevideo9.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  {video4 && React.cloneElement(video4, {
+                    className: 'two-item-image',
+                    autoPlay: true,
+                    'data-wf-ignore': 'true'
+                  })}
                 </div>
                 <div className="two-item" >
-                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  {video5 && React.cloneElement(video5, {
+                    className: 'two-item-image',
+                    autoPlay: true,
+                    'data-wf-ignore': 'true'
+                  })}
                 </div>
               </div>
             </div>
             <div className="two-carousel two-carousel-hidden" ref={emblaRef3} >
               <div className="two-row">
-                <div className="two-item" >
-                  <video src="/videos/heavevideo5.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+              <div className="two-item" >
+                  {video1 && React.cloneElement(video1, {
+                    className: 'two-item-image',
+                    autoPlay: true,
+                    'data-wf-ignore': 'true'
+                  })}
                 </div>
                 <div className="two-item" >
-                  <video src="/videos/heavevideo4.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  {video2 && React.cloneElement(video2, {
+                    className: 'two-item-image',
+                    autoPlay: true,
+                    'data-wf-ignore': 'true'
+                  })}
                 </div>
                 <div className="two-item" >
-                  <video src="/videos/heavevideo3.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  {video3 && React.cloneElement(video3, {
+                    className: 'two-item-image',
+                    autoPlay: true,
+                    'data-wf-ignore': 'true'
+                  })}
                 </div>
                 <div className="two-item" >
-                  <video src="/videos/heavevideo2.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  {video4 && React.cloneElement(video4, {
+                    className: 'two-item-image',
+                    autoPlay: true,
+                    'data-wf-ignore': 'true'
+                  })}
                 </div>
                 <div className="two-item" >
-                  <video src="/videos/heavevideo1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+                  {video5 && React.cloneElement(video5, {
+                    className: 'two-item-image',
+                    autoPlay: true,
+                    'data-wf-ignore': 'true'
+                  })}
                 </div>
               </div>
             </div>
