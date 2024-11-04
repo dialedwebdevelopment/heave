@@ -24,23 +24,10 @@ import { Section8Mobile } from "./Section8Mobile";
 
 const Main = () => {
 
-  const [isMobile, setIsMobile] = useState(false);
-
   // SCROLL TO TOP
 
   useEffect(() => {
     window.scrollTo(0, 0);
-
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    handleResize(); // Check on mount
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
   }, []);
 
   const sectionRef = useRef()

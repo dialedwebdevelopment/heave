@@ -65,7 +65,6 @@ export const Section1 = () => {
           <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main2.webp?v=1730738900292" width={2000} height={1000} className="one-image-img" ref={imageRef3} alt="Main Image" />
           <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main4.webp?v=1730738905467" width={2000} height={1000} className="one-image-img" ref={imageRef4} alt="Main Image" />
         </div>
-      <div className="one-gradient-background" />
       <div className="one-image-trigger"></div>
     </section>
   );
