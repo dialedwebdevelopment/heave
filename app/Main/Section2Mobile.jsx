@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, { Suspense, useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -22,65 +22,6 @@ export const Section2Mobile = () => {
     gsap.fromTo(buttonRef.current, { opacity: 0 }, { opacity: 1, duration: 1, scrollTrigger: { trigger: buttonRef.current, start: "top 95%" } })
     gsap.fromTo(sliderWrapperRef.current, { rotate: "27.5deg" }, { rotate: "0deg", scrollTrigger: { trigger: ".two-mobile", start: "top bottom", end: "bottom top", scrub: true } })
   }, [])
-
-  const [video1, setVideo1] = useState(null);
-  const [video2, setVideo2] = useState(null);
-  const [video3, setVideo3] = useState(null);
-  const [video4, setVideo4] = useState(null);
-  const [video5, setVideo5] = useState(null);
-
-  useEffect(() => {
-    // Preload video elements individually
-    setVideo1(
-      <video
-        src="/videos/heavevideo1.mp4"
-        muted
-        playsInline
-        loop
-        preload="auto"
-      />
-    );
-
-    setVideo2(
-      <video
-        src="/videos/heavevideo2.mp4"
-        muted
-        playsInline
-        loop
-        preload="auto"
-      />
-    );
-
-    setVideo3(
-      <video
-        src="/videos/heavevideo3.mp4"
-        muted
-        playsInline
-        loop
-        preload="auto"
-      />
-    );
-
-    setVideo4(
-      <video
-        src="/videos/heavevideo4.mp4"
-        muted
-        playsInline
-        loop
-        preload="auto"
-      />
-    );
-
-    setVideo5(
-      <video
-        src="/videos/heavevideo5.mp4"
-        muted
-        playsInline
-        loop
-        preload="auto"
-      />
-    );
-  }, []);
 
   // CAROUSEL
   const [emblaRef, emblaApi] = useEmblaCarousel({axis: "y", loop: true, watchDrag: false}, [AutoScroll({speed: 2 })] )
@@ -110,79 +51,39 @@ export const Section2Mobile = () => {
           <div className="two-content-right-content" ref={sliderWrapperRef} >
             <div className="two-carousel" ref={emblaRef} >
               <div className="two-row">
-              <div className="two-item" >
-                  {video1 && React.cloneElement(video1, {
-                    className: 'two-item-image',
-                    autoPlay: true,
-                    'data-wf-ignore': 'true'
-                  })}
+                <div className="two-item" >
+                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo1.mp4?v=1730721648346" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
                 <div className="two-item" >
-                  {video2 && React.cloneElement(video2, {
-                    className: 'two-item-image',
-                    autoPlay: true,
-                    'data-wf-ignore': 'true'
-                  })}
+                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo2.mp4?v=1730721652829" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
                 <div className="two-item" >
-                  {video3 && React.cloneElement(video3, {
-                    className: 'two-item-image',
-                    autoPlay: true,
-                    'data-wf-ignore': 'true'
-                  })}
+                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo3.mp4?v=1730721657920" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
                 <div className="two-item" >
-                  {video4 && React.cloneElement(video4, {
-                    className: 'two-item-image',
-                    autoPlay: true,
-                    'data-wf-ignore': 'true'
-                  })}
+                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo4.mp4?v=1730721661781" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
                 <div className="two-item" >
-                  {video5 && React.cloneElement(video5, {
-                    className: 'two-item-image',
-                    autoPlay: true,
-                    'data-wf-ignore': 'true'
-                  })}
+                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo5.mp4?v=1730721665211" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
               </div>
             </div>
             <div className="two-carousel" ref={emblaRef2} >
               <div className="two-row">
-              <div className="two-item" >
-                  {video1 && React.cloneElement(video1, {
-                    className: 'two-item-image',
-                    autoPlay: true,
-                    'data-wf-ignore': 'true'
-                  })}
+                <div className="two-item" >
+                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo1.mp4?v=1730721648346" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
                 <div className="two-item" >
-                  {video2 && React.cloneElement(video2, {
-                    className: 'two-item-image',
-                    autoPlay: true,
-                    'data-wf-ignore': 'true'
-                  })}
+                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo2.mp4?v=1730721652829" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
                 <div className="two-item" >
-                  {video3 && React.cloneElement(video3, {
-                    className: 'two-item-image',
-                    autoPlay: true,
-                    'data-wf-ignore': 'true'
-                  })}
+                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo3.mp4?v=1730721657920" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
                 <div className="two-item" >
-                  {video4 && React.cloneElement(video4, {
-                    className: 'two-item-image',
-                    autoPlay: true,
-                    'data-wf-ignore': 'true'
-                  })}
+                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo4.mp4?v=1730721661781" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
                 <div className="two-item" >
-                  {video5 && React.cloneElement(video5, {
-                    className: 'two-item-image',
-                    autoPlay: true,
-                    'data-wf-ignore': 'true'
-                  })}
+                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo5.mp4?v=1730721665211" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
               </div>
             </div>
