@@ -24,12 +24,6 @@ import { Section8Mobile } from "./Section8Mobile";
 
 const Main = () => {
 
-  // SCROLL TO TOP
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   const sectionRef = useRef()
 
   useLayoutEffect(() => {
@@ -184,8 +178,6 @@ const Main = () => {
     }
     
     const cursor = new Cursor(document.querySelector(".cursor"));
-    
-    const cta = document.querySelector(".cta");
     const menuBtn = document.querySelector(".menu-btn");
     
     onResize();
@@ -221,7 +213,7 @@ const Main = () => {
   return (
     <ReactLenis root>
       <div className="cursor" />
-      <section className="loading-video" ref={sectionRef} >
+      {/* <section className="loading-video" ref={sectionRef} >
         <div className="loading-video-content">
           <div className="loading-video-top-fade" />
           <div className="loading-video-bottom-fade" />
@@ -229,7 +221,7 @@ const Main = () => {
           <div className="loading-video-right-fade" />
           <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heaveloadingvideo.mp4?v=1730722663143" className="loading-video-content-video" autoPlay="autoplay" muted playsInline="true" />
         </div>
-      </section>
+      </section> */}
       <div className="experience">
         <Canvas style={{ pointerEvents: 'none' }} camera={{ position: [2, 2, 5], fov: 35 }}>
           <Suspense >

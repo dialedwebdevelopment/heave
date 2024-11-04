@@ -18,23 +18,23 @@ export const Section1 = () => {
   const typewriterRef3 = useRef()
   const boxTextRef = useRef()
 
-  gsap.set(imageRef1.current, { yPercent: 50, zIndex: 1 });
-  gsap.set(imageRef2.current, { yPercent: 50, zIndex: 1 });
-  gsap.set(imageRef3.current, { yPercent: 50, zIndex: 1 });
-  gsap.set(imageRef4.current, { yPercent: 50, zIndex: 1 });
-  gsap.set(typewriterRef1.current, { opacity: 0 });
-  gsap.set(typewriterRef2.current, { opacity: 0 });
-  gsap.set(typewriterRef3.current, { opacity: 0 });
+  // gsap.set(imageRef1.current, { yPercent: 50, zIndex: 1 });
+  // gsap.set(imageRef2.current, { yPercent: 50, zIndex: 1 });
+  // gsap.set(imageRef3.current, { yPercent: 50, zIndex: 1 });
+  // gsap.set(imageRef4.current, { yPercent: 50, zIndex: 1 });
+  // gsap.set(typewriterRef1.current, { opacity: 0 });
+  // gsap.set(typewriterRef2.current, { opacity: 0 });
+  // gsap.set(typewriterRef3.current, { opacity: 0 });
 
   useEffect(() => {
     const split = new SplitText(titleRef.current, { type: "chars" });
-    gsap.fromTo(split.chars, { 'will-change': 'opacity, transform', opacity: 0, scale: 0.6, rotationZ: () => gsap.utils.random(-20,20)}, { delay: 4.25, ease: 'power4', opacity: 1, scale: 1, rotation: 0, stagger: 0.065 });
+    gsap.fromTo(split.chars, { 'will-change': 'opacity, transform', opacity: 0, scale: 0.6, rotationZ: () => gsap.utils.random(-20,20)}, { ease: 'power4', opacity: 1, scale: 1, rotation: 0, stagger: 0.065 });
     const boxTextRefSplit = new SplitText(boxTextRef.current, { type: "chars" });
-    gsap.fromTo(boxTextRefSplit.chars, { 'will-change': 'opacity, transform', opacity: 0, scale: 0.6, rotationZ: () => gsap.utils.random(-20,20)}, { delay: 4.75, ease: 'power4', opacity: 1, scale: 1, rotation: 0, stagger: 0.065 });
-    gsap.fromTo(imageRef1.current, { yPercent: 50 }, { delay: 4.25, yPercent: 0, duration: 0.75, ease: "power2" })
-    gsap.fromTo(imageRef2.current, { yPercent: 50 }, { delay: 4.45, yPercent: 0, duration: 0.5, ease: "power2" })
-    gsap.fromTo(imageRef3.current, { yPercent: 50 }, { delay: 4.55, yPercent: 0, duration: 0.5, ease: "power2" })
-    gsap.fromTo(imageRef4.current, { yPercent: 50 }, { delay: 4.75, yPercent: 0, duration: 0.5, ease: "power2" })
+    gsap.fromTo(boxTextRefSplit.chars, { 'will-change': 'opacity, transform', opacity: 0, scale: 0.6, rotationZ: () => gsap.utils.random(-20,20)}, { delay: 0.5, ease: 'power4', opacity: 1, scale: 1, rotation: 0, stagger: 0.065 });
+    gsap.fromTo(imageRef1.current, { yPercent: 50 }, { yPercent: 0, duration: 0.75, ease: "power2" })
+    gsap.fromTo(imageRef2.current, { yPercent: 50 }, { delay: 0.15, yPercent: 0, duration: 0.5, ease: "power2" })
+    gsap.fromTo(imageRef3.current, { yPercent: 50 }, { delay: 0.25, yPercent: 0, duration: 0.5, ease: "power2" })
+    gsap.fromTo(imageRef4.current, { yPercent: 50 }, { delay: 0.35, yPercent: 0, duration: 0.5, ease: "power2" })
   }, [])
 
   useEffect(() => {
@@ -60,11 +60,12 @@ export const Section1 = () => {
         </div>
       </div>
       <div className="one-image">
-          <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main1.webp?v=1730738898250" width={2000} height={1000} className="one-image-img" ref={imageRef1} alt="Main Image" />
-          <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main3.webp?v=1730738903167" width={2000} height={1000} className="one-image-img" ref={imageRef2} alt="Main Image" />
-          <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main2.webp?v=1730738900292" width={2000} height={1000} className="one-image-img" ref={imageRef3} alt="Main Image" />
-          <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main4.webp?v=1730738905467" width={2000} height={1000} className="one-image-img" ref={imageRef4} alt="Main Image" />
+          <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main1.webp?v=1730738898250" width={1000} height={1000} className="one-image-img" ref={imageRef1} alt="Main Image" />
+          <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main3.webp?v=1730738903167" width={1000} height={1000} className="one-image-img" ref={imageRef2} alt="Main Image" />
+          <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main2.webp?v=1730738900292" width={1000} height={1000} className="one-image-img" ref={imageRef3} alt="Main Image" />
+          <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main4.webp?v=1730738905467" width={1000} height={1000} className="one-image-img" ref={imageRef4} alt="Main Image" />
         </div>
+      <div className="one-gradient-background" />
       <div className="one-image-trigger"></div>
     </section>
   );
