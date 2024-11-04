@@ -18,13 +18,13 @@ export const Section1 = () => {
   const typewriterRef3 = useRef()
   const boxTextRef = useRef()
 
-  // gsap.set(imageRef1.current, { yPercent: 50, zIndex: 1 });
-  // gsap.set(imageRef2.current, { yPercent: 50, zIndex: 1 });
-  // gsap.set(imageRef3.current, { yPercent: 50, zIndex: 1 });
-  // gsap.set(imageRef4.current, { yPercent: 50, zIndex: 1 });
-  // gsap.set(typewriterRef1.current, { opacity: 0 });
-  // gsap.set(typewriterRef2.current, { opacity: 0 });
-  // gsap.set(typewriterRef3.current, { opacity: 0 });
+  gsap.set(imageRef1.current, { yPercent: 50, zIndex: 1 });
+  gsap.set(imageRef2.current, { yPercent: 50, zIndex: 1 });
+  gsap.set(imageRef3.current, { yPercent: 50, zIndex: 1 });
+  gsap.set(imageRef4.current, { yPercent: 50, zIndex: 1 });
+  gsap.set(typewriterRef1.current, { opacity: 0 });
+  gsap.set(typewriterRef2.current, { opacity: 0 });
+  gsap.set(typewriterRef3.current, { opacity: 0 });
 
   useEffect(() => {
     const split = new SplitText(titleRef.current, { type: "chars" });
