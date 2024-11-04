@@ -259,9 +259,9 @@ const Main = () => {
         <div id="section1" >
           <Section1 />
         </div>
-        <div id="section2" >
+        {/* <div id="section2" >
           <Section2 />
-        </div>
+        </div> */}
         {/* <Section2Mobile /> */}
         <div id="section3" >
           <Section3 />
