@@ -110,11 +110,9 @@ export const Section7 = () => {
             ref={imageRefs[0]}
             onClick={() => handleAccordionClick(0)}
           >
-            <Image
-              src="/images/LEFT.jpg"
+            <img
+              src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/LEFT.jpg?v=1730724679942"
               className="seven-image"
-              width={2000}
-              height={2000}
               alt="Image 1"
             />
           </div>
@@ -123,11 +121,9 @@ export const Section7 = () => {
             ref={imageRefs[1]}
             onClick={() => handleAccordionClick(1)}
           >
-            <Image
-              src="/images/CENTER.jpg"
+            <img
+              src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/CENTER.jpg?v=1730724689471"
               className="seven-image"
-              width={2000}
-              height={2000}
               alt="Image 2"
             />
           </div>
@@ -136,11 +132,9 @@ export const Section7 = () => {
             ref={imageRefs[2]}
             onClick={() => handleAccordionClick(2)}
           >
-            <Image
-              src="/images/RIGHT.jpg"
+            <img
+              src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/RIGHT.jpg?v=1730724691853"
               className="seven-image"
-              width={2000}
-              height={2000}
               alt="Image 3"
             />
           </div>

@@ -47,7 +47,7 @@ const Main = () => {
   const sectionRef = useRef()
 
   useLayoutEffect(() => {
-    gsap.fromTo(sectionRef.current, { opacity: 1 }, { opacity: 0, pointerEvents: "none", duration: 0.5, delay: 3, onComplete: () => {sectionRef.current.style.display = "none";} })
+    gsap.fromTo(sectionRef.current, { opacity: 1 }, { opacity: 0, pointerEvents: "none", duration: 0.5, delay: 4, onComplete: () => {sectionRef.current.style.display = "none";} })
   }, [])
 
   // LENIS
@@ -235,7 +235,7 @@ const Main = () => {
   return (
     <ReactLenis root>
       {!isMobile && (
-        <div class="cursor" />
+        <div className="cursor" />
       )}
       <section className="loading-video" ref={sectionRef} >
         <div className="loading-video-content">
@@ -243,10 +243,9 @@ const Main = () => {
           <div className="loading-video-bottom-fade" />
           <div className="loading-video-left-fade" />
           <div className="loading-video-right-fade" />
-          <video src="/videos/loadingvideo.mp4" className="loading-video-content-video" autoPlay="autoplay" muted playsInline="true" data-wf-ignore="true" preload="auto" />
+          <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heaveloadingvideo.mp4?v=1730722663143" className="loading-video-content-video" autoPlay="autoplay" muted playsInline="true" />
         </div>
       </section>
-      {!isMobile && (
       <div className="experience">
         <Canvas style={{ pointerEvents: 'none' }} camera={{ position: [2, 2, 5], fov: 35 }}>
           <Suspense >
@@ -257,7 +256,6 @@ const Main = () => {
           <Environment preset="studio" environmentIntensity={0.75} />
         </Canvas>
       </div>
-      )}
         <div id="section1" >
           <Section1 />
         </div>

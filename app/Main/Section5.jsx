@@ -46,7 +46,7 @@ export const Section5 = () => {
             <div className="five-card-content">
               <h1 className="small-subheadline white" >BeReal</h1>
               <div className="five-card-image">
-                <Image src="/images/berealu.png" className="five-card-image-img" width={2000} height={2000} alt="Main Image" />
+                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/berealo.webp?v=1730723858257" className="five-card-image-img" alt="Main Image" />
               </div>
               <p className="description white" >We are passionate about elevating brands by leveraging viral marketing strategies that we have meticulously mastered over the years.</p>
             </div>
@@ -55,7 +55,7 @@ export const Section5 = () => {
             <div className="five-card-content">
               <h1 className="small-subheadline white" >Citizen</h1>
               <div className="five-card-image">
-                <Image src="/images/citizenu.png" className="five-card-image-img" width={2000} height={2000} alt="Main Image" />
+                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/citizeno.webp?v=1730723928778" className="five-card-image-img" alt="Main Image" />
               </div>
               <p className="description white" >We are passionate about elevating brands by leveraging viral marketing strategies that we have meticulously mastered over the years.</p>
             </div>
@@ -64,7 +64,7 @@ export const Section5 = () => {
             <div className="five-card-content">
               <h1 className="small-subheadline white" >Hexclad</h1>
               <div className="five-card-image">
-                <Image src="/images/hexcladu.png" className="five-card-image-img" width={2000} height={2000} alt="Main Image" />
+                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/hexclado.webp?v=1730724122212" className="five-card-image-img" alt="Main Image" />
               </div>
               <p className="description white" >We are passionate about elevating brands by leveraging viral marketing strategies that we have meticulously mastered over the years.</p>
             </div>
@@ -73,7 +73,7 @@ export const Section5 = () => {
             <div className="five-card-content">
               <h1 className="small-subheadline white" >Jack In The Box</h1>
               <div className="five-card-image">
-                <Image src="/images/jackintheboxu.png" className="five-card-image-img" width={2000} height={2000} alt="Main Image" />
+                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/jackintheboxo.webp?v=1730724191639" className="five-card-image-img" alt="Main Image" />
               </div>
               <p className="description white" >We are passionate about elevating brands by leveraging viral marketing strategies that we have meticulously mastered over the years.</p>
             </div>
@@ -82,7 +82,7 @@ export const Section5 = () => {
             <div className="five-card-content">
               <h1 className="small-subheadline white" >Tabs</h1>
               <div className="five-card-image">
-                <Image src="/images/tabsu.png" className="five-card-image-img" width={2000} height={2000} alt="Main Image" />
+                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/tabso.webp?v=1730724243790" className="five-card-image-img" alt="Main Image" />
               </div>
               <p className="description white" >We are passionate about elevating brands by leveraging viral marketing strategies that we have meticulously mastered over the years.</p>
             </div>

@@ -99,7 +99,7 @@
     align-items: center;
     user-select: none;
     animation: rotateText 11s infinite ease-in-out;
-    animation-delay: 3s;
+    animation-delay: 4.5s;
 }
 
 @keyframes rotateText {

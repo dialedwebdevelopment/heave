@@ -28,13 +28,13 @@ export const Section1 = ({loadingAnimationFinished}) => {
 
   useEffect(() => {
     const split = new SplitText(titleRef.current, { type: "chars" });
-    gsap.fromTo(split.chars, { 'will-change': 'opacity, transform', opacity: 0, scale: 0.6, rotationZ: () => gsap.utils.random(-20,20)}, { delay: 3.25, ease: 'power4', opacity: 1, scale: 1, rotation: 0, stagger: 0.065 });
+    gsap.fromTo(split.chars, { 'will-change': 'opacity, transform', opacity: 0, scale: 0.6, rotationZ: () => gsap.utils.random(-20,20)}, { delay: 4.25, ease: 'power4', opacity: 1, scale: 1, rotation: 0, stagger: 0.065 });
     const boxTextRefSplit = new SplitText(boxTextRef.current, { type: "chars" });
-    gsap.fromTo(boxTextRefSplit.chars, { 'will-change': 'opacity, transform', opacity: 0, scale: 0.6, rotationZ: () => gsap.utils.random(-20,20)}, { delay: 3.75, ease: 'power4', opacity: 1, scale: 1, rotation: 0, stagger: 0.065 });
-    gsap.fromTo(imageRef1.current, { yPercent: 50 }, { delay: 3.25, yPercent: 0, duration: 0.75, ease: "power2" })
-    gsap.fromTo(imageRef2.current, { yPercent: 50 }, { delay: 3.45, yPercent: 0, duration: 0.5, ease: "power2" })
-    gsap.fromTo(imageRef3.current, { yPercent: 50 }, { delay: 3.55, yPercent: 0, duration: 0.5, ease: "power2" })
-    gsap.fromTo(imageRef4.current, { yPercent: 50 }, { delay: 3.75, yPercent: 0, duration: 0.5, ease: "power2" })
+    gsap.fromTo(boxTextRefSplit.chars, { 'will-change': 'opacity, transform', opacity: 0, scale: 0.6, rotationZ: () => gsap.utils.random(-20,20)}, { delay: 4.75, ease: 'power4', opacity: 1, scale: 1, rotation: 0, stagger: 0.065 });
+    gsap.fromTo(imageRef1.current, { yPercent: 50 }, { delay: 4.25, yPercent: 0, duration: 0.75, ease: "power2" })
+    gsap.fromTo(imageRef2.current, { yPercent: 50 }, { delay: 4.45, yPercent: 0, duration: 0.5, ease: "power2" })
+    gsap.fromTo(imageRef3.current, { yPercent: 50 }, { delay: 4.55, yPercent: 0, duration: 0.5, ease: "power2" })
+    gsap.fromTo(imageRef4.current, { yPercent: 50 }, { delay: 4.75, yPercent: 0, duration: 0.5, ease: "power2" })
   }, [])
 
   useEffect(() => {
@@ -60,10 +60,10 @@ export const Section1 = ({loadingAnimationFinished}) => {
         </div>
       </div>
       <div className="one-image">
-          <Image src="/images/main1.png" className="one-image-img one-image-img-1" ref={imageRef1} width={2000} height={2000} alt="Main Image" />
-          <Image src="/images/main3.png" className="one-image-img one-image-img-2" ref={imageRef2} width={2000} height={2000} alt="Main Image" />
-          <Image src="/images/main2.png" className="one-image-img one-image-img-3" ref={imageRef3} width={2000} height={2000} alt="Main Image" />
-          <Image src="/images/main4.png" className="one-image-img one-image-img-4" ref={imageRef4} width={2000} height={2000} alt="Main Image" />
+          <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main1.png?v=1730722871143" className="one-image-img" ref={imageRef1} alt="Main Image" />
+          <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main3.png?v=1730722909823" className="one-image-img" ref={imageRef2} alt="Main Image" />
+          <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main2.png?v=1730722905733" className="one-image-img" ref={imageRef3} alt="Main Image" />
+          <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main4.png?v=1730722912703" className="one-image-img" ref={imageRef4} alt="Main Image" />
         </div>
       <div className="one-gradient-background" />
       <div className="one-image-trigger"></div>
