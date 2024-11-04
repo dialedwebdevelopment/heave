@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useLayoutEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -6,7 +6,7 @@ import Image from "next/image";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-export const Section1 = ({loadingAnimationFinished}) => {
+export const Section1 = () => {
 
   const titleRef = useRef()
   const imageRef1 = useRef()
@@ -60,10 +60,10 @@ export const Section1 = ({loadingAnimationFinished}) => {
         </div>
       </div>
       <div className="one-image">
-          <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main1.png?v=1730722871143" className="one-image-img" ref={imageRef1} alt="Main Image" />
-          <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main3.png?v=1730722909823" className="one-image-img" ref={imageRef2} alt="Main Image" />
-          <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main2.png?v=1730722905733" className="one-image-img" ref={imageRef3} alt="Main Image" />
-          <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main4.png?v=1730722912703" className="one-image-img" ref={imageRef4} alt="Main Image" />
+          <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main1.webp?v=1730738898250" width={2000} height={1000} className="one-image-img" ref={imageRef1} alt="Main Image" />
+          <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main3.webp?v=1730738903167" width={2000} height={1000} className="one-image-img" ref={imageRef2} alt="Main Image" />
+          <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main2.webp?v=1730738900292" width={2000} height={1000} className="one-image-img" ref={imageRef3} alt="Main Image" />
+          <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main4.webp?v=1730738905467" width={2000} height={1000} className="one-image-img" ref={imageRef4} alt="Main Image" />
         </div>
       <div className="one-gradient-background" />
       <div className="one-image-trigger"></div>

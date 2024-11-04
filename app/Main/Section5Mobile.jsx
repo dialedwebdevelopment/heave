@@ -21,7 +21,7 @@ export const Section5Mobile = () => {
     const titleSplitText = new SplitText(titleRef.current, { type: 'words' });
     gsap.fromTo(titleSplitText.words, { opacity: 0 }, { opacity: 1, stagger: 0.05, duration: 1, scrollTrigger: { trigger: titleRef.current, start: "top 95%" } })
 
-    // gsap.fromTo(cardRef1.current, { opacity: 0, filter: 'blur(10px)' }, { opacity: 1, filter: 'blur(0px)', duration: 1, scrollTrigger: { trigger: cardRef1.current, start: "top 95%" } })
+    gsap.fromTo(cardRef1.current, { opacity: 0, filter: 'blur(10px)' }, { opacity: 1, filter: 'blur(0px)', duration: 1, scrollTrigger: { trigger: cardRef1.current, start: "top 95%" } })
 
   }, [])
 
@@ -101,9 +101,10 @@ export const Section5Mobile = () => {
         <h1 className="subheadline white" ref={titleRef} >Some of the <span className="blue" >brands</span> we&apos;ve worked with</h1>
       </div>
 
+      <div ref={cardRef1} >
       <div className="five-mobile-carousel" ref={emblaRef} >
         <div className="five-mobile-row">
-          <div className="five-mobile-item" ref={cardRef1} >
+          <div className="five-mobile-item" >
             <div className="five-mobile-item-content">
                 <h1 className="small-subheadline white" >BeReal</h1>
                 <div className="five-card-image">
@@ -149,6 +150,7 @@ export const Section5Mobile = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
 
       <div className="five-mobile-carousel-buttons">

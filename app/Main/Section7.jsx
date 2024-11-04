@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState, useRef, useEffect } from "react";
 import Accordion from "./Accordion"; // Import the Accordion component
-import Image from "next/image";
 import Lenis from "lenis"; // Import Lenis
 import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
@@ -105,69 +104,44 @@ export const Section7 = () => {
         <h1 className="subheadline white" ref={titleRef} >Transforming Simple Ideas into <span className="blue">Viral Sensations</span></h1>
         <div className="seven-content-row">
         <div className="seven-content-left">
-          <div
-            className="seven-content-left-imagebox"
-            ref={imageRefs[0]}
-            onClick={() => handleAccordionClick(0)}
-          >
-            <img
-              src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/LEFT.jpg?v=1730724679942"
-              className="seven-image"
-              alt="Image 1"
-            />
+          <div className="seven-content-left-imagebox" ref={imageRefs[0]} onClick={() => handleAccordionClick(0)} >
+            <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/LEFT.jpg?v=1730724679942" className="seven-image" alt="Image 1" />
           </div>
-          <div
-            className="seven-content-left-imagebox"
-            ref={imageRefs[1]}
-            onClick={() => handleAccordionClick(1)}
-          >
-            <img
-              src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/CENTER.jpg?v=1730724689471"
-              className="seven-image"
-              alt="Image 2"
-            />
+          <div className="seven-content-left-imagebox" ref={imageRefs[1]} onClick={() => handleAccordionClick(1)} >
+            <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/CENTER.jpg?v=1730724689471" className="seven-image" alt="Image 2" />
           </div>
-          <div
-            className="seven-content-left-imagebox"
-            ref={imageRefs[2]}
-            onClick={() => handleAccordionClick(2)}
-          >
-            <img
-              src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/RIGHT.jpg?v=1730724691853"
-              className="seven-image"
-              alt="Image 3"
-            />
+          <div className="seven-content-left-imagebox" ref={imageRefs[2]} onClick={() => handleAccordionClick(2)} >
+            <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/RIGHT.jpg?v=1730724691853" className="seven-image" alt="Image 3" />
           </div>
         </div>
         <div className="seven-border"></div>
         <div className="seven-content-right">
-          {/* Accordion components */}
           <div ref={accordionRef1} >
-          <Accordion
-            index={0}
-            isActive={activeIndex === 0}
-            onToggle={() => handleAccordionClick(0)}
-            title="Product Highlight"
-            content="We start by selecting and showcasing the product that will be at the center of the meme. The goal is to position it in a way that resonates with the audience, making it instantly recognizable and relatable."
-          />
+            <Accordion
+              index={0}
+              isActive={activeIndex === 0}
+              onToggle={() => handleAccordionClick(0)}
+              title="Product Highlight"
+              content="We start by selecting and showcasing the product that will be at the center of the meme. The goal is to position it in a way that resonates with the audience, making it instantly recognizable and relatable."
+            />
           </div>
           <div ref={accordionRef2} >
-          <Accordion
-            index={1}
-            isActive={activeIndex === 1}
-            onToggle={() => handleAccordionClick(1)}
-            title="Meme Magic"
-            content="This is where the magic happens. We craft a clever, engaging, and humorous meme around the product, designed to tap into current trends and cultural moments, ensuring it catches the attention of your target audience."
-          />
+            <Accordion
+              index={1}
+              isActive={activeIndex === 1}
+              onToggle={() => handleAccordionClick(1)}
+              title="Meme Magic"
+              content="This is where the magic happens. We craft a clever, engaging, and humorous meme around the product, designed to tap into current trends and cultural moments, ensuring it catches the attention of your target audience."
+            />
           </div>
           <div ref={accordionRef3} >
-          <Accordion
-            index={2}
-            isActive={activeIndex === 2}
-            onToggle={() => handleAccordionClick(2)}
-            title="Going Viral"
-            content="Finally, we distribute the meme across platforms, leveraging our network of pages with more than 42 million followers to maximize exposure and engagement, ensuring the meme goes viral and reaches its full potential."
-          />
+            <Accordion
+              index={2}
+              isActive={activeIndex === 2}
+              onToggle={() => handleAccordionClick(2)}
+              title="Going Viral"
+              content="Finally, we distribute the meme across platforms, leveraging our network of pages with more than 42 million followers to maximize exposure and engagement, ensuring the meme goes viral and reaches its full potential."
+            />
           </div>
         </div>
         </div>

@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import Image from "next/image";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -35,12 +34,6 @@ export const Section9Mobile = () => {
     gsap.fromTo(leftRef1Mobile.current, { opacity: 0, filter: 'blur(10px)' }, { filter: 'blur(0px)', opacity: 1, duration: 1, scrollTrigger: { trigger: leftRef1Mobile.current, start: "top 95%" } })
     gsap.fromTo(leftRef2Mobile.current, { opacity: 0, filter: 'blur(10px)' }, { filter: 'blur(0px)', opacity: 1, duration: 1, scrollTrigger: { trigger: leftRef2Mobile.current, start: "top 95%" } })
   }, [])
-
-  // NAVIGATION
-
-  const handleClick = (linkUrl) => {
-    window.open(linkUrl, '_blank');
-  };
 
   // CONTACT
   const [formData, setFormData] = useState({

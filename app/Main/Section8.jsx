@@ -39,23 +39,23 @@ function ParallaxText({ children, baseVelocity = 100 }) {
   });
 
   const images = [
-    { src: "/logos/BUCKEDUP.png", alt: "BUCKEDUP Logo" },
-    { src: "/logos/DOORDASH.png", alt: "DOORDASH Logo" },
-    { src: "/logos/DUNKIN.png", alt: "DUNKIN Logo" },
-    { src: "/logos/FASHIONNOVA.png", alt: "FASHIONNOVA Logo" },
-    { src: "/logos/HEXCLAD.png", alt: "HEXCLAD Logo" },
-    { src: "/logos/HINGELOGO.png", alt: "HINGELOGO Logo" },
-    { src: "/logos/JELLYBELLY.png", alt: "JELLYBELLY Logo" },
-    { src: "/logos/JACKINTHEBOX.png", alt: "JACKINTHEBOX Logo" },
-    { src: "/logos/LIQUIDIV.png", alt: "LIQUIDIV Logo" },
-    { src: "/logos/POLYMARKET.png", alt: "POLYMARKET Logo" },
-    { src: "/logos/REEF.png", alt: "REEF Logo" },
-    { src: "/logos/SONIC.webp", alt: "SONIC Logo" },
-    { src: "/logos/TACO BELL.svg", alt: "TACO BELL Logo" },
-    { src: "/logos/TEMU.png", alt: "TEMU Logo" },
-    { src: "/logos/THAI EXPRESS.png", alt: "THAI EXPRESS Logo" },
-    { src: "/logos/LYFT.png", alt: "LYFT Logo" },
-    { src: "/logos/BEREAL.png", alt: "BEREAL Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/BEREAL.webp?v=1730742102983", alt: "BEREAL Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/BUCKEDUP.webp?v=1730742137457", alt: "BUCKEDUP Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/DOORDASH.webp?v=1730742582195", alt: "DOORDASH Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/DUNKIN.webp?v=1730742224537", alt: "DUNKIN Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/FASHIONNOVA.webp?v=1730742244549", alt: "FASHIONNOVA Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/HEXCLAD.webp?v=1730742257966", alt: "HEXCLAD Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/HINGELOGO.webp?v=1730742276687", alt: "HINGELOGO Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/JELLYBELLY.webp?v=1730742305727", alt: "JELLYBELLY Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/JACKINTHEBOX.webp?v=1730742290321", alt: "JACKINTHEBOX Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/LIQUIDIV.webp?v=1730742318894", alt: "LIQUIDIV Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/POLYMARKET.webp?v=1730742377541", alt: "POLYMARKET Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/REEF.webp?v=1730742423440", alt: "REEF Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/SONIC.webp?v=1730742522716", alt: "SONIC Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/TACO%20BELL.svg?v=1730742500132", alt: "TACO BELL Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/TEMU.webp?v=1730742469736", alt: "TEMU Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/THAIEXPRESS.webp?v=1730742438209", alt: "THAI EXPRESS Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/LYFT.webp?v=1730742358847", alt: "LYFT Logo" },
   ];
   
   // Repeat images to not have issues
@@ -66,11 +66,11 @@ function ParallaxText({ children, baseVelocity = 100 }) {
       <motion.div className="eight-slider-inside" style={{ x }}>
         {repeatedImages.map((image, index) => (
           <div className="eight-slider-item" key={index}>
-            <NextImage
+            <img
               src={image.src}
               className="eight-slider-item-image"
               width={500}
-              height={1000}
+              height={500}
               alt={image.alt}
             />
           </div>
@@ -87,7 +87,6 @@ export const Section8 = () => {
       <div className="eight-content">
         <div className="slider-left-fade" />
         <ParallaxText baseVelocity={-1} />
-        {/* <ParallaxText baseVelocity={1} /> */}
         <div className="slider-right-fade" />
       </div>
       <div className="section-border" />

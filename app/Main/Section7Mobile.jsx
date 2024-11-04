@@ -1,8 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState, useRef, useEffect } from "react";
-import Accordion from "./Accordion"; // Import the Accordion component
-import Image from "next/image";
-import Lenis from "lenis"; // Import Lenis
+import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -22,9 +19,9 @@ export const Section7Mobile = () => {
         const titleSplitText = new SplitText(titleRef.current, { type: 'words' });
         gsap.fromTo(titleSplitText.words, { opacity: 0 }, { opacity: 1, stagger: 0.05, duration: 1, scrollTrigger: { trigger: titleRef.current, start: "top 95%" } })
 
-        gsap.fromTo(boxRef1.current, { opacity: 0, willChange: 'filter, transform', filter: 'blur(10px)' }, { opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: boxRef1.current, start: "top 75%" } })
-        gsap.fromTo(boxRef2.current, { opacity: 0, willChange: 'filter, transform', filter: 'blur(10px)' }, { opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: boxRef2.current, start: "top 75%" } })
-        gsap.fromTo(boxRef3.current, { opacity: 0, willChange: 'filter, transform', filter: 'blur(10px)' }, { opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: boxRef3.current, start: "top 75%" } })
+        gsap.fromTo(boxRef1.current, { opacity: 0, willChange: 'filter, transform', filter: 'blur(10px)' }, { opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: boxRef1.current, start: "top 95%" } })
+        gsap.fromTo(boxRef2.current, { opacity: 0, willChange: 'filter, transform', filter: 'blur(10px)' }, { opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: boxRef2.current, start: "top 95%" } })
+        gsap.fromTo(boxRef3.current, { opacity: 0, willChange: 'filter, transform', filter: 'blur(10px)' }, { opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: boxRef3.current, start: "top 95%" } })
 
     }, [])
 

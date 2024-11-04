@@ -9,7 +9,6 @@ import { Section2 } from "./Section2";
 import { Section3 } from "./Section3";
 import { Section4 } from "./Section4";
 import { Section5 } from "./Section5";
-import { Section6 } from "./Section6";
 import { Section7 } from "./Section7";
 import { Section8 } from "./Section8";
 import { SectionFooter } from "./SectionFooter";
@@ -234,9 +233,7 @@ const Main = () => {
 
   return (
     <ReactLenis root>
-      {!isMobile && (
-        <div className="cursor" />
-      )}
+      <div className="cursor" />
       <section className="loading-video" ref={sectionRef} >
         <div className="loading-video-content">
           <div className="loading-video-top-fade" />
@@ -259,10 +256,10 @@ const Main = () => {
         <div id="section1" >
           <Section1 />
         </div>
-        {/* <div id="section2" >
+        <div id="section2" >
           <Section2 />
-        </div> */}
-        {/* <Section2Mobile /> */}
+        </div>
+        <Section2Mobile />
         <div id="section3" >
           <Section3 />
         </div>

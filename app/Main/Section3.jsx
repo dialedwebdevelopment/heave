@@ -3,7 +3,6 @@ import React, { Suspense, useEffect, useLayoutEffect, useRef, useState } from "r
 import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import Image from "next/image";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -14,9 +13,6 @@ export const Section3 = () => {
   const imageRef1 = useRef()
   const imageRef2 = useRef()
   const imageRef3 = useRef()
-  const floatingBoxRef1 = useRef();
-  const floatingBoxRef2 = useRef();
-  const floatingBoxRef3 = useRef();
 
   useEffect(() => {
     const handleResize = () => {
@@ -78,15 +74,9 @@ export const Section3 = () => {
         box3Y += distY3 * speed;
   
         // Apply the calculated transforms
-        if (imageRef1.current) {
-          imageRef1.current.style.transform = `translate(${box1X}px, ${box1Y}px)`;
-        }
-        if (imageRef2.current) {
-          imageRef2.current.style.transform = `translate(${box2X}px, ${box2Y}px)`;
-        }
-        if (imageRef3.current) {
-          imageRef3.current.style.transform = `translate(${box3X}px, ${box3Y}px)`;
-        }
+        imageRef1.current.style.transform = `translate(${box1X}px, ${box1Y}px)`;
+        imageRef2.current.style.transform = `translate(${box2X}px, ${box2Y}px)`;
+        imageRef3.current.style.transform = `translate(${box3X}px, ${box3Y}px)`;
   
         requestAnimationFrame(animate); // Continue the animation loop
       };
@@ -104,7 +94,7 @@ export const Section3 = () => {
   return (
     <section className="section three">
       <div className="three-content">
-        <h1 className="subheadline three-subheadline white" ref={textRef} >We don’t just create campaigns, we <span className="blue" > ignite {!isMobile && <br />} movements</span>. <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavetest.png?v=1730723470922" className="three-image three-image-1" ref={imageRef1} alt="alt" /> Leveraging our <span className="blue" >vast network</span> <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavetest2.png?v=1730723474694" className="three-image three-image-2" ref={imageRef2} alt="alt" /> of influencers and digital platforms, we elevate your brand from concept to<span className="blue" > viral success</span>, <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavetest3.png?v=1730723477134" className="three-image three-image-3" ref={imageRef3} alt="alt" /> keeping your audience captivated and engaged.</h1>
+        <h1 className="subheadline three-subheadline white" ref={textRef} >We don’t just create campaigns, we <span className="blue" > ignite {!isMobile && <br />} movements</span>. <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavetest.png?v=1730723470922" width={500} height={500} className="three-image three-image-1" ref={imageRef1} alt="alt" /> Leveraging our <span className="blue" >vast network</span> <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavetest2.png?v=1730723474694" width={500} height={500} className="three-image three-image-2" ref={imageRef2} alt="alt" /> of influencers and digital platforms, we elevate your brand from concept to<span className="blue" > viral success</span>, <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavetest3.png?v=1730723477134" width={500} height={500} className="three-image three-image-3" ref={imageRef3} alt="alt" /> keeping your audience captivated and engaged.</h1>
       </div>
       <div className="section-border"></div>
     </section>

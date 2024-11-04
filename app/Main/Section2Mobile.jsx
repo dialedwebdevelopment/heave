@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { Suspense, useEffect, useLayoutEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -14,7 +14,6 @@ export const Section2Mobile = () => {
   const titleRef = useRef()
   const buttonRef = useRef()
   const sliderWrapperRef = useRef()
-  const triggerRef = useRef()
 
   useEffect(() => {
     const titleSplitText = new SplitText(titleRef.current, { type: 'words' });
@@ -24,9 +23,9 @@ export const Section2Mobile = () => {
   }, [])
 
   // CAROUSEL
-  const [emblaRef, emblaApi] = useEmblaCarousel({axis: "y", loop: true, watchDrag: false}, [AutoScroll({speed: 2 })] )
+  const [emblaRef] = useEmblaCarousel({axis: "y", loop: true, watchDrag: false}, [AutoScroll({speed: 2 })] )
 
-  const [emblaRef2, emblaApi2] = useEmblaCarousel({axis: "y", loop: true, watchDrag: false}, [AutoScroll({speed: -2 })] )
+  const [emblaRef2] = useEmblaCarousel({axis: "y", loop: true, watchDrag: false}, [AutoScroll({speed: -2 })] )
 
   return (
     <section className="section two-mobile" >

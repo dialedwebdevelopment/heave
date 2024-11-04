@@ -1,38 +1,18 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { motion } from "framer-motion";
-import Image from "next/image";
 import MotionNumber from "motion-number";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 export const Section4 = () => {
-
-  // ISMOBILE
-
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Set the width threshold for mobile
-    };
-
-    handleResize(); // Check on initial render
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
   
   const titleRef = useRef()
-  const descriptionRef = useRef()
   const boxRef1 = useRef()
   const boxRef2 = useRef()
   const boxRef3 = useRef()
-  const boxRef4 = useRef()
 
   useEffect(() => {
     const titleSplitText = new SplitText(titleRef.current, { type: 'words' });
@@ -41,7 +21,7 @@ export const Section4 = () => {
     gsap.fromTo(boxRef1.current, { yPercent: 25, opacity: 0, willChange: 'filter, transform', filter: 'blur(10px)' }, { yPercent: 0, opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: boxRef1.current, start: "top bottom"  } })
     gsap.fromTo(boxRef2.current, { yPercent: 25, opacity: 0, willChange: 'filter, transform', filter: 'blur(10px)' }, { delay: 0.25, yPercent: 0, opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: boxRef1.current, start: "top bottom"  } })
     gsap.fromTo(boxRef3.current, { yPercent: 25, opacity: 0, willChange: 'filter, transform', filter: 'blur(10px)' }, { delay: 0.5, yPercent: 0, opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: boxRef1.current, start: "top bottom"  } })
-  }, [isMobile])
+  }, [])
 
   const [numbers, setNumbers] = useState({
     likes: 340200,

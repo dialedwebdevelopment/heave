@@ -15,55 +15,55 @@ export const Section8Mobile = () => {
       <div className="eight-content">
         <Marquee gradient={true} gradientWidth={50} gradientColor="#010101" speed={100} >
             <div className="eight-slider-item" >
-                <Image src="/logos/BUCKEDUP.png"  className="eight-slider-item-image" width={500} height={1000} alt="alt" />
+                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/BEREAL.webp?v=1730742102983"  className="eight-slider-item-image" width={500} height={500} alt="alt" />
             </div>
             <div className="eight-slider-item" >
-                <Image src="/logos/DOORDASH.png"  className="eight-slider-item-image" width={500} height={1000} alt="alt" />
+                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/BUCKEDUP.webp?v=1730742137457"  className="eight-slider-item-image" width={500} height={500} alt="alt" />
             </div>
             <div className="eight-slider-item" >
-                <Image src="/logos/DUNKIN.png"  className="eight-slider-item-image" width={500} height={1000} alt="alt" />
+                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/DOORDASH.webp?v=1730742582195"  className="eight-slider-item-image" width={500} height={500} alt="alt" />
             </div>
             <div className="eight-slider-item" >
-                <Image src="/logos/FASHIONNOVA.png"  className="eight-slider-item-image" width={500} height={1000} alt="alt" />
+                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/DUNKIN.webp?v=1730742224537"  className="eight-slider-item-image" width={500} height={500} alt="alt" />
             </div>
             <div className="eight-slider-item" >
-                <Image src="/logos/HEXCLAD.png"  className="eight-slider-item-image" width={500} height={1000} alt="alt" />
+                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/FASHIONNOVA.webp?v=1730742244549"  className="eight-slider-item-image" width={500} height={500} alt="alt" />
             </div>
             <div className="eight-slider-item" >
-                <Image src="/logos/HINGELOGO.png"  className="eight-slider-item-image" width={500} height={1000} alt="alt" />
+                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/HEXCLAD.webp?v=1730742257966"  className="eight-slider-item-image" width={500} height={500} alt="alt" />
             </div>
             <div className="eight-slider-item" >
-                <Image src="/logos/JELLYBELLY.png"  className="eight-slider-item-image" width={500} height={1000} alt="alt" />
+                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/HINGELOGO.webp?v=1730742276687"  className="eight-slider-item-image" width={500} height={500} alt="alt" />
             </div>
             <div className="eight-slider-item" >
-                <Image src="/logos/JACKINTHEBOX.png"  className="eight-slider-item-image" width={500} height={1000} alt="alt" />
+                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/JELLYBELLY.webp?v=1730742305727"  className="eight-slider-item-image" width={500} height={500} alt="alt" />
             </div>
             <div className="eight-slider-item" >
-                <Image src="/logos/LIQUIDIV.png"  className="eight-slider-item-image" width={500} height={1000} alt="alt" />
+                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/JACKINTHEBOX.webp?v=1730742290321"  className="eight-slider-item-image" width={500} height={500} alt="alt" />
             </div>
             <div className="eight-slider-item" >
-                <Image src="/logos/POLYMARKET.png"  className="eight-slider-item-image" width={500} height={1000} alt="alt" />
+                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/LIQUIDIV.webp?v=1730742318894"  className="eight-slider-item-image" width={500} height={500} alt="alt" />
             </div>
             <div className="eight-slider-item" >
-                <Image src="/logos/REEF.png"  className="eight-slider-item-image" width={500} height={1000} alt="alt" />
+                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/POLYMARKET.webp?v=1730742377541"  className="eight-slider-item-image" width={500} height={500} alt="alt" />
             </div>
             <div className="eight-slider-item" >
-                <Image src="/logos/SONIC.webp"  className="eight-slider-item-image" width={500} height={1000} alt="alt" />
+                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/REEF.webp?v=1730742423440"  className="eight-slider-item-image" width={500} height={500} alt="alt" />
             </div>
             <div className="eight-slider-item" >
-                <Image src="/logos/TACO BELL.svg"  className="eight-slider-item-image" width={500} height={1000} alt="alt" />
+                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/SONIC.webp?v=1730742522716"  className="eight-slider-item-image" width={500} height={500} alt="alt" />
             </div>
             <div className="eight-slider-item" >
-                <Image src="/logos/TEMU.png"  className="eight-slider-item-image" width={500} height={1000} alt="alt" />
+                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/TACO%20BELL.svg?v=1730742500132"  className="eight-slider-item-image" width={500} height={500} alt="alt" />
             </div>
             <div className="eight-slider-item" >
-                <Image src="/logos/THAI EXPRESS.png"  className="eight-slider-item-image" width={500} height={1000} alt="alt" />
+                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/TEMU.webp?v=1730742469736"  className="eight-slider-item-image" width={500} height={500} alt="alt" />
             </div>
             <div className="eight-slider-item" >
-                <Image src="/logos/LYFT.png"  className="eight-slider-item-image" width={500} height={1000} alt="alt" />
+                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/THAIEXPRESS.webp?v=1730742438209"  className="eight-slider-item-image" width={500} height={500} alt="alt" />
             </div>
             <div className="eight-slider-item" >
-                <Image src="/logos/BEREAL.png"  className="eight-slider-item-image" width={500} height={1000} alt="alt" />
+                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/LYFT.webp?v=1730742358847"  className="eight-slider-item-image" width={500} height={500} alt="alt" />
             </div>
         </Marquee>
       </div>
