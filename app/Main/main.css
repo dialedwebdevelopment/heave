@@ -138,7 +138,7 @@
     font-size: 7.5vw;
     margin: 0;
     font-weight: 600;
-    line-height: 75%;
+    line-height: 100%;
     transform-style: preserve-3d;
 }
 
@@ -946,6 +946,8 @@ input::placeholder {
     flex-direction: column;
     padding-left: 0;
     gap: 2.5vw;
+    height: fit-content;
+    padding: 5vw 2.5vw;
 }
 
 .one-image {
@@ -965,26 +967,35 @@ input::placeholder {
 .one-item-changing-text span {
     justify-content: center;
     font-size: 15vw;
+    font-weight: 600;
+    margin: 0;
+    line-height: 100%;
+    overflow: hidden;
 }
 
 .one-item-changing-text-1 {
     --i: 0;
-    transform: rotateX(calc(90deg * var(--i))) translateZ(7.5vw);
+    transform: rotateX(calc(90deg * var(--i))) translateZ(7.25vw);
 }
 
 .one-item-changing-text-2 {
     --i: 1;
-    transform: rotateX(calc(90deg * var(--i))) translateZ(7.5vw);
+    transform: rotateX(calc(90deg * var(--i))) translateZ(7.25vw);
 }
 
 .one-item-changing-text-3 {
     --i: 2;
-    transform: rotateX(calc(90deg * var(--i))) translateZ(7.5vw);
+    transform: rotateX(calc(90deg * var(--i))) translateZ(7.25vw);
 }
 
 .one-item-changing-text-4 {
     --i: 3;
-    transform: rotateX(calc(90deg * var(--i))) translateZ(7.5vw);
+    transform: rotateX(calc(90deg * var(--i))) translateZ(7.25vw);
+}
+
+.one-item-changing-text:last-child span {
+    background: #010101;
+    color: #5eafff;
 }
 
 /* 2 */
