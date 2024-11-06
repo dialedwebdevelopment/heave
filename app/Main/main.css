@@ -1272,7 +1272,7 @@ input::placeholder {
 .seven-mobile {
     height: fit-content;
     width: 100%;
-    padding: 0 5vw;
+    padding: 0;
     gap: 2.5vw;
     display: flex;
 }
@@ -1289,6 +1289,10 @@ input::placeholder {
 }
 
 .seven-mobile-subtitle {
+    text-align: center;
+}
+
+/* .seven-mobile-subtitle {
     text-align: center;
 }
 
@@ -1336,7 +1340,91 @@ input::placeholder {
     width: 100%;
     height: 100%;
     object-fit: contain;
+} */
+
+.seven-mobile-carousel {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    height: fit-content;
 }
+
+.seven-mobile-row {
+    display: flex;
+    gap: 2.5vw;
+    width: 100%;
+}
+
+.seven-mobile-item-padding {
+    flex: 0 0 2.5vw;
+    min-width: 0;
+}
+
+.seven-mobile-item {
+    flex: 0 0 85vw;
+    min-width: 0;
+    height: 125vw;
+    padding: 10vw;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.075);
+}
+
+.seven-mobile-item-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    gap: 2.5vw;
+}
+
+.seven-mobile-item-imageframe {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.seven-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.seven-mobile-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5vw;
+}
+
+.seven-mobile-bottom-buttons {
+    display: flex;
+    gap: 2.5vw;
+}
+
+.embla__progress {
+    border-radius: 999px;
+    /* box-shadow: inset 0 0 0 0.2rem aqua; */
+    background-color: rgba(255, 255, 255, 0.075);
+    position: relative;
+    height: 1vw;
+    justify-self: flex-end;
+    align-self: center;
+    width: 50vw;
+    max-width: 90%;
+    overflow: hidden;
+  }
+  .embla__progress__bar {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+  }
 
 /* 8 */
 
@@ -1393,7 +1481,7 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     gap: 5vw;
-    padding: 25vw 0;
+    padding: 0;
     height: fit-content;
 }
 

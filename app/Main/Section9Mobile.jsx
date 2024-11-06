@@ -63,7 +63,7 @@ export const Section9Mobile = () => {
 
   return (
     <section className="section nine-mobile">
-      <div className="section-border" />
+      {/* <div className="section-border" /> */}
       <div className="nine-content">
         <div className="nine-content-left">
           <h1 className="subheadline white form-mobile-text-center" ref={titleRefMobile} >Let’s create the <span className="blue" >future together!</span></h1>

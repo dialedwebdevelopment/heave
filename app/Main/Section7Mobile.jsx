@@ -1,8 +1,10 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState, useCallback } from "react";
 import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { PrevButton, NextButton, usePrevNextButtons} from './Carousel/EmblaCarouselArrowButtons'
+import useEmblaCarousel from 'embla-carousel-react'
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -25,11 +27,36 @@ export const Section7Mobile = () => {
 
     }, [])
 
+    const [emblaRef, emblaApi] = useEmblaCarousel({ dragFree: true})
+    const [scrollProgress, setScrollProgress] = useState(0)
+
+    const {
+        prevBtnDisabled,
+        nextBtnDisabled,
+        onPrevButtonClick,
+        onNextButtonClick
+    } = usePrevNextButtons(emblaApi)
+
+    const onScroll = useCallback((emblaApi) => {
+        const progress = Math.max(0, Math.min(1, emblaApi.scrollProgress()))
+        setScrollProgress(progress * 100)
+    }, [])
+
+    useEffect(() => {
+        if (!emblaApi) return
+    
+        onScroll(emblaApi)
+        emblaApi
+          .on('reInit', onScroll)
+          .on('scroll', onScroll)
+          .on('slideFocus', onScroll)
+    }, [emblaApi, onScroll])
+
   return (
     <section className="section seven-mobile">
         <div className="seven-content">
             <h1 className="subheadline white seven-mobile-subtitle" ref={titleRef} >Transforming Simple Ideas into <span className="blue">Viral Sensations</span></h1>
-            <div className="seven-content-column">
+            {/* <div className="seven-content-column">
                 <div className="seven-mobile-item" ref={boxRef1} >
                     <div className="seven-mobile-item-content">
                         <div className="seven-mobile-item-imageframe">
@@ -57,7 +84,54 @@ export const Section7Mobile = () => {
                         <p className="description white" >Finally, we distribute the meme across platforms, leveraging our network of pages with more than 42 million followers to maximize exposure and engagement, ensuring the meme goes viral and reaches its full potential.</p>
                     </div>
                 </div>
+            </div> */}
+            <div className="seven-mobile-carousel" ref={emblaRef} >
+                <div className="seven-mobile-row">
+                    <div className="seven-mobile-item-padding" />
+                    <div className="seven-mobile-item" >
+                        <div className="seven-mobile-item-content">
+                            <div className="seven-mobile-item-imageframe">
+                                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/LEFT.jpg?v=1730724679942" className="seven-image" alt="Image 1" />
+                            </div>
+                            <h2 className="small-subheadline white" >Product Highlight</h2>
+                            <p className="description white" >We start by selecting and showcasing the product that will be at the center of the meme. The goal is to position it in a way that resonates with the audience, making it instantly recognizable and relatable.</p>
+                        </div>
+                    </div>
+                    <div className="seven-mobile-item" >
+                        <div className="seven-mobile-item-content">
+                            <div className="seven-mobile-item-imageframe">
+                                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/CENTER.jpg?v=1730724689471" className="seven-image" alt="Image 1" />
+                            </div>
+                            <h2 className="small-subheadline white" >Meme Magic</h2>
+                            <p className="description white" >This is where the magic happens. We craft a clever, engaging, and humorous meme around the product, designed to tap into current trends and cultural moments, ensuring it catches the attention of your target audience.</p>
+                        </div>
+                    </div>
+                    <div className="seven-mobile-item" >
+                        <div className="seven-mobile-item-content">
+                            <div className="seven-mobile-item-imageframe">
+                                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/RIGHT.jpg?v=1730724691853" className="seven-image" alt="Image 1" />
+                            </div>
+                            <h2 className="small-subheadline white" >Going Viral</h2>
+                            <p className="description white" >Finally, we distribute the meme across platforms, leveraging our network of pages with more than 42 million followers to maximize exposure and engagement, ensuring the meme goes viral and reaches its full potential.</p>
+                        </div>
+                    </div>
+                    <div className="seven-mobile-item-padding" />
+                </div>
             </div>
+
+            <div className="seven-mobile-bottom">
+                <div className="seven-mobile-bottom-buttons">
+                    <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+                    <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+                </div>
+                <div className="embla__progress">
+                    <div
+                        className="embla__progress__bar"
+                        style={{ transform: `translate3d(${scrollProgress}%,0px,0px)` }}
+                    />
+                </div>
+            </div>
+
         </div>
     </section>
   );
