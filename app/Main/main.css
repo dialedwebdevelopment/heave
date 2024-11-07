@@ -220,7 +220,7 @@
 }
 
 .two-button {
-    width: 75%;
+    width: fit-content;
     height: 2.75vw;
     display: flex;
     align-items: center;
@@ -228,6 +228,7 @@
     padding: 0 1vw;
     padding-right: 0.5vw;
     border-radius: 999px;
+    gap: 2.5vw;
     cursor: pointer;
     position: relative;
     border: none;
@@ -1046,10 +1047,11 @@ input::placeholder {
 }
 
 .two-button {
-    width: 50%;
+    width: fit-content;
     height: 7.5vw;
     padding: 0 2.5vw;
     padding-right: 1.5vw;
+    gap: 2.5vw;
 }
 
 .two-circle-button {
