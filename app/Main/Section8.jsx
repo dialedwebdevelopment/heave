@@ -39,23 +39,23 @@ function ParallaxText({ children, baseVelocity = 100 }) {
   });
 
   const images = [
-    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/BEREAL.webp?v=1730742102983", alt: "BEREAL Logo" },
-    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/BUCKEDUP.webp?v=1730742137457", alt: "BUCKEDUP Logo" },
-    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/DOORDASH.webp?v=1730742582195", alt: "DOORDASH Logo" },
-    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/DUNKIN.webp?v=1730742224537", alt: "DUNKIN Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/berealwhite.webp?v=1731073048020", alt: "BEREAL Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/buckedupwhite.webp?v=1731073168839", alt: "BUCKEDUP Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/doordashwhite.webp?v=1731073123398", alt: "DOORDASH Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/dunkinwhite.webp?v=1731073185370", alt: "DUNKIN Logo" },
     { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/FASHIONNOVA2.webp?v=1730837608954", alt: "FASHIONNOVA Logo" },
     { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/HEXCLAD2.webp?v=1730837527138", alt: "HEXCLAD Logo" },
     { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/HINGELOGO2.webp?v=1730837375537", alt: "HINGELOGO Logo" },
-    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/JELLYBELLY.webp?v=1730742305727", alt: "JELLYBELLY Logo" },
-    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/JACKINTHEBOX.webp?v=1730742290321", alt: "JACKINTHEBOX Logo" },
-    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/LIQUIDIV.webp?v=1730742318894", alt: "LIQUIDIV Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/jellybellywhite.webp?v=1731072394122", alt: "JELLYBELLY Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/jackintheboxwhite.webp?v=1731071800089", alt: "JACKINTHEBOX Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/liquidivwhite.webp?v=1731072576614", alt: "LIQUIDIV Logo" },
     { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/POLYMARKET2.webp?v=1730837299614", alt: "POLYMARKET Logo" },
     { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/REEF2.webp?v=1730837209189", alt: "REEF Logo" },
-    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/SONIC.webp?v=1730742522716", alt: "SONIC Logo" },
-    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/TACOBELL.webp?v=1730837098525", alt: "TACO BELL Logo" },
-    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/TEMU.webp?v=1730742469736", alt: "TEMU Logo" },
-    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/thaiexpress.svg?v=1730837817703", alt: "THAI EXPRESS Logo" },
-    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/LYFT.webp?v=1730742358847", alt: "LYFT Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/sonicwhite.webp?v=1731073240470", alt: "SONIC Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/tacobellwhite.webp?v=1731073086942", alt: "TACO BELL Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/temuwhite.webp?v=1731073067191", alt: "TEMU Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/thaiexpresswhite.webp?v=1731073147258", alt: "THAI EXPRESS Logo" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/lyftwhite.webp?v=1731073105721", alt: "LYFT Logo" },
   ];
   
   // Repeat images to not have issues

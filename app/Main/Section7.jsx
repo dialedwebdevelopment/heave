@@ -139,7 +139,7 @@ export const Section7 = () => {
               index={2}
               isActive={activeIndex === 2}
               onToggle={() => handleAccordionClick(2)}
-              title="Going Viral"
+              title="Distribution"
               content="Finally, we distribute the meme across platforms, leveraging our network of pages with more than 42 million followers to maximize exposure and engagement, ensuring the meme goes viral and reaches its full potential."
             />
           </div>

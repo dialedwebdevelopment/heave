@@ -111,7 +111,7 @@ export const Section7Mobile = () => {
                             <div className="seven-mobile-item-imageframe">
                                 <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/RIGHT.jpg?v=1730724691853" className="seven-image" alt="Image 1" />
                             </div>
-                            <h2 className="small-subheadline white" >Going Viral</h2>
+                            <h2 className="small-subheadline white" >Distribution</h2>
                             <p className="description white" >Finally, we distribute the meme across platforms, leveraging our network of pages with more than 42 million followers to maximize exposure and engagement, ensuring the meme goes viral and reaches its full potential.</p>
                         </div>
                     </div>

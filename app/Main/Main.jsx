@@ -263,7 +263,7 @@ const Main = () => {
           <Section9 />
           <Section9Mobile />
         </div>
-        <SectionFooter />
+        {/* <SectionFooter /> */}
     </ReactLenis>
   );
 };

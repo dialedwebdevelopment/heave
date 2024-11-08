@@ -110,7 +110,7 @@ export const Section5Mobile = () => {
                 <div className="five-card-image">
                   <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/berealo.webp?v=1730723858257" className="five-card-image-img" alt="Main Image" />
                 </div>
-                <p className="description white" >We are passionate about elevating brands by leveraging viral marketing strategies that we have meticulously mastered over the years.</p>
+                <p className="description white" >BeReal, the social media app that encourages authenticity, wanted to engage young audiences and spark conversations around real, unfiltered moments. They challenged us to create content that would increase brand awareness and fuel organic word-of-mouth.</p>
             </div>
           </div>
           <div className="five-mobile-item" >
@@ -119,7 +119,7 @@ export const Section5Mobile = () => {
                 <div className="five-card-image">
                   <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/citizeno.webp?v=1730723928778" className="five-card-image-img" alt="Main Image" />
                 </div>
-                <p className="description white" >We are passionate about elevating brands by leveraging viral marketing strategies that we have meticulously mastered over the years.</p>
+                <p className="description white" >Citizen, a US-only livetime safety app, wanted to leverage a campaign to add more young users on their platform. We combined Citizen’s safety appeal with humor on X (Twitter), effectively boosting brand awareness and app downloads in a tangible, measurable way.</p>
             </div>
           </div>
           <div className="five-mobile-item" >
@@ -128,7 +128,7 @@ export const Section5Mobile = () => {
                 <div className="five-card-image">
                   <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/hexclado.webp?v=1730724122212" className="five-card-image-img" alt="Main Image" />
                 </div>
-                <p className="description white" >We are passionate about elevating brands by leveraging viral marketing strategies that we have meticulously mastered over the years.</p>
+                <p className="description white" >HexClad, a leading high-quality cookware brand, wanted to connect with Gen Z audiences online in a relatable and viral way. Heave orchestrated the development and dissemination of inventive memes that engaged millions into a topic as ordinary as cooking pots and pans.</p>
             </div>
           </div>
           <div className="five-mobile-item" >
@@ -137,7 +137,7 @@ export const Section5Mobile = () => {
                 <div className="five-card-image">
                   <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/jackintheboxo.webp?v=1730724191639" className="five-card-image-img" alt="Main Image" />
                 </div>
-                <p className="description white" >We are passionate about elevating brands by leveraging viral marketing strategies that we have meticulously mastered over the years.</p>
+                <p className="description white" >WJack in the Box, a large US fast food chain, wished to increase awareness of their promotion on Saint Patrick’s Day. We swiftly created content promoting Jack in the Box’s holiday offer all in one day.</p>
             </div>
           </div>
           <div className="five-mobile-item" >
@@ -146,7 +146,16 @@ export const Section5Mobile = () => {
                 <div className="five-card-image">
                   <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/tabso.webp?v=1730724243790" className="five-card-image-img" alt="Main Image" />
                 </div>
-                <p className="description white" >We are passionate about elevating brands by leveraging viral marketing strategies that we have meticulously mastered over the years.</p>
+                <p className="description white" >Tabs Chocolate, a DTC e-commerce store selling chocolate, struggled with revenue growth, having only focused on one single marketing channel. Heave helped Tabs in scaling their revenue from five figures to six figures per month through a consistent and coordinated flurry of memes, influencers, and organic content online.</p>
+            </div>
+          </div>
+          <div className="five-mobile-item" >
+            <div className="five-mobile-item-content">
+                <h1 className="small-subheadline white" >Coned</h1>
+                <div className="five-card-image">
+                  <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/casestudy1.webp?v=1731068625703" className="five-card-image-img" alt="Main Image" />
+                </div>
+                <p className="description white" >Tabs Chocolate, a DTC e-commerce store selling chocolate, struggled with revenue growth, having only focused on one single marketing channel. Heave helped Tabs in scaling their revenue from five figures to six figures per month through a consistent and coordinated flurry of memes, influencers, and organic content online.</p>
             </div>
           </div>
         </div>

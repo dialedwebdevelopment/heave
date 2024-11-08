@@ -58,7 +58,7 @@ export const Section9 = () => {
     e.preventDefault();
 
     const { name, phone, company, position, message } = formData;
-    const mailtoLink = `mailto:heavecorp@gmail.com?subject=Contact from ${name}&body=Name: ${name}%0D%0APhone: ${phone}%0D%0ACompany: ${company}%0D%0APosition: ${position}%0D%0AMessage: ${message}`;
+    const mailtoLink = `mailto:hello@heavecorp.com?subject=Contact from ${name}&body=Name: ${name}%0D%0APhone: ${phone}%0D%0ACompany: ${company}%0D%0APosition: ${position}%0D%0AMessage: ${message}`;
 
     window.location.href = mailtoLink;
   };
@@ -73,13 +73,13 @@ export const Section9 = () => {
             <div ref={leftRef2} className="nine-content-left-item">
               <p className="description white">Socials:</p>
               <div className="nine-content-left-item-column">
-                <a className="nine-content-left-item-column-text" href="https://tidycal.com/dialedweb/discoverycall" target="_blank" >
+                <a className="nine-content-left-item-column-text" href="https://www.instagram.com/heave" target="_blank" >
                   <p className="description grey hover-text-grey">Instagram</p>
                 </a>
-                <a className="nine-content-left-item-column-text" href="https://tidycal.com/dialedweb/discoverycall" target="_blank" >
+                <a className="nine-content-left-item-column-text" href="https://www.linkedin.com/company/heavecorp/" target="_blank" >
                   <p className="description grey hover-text-grey">LinkedIn</p>
                 </a>
-                <a className="nine-content-left-item-column-text" href="https://tidycal.com/dialedweb/discoverycall" target="_blank" >
+                <a className="nine-content-left-item-column-text" href="https://x.com/heaveads" target="_blank" >
                   <p className="description grey hover-text-grey">Twitter</p>
                 </a>
               </div>
@@ -87,8 +87,8 @@ export const Section9 = () => {
             <div ref={leftRef3} className="nine-content-left-item">
               <p className="description white">Email:</p>
               <div className="nine-content-left-item-column">
-                <a className="nine-content-left-item-column-text" href="mailto:admin@dialedweb.com" >
-                  <p className="description grey hover-text-grey">info@heavecorp.com</p>
+                <a className="nine-content-left-item-column-text" href="mailto:hello@heavecorp.com" >
+                  <p className="description grey hover-text-grey">hello@heavecorp.com</p>
                 </a>
               </div>
             </div>
