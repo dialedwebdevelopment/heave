@@ -34,7 +34,7 @@
 .one-content-textbox {
     display: flex;
     flex-direction: row;
-    padding-left: 5vw;
+    padding-left: 4vw;
     align-items: center;
     gap: 1.5vw;
 }
@@ -90,7 +90,7 @@
 .one-item-changing-text {
     position: relative;
     pointer-events: none;
-    width: 32vw;
+    width: 34vw;
     height: 15vh;
     transform-style: preserve-3d;
     display: flex;
@@ -164,7 +164,7 @@
 
 .one-item-changing-text:last-child span {
     background: #010101;
-    color: #5eafff;
+    color: #4caeff;
 }
 
 /* 2 */
@@ -240,7 +240,7 @@
     width: 2vw;
     height: 2vw;
     border-radius: 999px;
-    background-color: #5eafff;
+    background-color: #4caeff;
     border: none;
     display: flex;
     align-items: center;
@@ -857,7 +857,7 @@ input {
 
 input:focus {
     outline: none;
-    border-color: #5eafff;
+    border-color: #4caeff;
   }
 
 input::placeholder {
@@ -997,7 +997,7 @@ input::placeholder {
 
 .one-item-changing-text:last-child span {
     background: #010101;
-    color: #5eafff;
+    color: #4caeff;
 }
 
 /* 2 */

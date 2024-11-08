@@ -24,9 +24,9 @@ export const Section4 = () => {
   }, [])
 
   const [numbers, setNumbers] = useState({
-    likes: 340200,
-    shares: 123560,
-    impressions: 510450,
+    likes: 110000000,
+    shares: 30000000,
+    impressions: 4700000000,
   });
 
   // Randomly update numbers every 4 seconds
@@ -55,7 +55,7 @@ export const Section4 = () => {
             <div className="four-content-item-box" >
               <p className="description" >Impressions</p> 
               <div className="four-number">
-                <MotionNumber value={numbers.impressions} locales="fr-FR" className="subheadline blue" />
+                <MotionNumber value={numbers.impressions} locales="en-US" className="subheadline blue" />
                 <p className="subheadline blue" >+</p>
               </div>
             </div>
@@ -65,7 +65,7 @@ export const Section4 = () => {
             <div className="four-content-item-box" >
               <p className="description" >Likes</p>
               <div className="four-number">
-                <MotionNumber value={numbers.likes} locales="fr-FR" className="subheadline blue" />
+                <MotionNumber value={numbers.likes} locales="en-US" className="subheadline blue" />
                 <p className="subheadline blue" >+</p>
               </div>
             </div>
@@ -75,7 +75,7 @@ export const Section4 = () => {
             <div className="four-content-item-box" >
               <p className="description" >Shares</p>
               <div className="four-number">
-                <MotionNumber value={numbers.shares} locales="fr-FR" className="subheadline blue" />
+                <MotionNumber value={numbers.shares} locales="en-US" className="subheadline blue" />
                 <p className="subheadline blue" >+</p>
               </div>
             </div>

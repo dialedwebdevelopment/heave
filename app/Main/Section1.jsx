@@ -52,10 +52,10 @@ export const Section1 = () => {
         <div className="one-content-textbox">
           <h1 className="headline one-headline" ref={titleRef} >We Create</h1>
           <div className="one-item-changing-text">
-            <span className="one-item-changing-text-1" ><h1 className="headline blue" ref={boxTextRef} >Brands</h1></span>
-            <span className="one-item-changing-text-2">Shows</span>
-            <span className="one-item-changing-text-3">Content</span>
-            <span className="one-item-changing-text-4">Trends</span>
+            <span className="one-item-changing-text-1" ><h1 className="headline blue" ref={boxTextRef} >Brands.</h1></span>
+            <span className="one-item-changing-text-2">Shows.</span>
+            <span className="one-item-changing-text-3">Content.</span>
+            <span className="one-item-changing-text-4">Trends.</span>
           </div>
         </div>
       </div>
