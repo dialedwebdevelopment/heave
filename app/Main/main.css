@@ -1456,7 +1456,7 @@ input::placeholder {
 }
 
 .eight-slider-item-image {
-    height: 10vw;
+    height: 7.5vw;
     width: fit-content;
     object-fit: contain;
     opacity: 1;
