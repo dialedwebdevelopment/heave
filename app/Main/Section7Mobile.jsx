@@ -14,6 +14,7 @@ export const Section7Mobile = () => {
     const boxRef1 = useRef()
     const boxRef2 = useRef()
     const boxRef3 = useRef()
+    const cardRef1 = useRef()
 
     // GSAP ANIMATIONS
     useEffect(() => {
@@ -24,6 +25,8 @@ export const Section7Mobile = () => {
         gsap.fromTo(boxRef1.current, { opacity: 0, willChange: 'filter, transform', filter: 'blur(10px)' }, { opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: boxRef1.current, start: "top 95%" } })
         gsap.fromTo(boxRef2.current, { opacity: 0, willChange: 'filter, transform', filter: 'blur(10px)' }, { opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: boxRef2.current, start: "top 95%" } })
         gsap.fromTo(boxRef3.current, { opacity: 0, willChange: 'filter, transform', filter: 'blur(10px)' }, { opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: boxRef3.current, start: "top 95%" } })
+
+        gsap.fromTo(cardRef1.current, { opacity: 0, filter: 'blur(10px)' }, { opacity: 1, filter: 'blur(0px)', duration: 1, scrollTrigger: { trigger: cardRef1.current, start: "top 95%" } })
 
     }, [])
 
@@ -85,6 +88,7 @@ export const Section7Mobile = () => {
                     </div>
                 </div>
             </div> */}
+            <div ref={cardRef1} >
             <div className="seven-mobile-carousel" ref={emblaRef} >
                 <div className="seven-mobile-row">
                     <div className="seven-mobile-item-padding" />
@@ -117,6 +121,7 @@ export const Section7Mobile = () => {
                     </div>
                     <div className="seven-mobile-item-padding" />
                 </div>
+            </div>
             </div>
 
             <div className="seven-mobile-bottom">
