@@ -499,7 +499,7 @@
 .five-card-image-img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .five-card-invisible {
@@ -850,7 +850,7 @@ input {
     padding-left: 1vw;
     font-weight: 300;
     line-height: 110%;
-    color: #ffffff35;
+    color: white;
     border-bottom: 1px solid #ffffff35;
     transition: border-color 0.3s;
 }

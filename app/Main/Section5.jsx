@@ -58,7 +58,7 @@ export const Section5 = () => {
               <div className="five-card-image">
                 <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/casestudy3.webp?v=1731068632611" className="five-card-image-img" alt="Main Image" />
               </div>
-              <p className="description white" >Citizen, a US-only livetime safety app, wanted to leverage a campaign to add more young users on their platform. We combined Citizen’s safety appeal with humor on X (Twitter), effectively boosting brand awareness and app downloads in a tangible, measurable way.</p>
+              <p className="description white" >Citizen, a US-only live-time safety app, wanted to leverage a campaign to add more gen-z users on their platform. We combined Citizen’s safety appeal with humor on X (Twitter), effectively boosting brand awareness and app downloads in a tangible, measurable way.</p>
             </div>
           </div>
           <div className="five-card" ref={cardRef3} >
@@ -76,7 +76,7 @@ export const Section5 = () => {
               <div className="five-card-image">
                 <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/casestudy5.webp?v=1731068638414" className="five-card-image-img" alt="Main Image" />
               </div>
-              <p className="description white" >Jack in the Box, a large US fast food chain, wished to increase awareness of their promotion on Saint Patrick’s Day. We swiftly created content promoting Jack in the Box’s holiday offer all in one day.</p>
+              <p className="description white" >Jack in the Box, a large US fast food chain, wished to increase awareness of their promotion on Saint Patrick’s Day. We swiftly created and distributed content promoting Jack in the Box’s holiday offer all in one day.</p>
             </div>
           </div>
           <div className="five-card" ref={cardRef5} >
@@ -85,16 +85,16 @@ export const Section5 = () => {
               <div className="five-card-image">
                 <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/casestudy6.webp?v=1731068641659" className="five-card-image-img" alt="Main Image" />
               </div>
-              <p className="description white" >Tabs Chocolate, a DTC e-commerce store selling chocolate, struggled with revenue growth, having only focused on one single marketing channel. Heave helped Tabs in scaling their revenue from five figures to six figures per month through a consistent and coordinated flurry of memes, influencers, and organic content online.</p>
+              <p className="description white" >Tabs Chocolate, a DTC e-commerce store selling chocolate, struggled with revenue growth, having only focused on one single marketing channel. Heave helped Tabs scale their revenue from five to six figures per month through a consistent and coordinated flurry of memes, influencers, and organic content.</p>
             </div>
           </div>
           <div className="five-card" ref={cardRef6} >
             <div className="five-card-content">
-              <h1 className="small-subheadline white" >Coned</h1>
+              <h1 className="small-subheadline white" >Baked Bags</h1>
               <div className="five-card-image">
                 <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/casestudy1.webp?v=1731068625703" className="five-card-image-img" alt="Main Image" />
               </div>
-              <p className="description white" >We are passionate about elevating brands by leveraging viral marketing strategies that we have meticulously mastered over the years.</p>
+              <p className="description white" >Baked Bags, a CPG snack company, aimed to grow sales of its trendy infused-waffle cone snack through its online store. Heave boosted Baked Bags’ online sales and social presence with clever organic content.</p>
             </div>
           </div>
         </motion.div>

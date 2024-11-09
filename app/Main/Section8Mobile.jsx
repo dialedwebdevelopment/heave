@@ -45,10 +45,10 @@ export const Section8Mobile = () => {
                 <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/liquidivwhite.webp?v=1731072576614"  className="eight-slider-item-image" width={500} height={500} alt="alt" />
             </div>
             <div className="eight-slider-item" >
-                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/POLYMARKET2.webp?v=1730837299614"  className="eight-slider-item-image" width={500} height={500} alt="alt" />
+                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/POLYMARKETwhite.webp?v=1731139330408"  className="eight-slider-item-image" width={500} height={500} alt="alt" />
             </div>
             <div className="eight-slider-item" >
-                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/REEF2.webp?v=1730837209189"  className="eight-slider-item-image" width={500} height={500} alt="alt" />
+                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/reefwhite.webp?v=1731139188236"  className="eight-slider-item-image" width={500} height={500} alt="alt" />
             </div>
             <div className="eight-slider-item" >
                 <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/sonicwhite.webp?v=1731073240470"  className="eight-slider-item-image" width={500} height={500} alt="alt" />
