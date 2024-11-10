@@ -58,7 +58,7 @@ export const Section5 = () => {
               <div className="five-card-image">
                 <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/casestudy3.webp?v=1731068632611" className="five-card-image-img" alt="Main Image" />
               </div>
-              <p className="description white" >Citizen, a US-only live-time safety app, wanted to leverage a campaign to add more gen-z users on their platform. We combined Citizen’s safety appeal with humor on X (Twitter), effectively boosting brand awareness and app downloads in a tangible, measurable way.</p>
+              <p className="description white" >Citizen, a live-time safety app, wanted to leverage a campaign to add more gen-z users on their platform. We combined Citizen’s safety appeal with humor on X, effectively boosting brand awareness and app downloads in a tangible, measurable way.</p>
             </div>
           </div>
           <div className="five-card" ref={cardRef3} >
@@ -67,7 +67,7 @@ export const Section5 = () => {
               <div className="five-card-image">
                 <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/casestudy4.webp?v=1731068635004" className="five-card-image-img" alt="Main Image" />
               </div>
-              <p className="description white" >HexClad, a leading high-quality cookware brand, wanted to connect with Gen Z audiences online in a relatable and viral way. Heave orchestrated the development and dissemination of inventive memes that engaged millions into a topic as ordinary as cooking pots and pans.</p>
+              <p className="description white" >HexClad, a top cookware brand, wanted to connect with Gen Z audiences online in a relatable and viral way. Heave orchestrated the development and dissemination of inventive memes that engaged millions into a topic as ordinary as cooking pots and pans.</p>
             </div>
           </div>
           <div className="five-card" ref={cardRef4} >
@@ -85,7 +85,7 @@ export const Section5 = () => {
               <div className="five-card-image">
                 <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/casestudy6.webp?v=1731068641659" className="five-card-image-img" alt="Main Image" />
               </div>
-              <p className="description white" >Tabs Chocolate, a DTC e-commerce store selling chocolate, struggled with revenue growth, having only focused on one single marketing channel. Heave helped Tabs scale their revenue from five to six figures per month through a consistent and coordinated flurry of memes, influencers, and organic content.</p>
+              <p className="description white" >Tabs Chocolate, a DTC e-commerce store, struggled with revenue growth, relying on just one marketing channel. Heave helped Tabs scale their revenue from five to six figures per month through a consistent and coordinated flurry of memes, and organic content.</p>
             </div>
           </div>
           <div className="five-card" ref={cardRef6} >
