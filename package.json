@@ -12,6 +12,7 @@
     "@motionone/utils": "^10.18.0",
     "@react-three/drei": "^9.114.0",
     "@react-three/fiber": "^8.17.8",
+    "bear-react-vertical-marquee": "^3.0.1",
     "embla-carousel-auto-scroll": "^8.3.0",
     "embla-carousel-autoplay": "^8.3.0",
     "embla-carousel-react": "^8.3.0",

@@ -6,6 +6,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { ChevronRight } from "lucide-react";
 import useEmblaCarousel from 'embla-carousel-react'
 import AutoScroll from 'embla-carousel-auto-scroll'
+import Marquee from "react-fast-marquee";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -53,8 +54,7 @@ export const Section2Mobile = () => {
           <div className="top-fade" />
           <div className="bottom-fade" />
           <div className="two-content-right-content" ref={sliderWrapperRef} >
-            <div className="two-carousel" ref={emblaRef} >
-              <div className="two-row">
+            <Marquee gradient={true} gradientColor="#010101" gradientWidth={"10vw"} >
                 <div className="two-item" >
                   <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo1.mp4?v=1730721648346" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
@@ -71,25 +71,6 @@ export const Section2Mobile = () => {
                   <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo5.mp4?v=1730721665211" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
                 <div className="two-item" >
-                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo1.mp4?v=1730721648346" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
-                </div>
-                <div className="two-item" >
-                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo2.mp4?v=1730721652829" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
-                </div>
-                <div className="two-item" >
-                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo3.mp4?v=1730721657920" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
-                </div>
-                <div className="two-item" >
-                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo4.mp4?v=1730721661781" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
-                </div>
-                <div className="two-item" >
-                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo5.mp4?v=1730721665211" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
-                </div>
-              </div>
-            </div>
-            <div className="two-carousel" ref={emblaRef2} >
-              <div className="two-row">
-                <div className="two-item" >
                   <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo6.mp4?v=1730721670541" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
                 <div className="two-item" >
@@ -101,20 +82,7 @@ export const Section2Mobile = () => {
                 <div className="two-item" >
                   <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo9.mp4?v=1730721682141" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
-                <div className="two-item" >
-                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo6.mp4?v=1730721670541" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
-                </div>
-                <div className="two-item" >
-                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo7.mp4?v=1730721673586" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
-                </div>
-                <div className="two-item" >
-                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo8.mp4?v=1730721676866" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
-                </div>
-                <div className="two-item" >
-                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo9.mp4?v=1730721682141" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
-                </div>
-              </div>
-            </div>
+            </Marquee>
           </div>
         </div>
       </div>

@@ -27,7 +27,7 @@ export const Section8Mobile = () => {
                 <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/dunkinwhite.webp?v=1731073185370"  className="eight-slider-item-image" width={500} height={500} alt="alt" />
             </div>
             <div className="eight-slider-item" >
-                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/FASHIONNOVA2.webp?v=1730837608954"  className="eight-slider-item-image" width={500} height={500} alt="alt" />
+                {/* <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/FASHIONNOVA2.webp?v=1730837608954"  className="eight-slider-item-image" width={500} height={500} alt="alt" /> */}
             </div>
             <div className="eight-slider-item" >
                 <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/HEXCLAD2.webp?v=1730837527138"  className="eight-slider-item-image" width={500} height={500} alt="alt" />

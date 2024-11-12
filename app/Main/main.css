@@ -1144,7 +1144,7 @@ input::placeholder {
 }
 
 .three-subheadline {
-    font-size: 5vw;
+    font-size: 6vw;
 }
 
 /* 4 */
@@ -1455,8 +1455,8 @@ input::placeholder {
 }
 
 .eight-slider-item-image {
-    height: 7.5vw;
-    width: fit-content;
+    height: 10vw;
+    width: auto;
     object-fit: contain;
     opacity: 1;
 }
