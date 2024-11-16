@@ -8,23 +8,20 @@ gsap.registerPlugin(SplitText, ScrollTrigger);
 
 export const Section1 = () => {
 
+  const [textAnimationTrigger, setTextAnimationTrigger] = useState(false);
+
   const titleRef = useRef()
   const imageRef1 = useRef()
   const imageRef2 = useRef()
   const imageRef3 = useRef()
   const imageRef4 = useRef()
-  const typewriterRef1 = useRef()
-  const typewriterRef2 = useRef()
-  const typewriterRef3 = useRef()
   const boxTextRef = useRef()
+  const nullRef = useRef()
 
   gsap.set(imageRef1.current, { yPercent: 50, zIndex: 1 });
   gsap.set(imageRef2.current, { yPercent: 50, zIndex: 1 });
   gsap.set(imageRef3.current, { yPercent: 50, zIndex: 1 });
   gsap.set(imageRef4.current, { yPercent: 50, zIndex: 1 });
-  gsap.set(typewriterRef1.current, { opacity: 0 });
-  gsap.set(typewriterRef2.current, { opacity: 0 });
-  gsap.set(typewriterRef3.current, { opacity: 0 });
 
   useEffect(() => {
     const split = new SplitText(titleRef.current, { type: "chars" });
@@ -35,6 +32,7 @@ export const Section1 = () => {
     gsap.fromTo(imageRef2.current, { yPercent: 50 }, { delay: 4.4, yPercent: 0, duration: 0.5, ease: "power2" })
     gsap.fromTo(imageRef3.current, { yPercent: 50 }, { delay: 4.65, yPercent: 0, duration: 0.5, ease: "power2" })
     gsap.fromTo(imageRef4.current, { yPercent: 50 }, { delay: 4.8, yPercent: 0, duration: 0.5, ease: "power2" })
+    gsap.fromTo(nullRef.current, { opacity: 0 }, { delay: 3, opacity: 1, duration: 1, onComplete: () => setTextAnimationTrigger(true) });
   }, [])
 
   useEffect(() => {
@@ -51,7 +49,7 @@ export const Section1 = () => {
       <div className="one-content">
         <div className="one-content-textbox">
           <h1 className="headline one-headline" ref={titleRef} >We Create</h1>
-          <div className="one-item-changing-text">
+          <div className={`one-item-changing-text ${textAnimationTrigger ? "one-item-changing-text-animate" : ""}`}>
             <span className="one-item-changing-text-1" ><h1 className="headline blue" ref={boxTextRef} >Brands.</h1></span>
             <span className="one-item-changing-text-2">Shows.</span>
             <span className="one-item-changing-text-3">Content.</span>

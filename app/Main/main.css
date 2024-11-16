@@ -98,8 +98,11 @@
     text-align: center;
     align-items: center;
     user-select: none;
+}
+
+.one-item-changing-text.one-item-changing-text-animate {
     animation: rotateText 11s infinite ease-in-out;
-    animation-delay: 6s;
+    /* animation-delay: 2s; */
 }
 
 @keyframes rotateText {
@@ -962,7 +965,6 @@ input::placeholder {
 .one-item-changing-text {
     width: 90vw;
     height: 15vw;
-    animation-delay: 7s;
 }
 
 .one-item-changing-text span {
