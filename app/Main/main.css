@@ -1105,8 +1105,15 @@ input::placeholder {
     transition: background-color 0.35s ease;
 }
 
+.two-mobile-slider-item {
+    /* height: 30vw;
+    width: 30vw; */
+    margin-right: 0vw;
+    /* padding: 5vw; */
+}
+
 .two-item-image {
-    width: 100%;
+    width: auto;
     height: 100%;
     object-fit: contain;
 }

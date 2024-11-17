@@ -7,8 +7,50 @@ import { ChevronRight } from "lucide-react";
 import useEmblaCarousel from 'embla-carousel-react'
 import AutoScroll from 'embla-carousel-auto-scroll'
 import Marquee from "react-fast-marquee";
+import { motion, useScroll, useSpring, useTransform, useMotionValue, useVelocity, useAnimationFrame } from "framer-motion";
+import { wrap } from "@motionone/utils";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
+
+function ParallaxText({ children, baseVelocity = 100 }) {
+  const baseX = useMotionValue(0);
+
+  // Define x-axis transform using a wrapping function
+  const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
+
+  // Animation loop for horizontal movement
+  useAnimationFrame((t, delta) => {
+    const moveBy = baseVelocity * (delta / 1000); // Adjust movement based on velocity
+    baseX.set(baseX.get() + moveBy);
+  });
+
+  const videos = [
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo1.mp4?v=1730721648346" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo2.mp4?v=1730721652829" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo3.mp4?v=1730721657920" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo4.mp4?v=1730721661781" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo5.mp4?v=1730721665211" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo6.mp4?v=1730721670541" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo7.mp4?v=1730721673586" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo8.mp4?v=1730721676866" },
+    { src: "https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo9.mp4?v=1730721682141" },
+  ];
+  
+  // Repeat images to not have issues
+  const repeatedImages = [...videos, ...videos, ...videos, ...videos];
+  
+  return (
+    <div className="eight-slider">
+      <motion.div className="eight-slider-inside" style={{ x }}>
+        {repeatedImages.map((videos, index) => (
+          <div className="two-mobile-slider-item" key={index}>
+            <video src={videos.src} className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop preload="auto" />
+          </div>
+        ))}
+      </motion.div>
+    </div>
+  );
+}
 
 export const Section2Mobile = () => {
 
@@ -54,7 +96,12 @@ export const Section2Mobile = () => {
           <div className="top-fade" />
           <div className="bottom-fade" />
           <div className="two-content-right-content" ref={sliderWrapperRef} >
-            <Marquee gradient={true} gradientColor="#010101" gradientWidth={"10vw"} >
+            <div className="left-fade" />
+            <div className="right-fade" />
+            <div className="top-fade" />
+            <div className="bottom-fade" />
+            <ParallaxText baseVelocity={-1} />
+            {/* <Marquee gradient={true} gradientColor="#010101" gradientWidth={"10vw"} >
                 <div className="two-item" >
                   <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo1.mp4?v=1730721648346" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop preload="auto" />
                 </div>
@@ -82,7 +129,7 @@ export const Section2Mobile = () => {
                 <div className="two-item" >
                   <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo9.mp4?v=1730721682141" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop preload="auto" />
                 </div>
-            </Marquee>
+            </Marquee> */}
           </div>
         </div>
       </div>
