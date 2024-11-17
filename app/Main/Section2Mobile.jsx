@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useMemo, useRef } from "react";
 import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -37,7 +37,7 @@ function ParallaxText({ children, baseVelocity = 100 }) {
   ];
   
   // Repeat images to not have issues
-  const repeatedImages = [...videos, ...videos, ...videos, ...videos];
+  const repeatedImages = useMemo(() => [...videos, ...videos, ...videos, ...videos], []);
   
   return (
     <div className="eight-slider">
