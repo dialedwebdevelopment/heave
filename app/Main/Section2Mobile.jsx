@@ -16,7 +16,7 @@ function ParallaxText({ children, baseVelocity = 100 }) {
   const baseX = useMotionValue(0);
 
   // Define x-axis transform using a wrapping function
-  const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
+  const x = useTransform(baseX, (v) => `${wrap(-0, -100, v)}%`);
 
   // Animation loop for horizontal movement
   useAnimationFrame((t, delta) => {
@@ -42,7 +42,7 @@ function ParallaxText({ children, baseVelocity = 100 }) {
   return (
     <div className="eight-slider">
       <motion.div className="eight-slider-inside" style={{ x }}>
-        {repeatedVideos.map((videos, index) => (
+        {videos.map((videos, index) => (
           <div className="two-mobile-slider-item" key={index}>
             <video src={videos.src} className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
           </div>
@@ -100,7 +100,7 @@ export const Section2Mobile = () => {
             <div className="right-fade" />
             <div className="top-fade" />
             <div className="bottom-fade" />
-            <ParallaxText baseVelocity={-1} />
+            <ParallaxText baseVelocity={-20} />
             {/* <Marquee gradient={true} gradientColor="#010101" gradientWidth={"10vw"} >
                 <div className="two-item" >
                   <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo1.mp4?v=1730721648346" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop preload="auto" />
