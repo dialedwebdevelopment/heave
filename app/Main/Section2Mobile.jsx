@@ -35,18 +35,35 @@ function ParallaxText({ children, baseVelocity = 100 }) {
     { src: "/videos/heavevid8.mp4" },
     { src: "/videos/heavevid9.mp4" },
   ];
-  
-  // Repeat images to not have issues
-  const repeatedVideos = useMemo(() => [...videos, ...videos, ...videos, ...videos], []);
-  
+
+  // Generate video elements once and reuse them
+  const videoElements = useMemo(
+    () =>
+      videos.map((video, index) => (
+        <div className="two-mobile-slider-item" key={index}>
+          <video
+            src={video.src}
+            className="two-item-image"
+            autoPlay="autoplay"
+            muted
+            playsInline={true}
+            loop
+          />
+        </div>
+      )),
+    []
+  );
+
+  // Repeat video elements to prevent redundant loading
+  const repeatedVideos = useMemo(
+    () => Array.from({ length: 4 }, () => videoElements).flat(),
+    [videoElements]
+  );
+
   return (
     <div className="eight-slider">
       <motion.div className="eight-slider-inside" style={{ x }}>
-        {repeatedVideos.map((videos, index) => (
-          <div className="two-mobile-slider-item" key={index}>
-            <video src={videos.src} className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
-          </div>
-        ))}
+        {repeatedVideos}
       </motion.div>
     </div>
   );
