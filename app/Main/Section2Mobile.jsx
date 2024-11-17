@@ -46,6 +46,8 @@ function ParallaxText({ children, baseVelocity = 100 }) {
     { src: "/videos/heavevid7.mp4" },
     { src: "/videos/heavevid8.mp4" },
     { src: "/videos/heavevid9.mp4" },
+    { src: "/videos/heavevid1.mp4" },
+    { src: "/videos/heavevid2.mp4" },
   ], []);
   
   return (
