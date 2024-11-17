@@ -16,7 +16,7 @@ function ParallaxText({ children, baseVelocity = 100 }) {
   const baseX = useMotionValue(0);
 
   // Define x-axis transform using a wrapping function
-  const x = useTransform(baseX, (v) => `${wrap(-1.5, -82.5, v)}%`);
+  const x = useTransform(baseX, (v) => `${wrap(-1, -82.5, v)}%`);
 
   // Animation loop for horizontal movement
   useAnimationFrame((t, delta) => {
