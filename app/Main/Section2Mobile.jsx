@@ -24,21 +24,7 @@ function ParallaxText({ children, baseVelocity = 100 }) {
     baseX.set(baseX.get() + moveBy);
   });
 
-  const videos = [
-    { src: "/videos/heavevid1.mp4" },
-    { src: "/videos/heavevid2.mp4" },
-    { src: "/videos/heavevid3.mp4" },
-    { src: "/videos/heavevid4.mp4" },
-    { src: "/videos/heavevid5.mp4" },
-    { src: "/videos/heavevid6.mp4" },
-    { src: "/videos/heavevid7.mp4" },
-    { src: "/videos/heavevid8.mp4" },
-    { src: "/videos/heavevid9.mp4" },
-    { src: "/videos/heavevid1.mp4" },
-    { src: "/videos/heavevid2.mp4" },
-  ];
-
-  // const videos = useMemo(() => [
+  // const videos = [
   //   { src: "/videos/heavevid1.mp4" },
   //   { src: "/videos/heavevid2.mp4" },
   //   { src: "/videos/heavevid3.mp4" },
@@ -50,7 +36,21 @@ function ParallaxText({ children, baseVelocity = 100 }) {
   //   { src: "/videos/heavevid9.mp4" },
   //   { src: "/videos/heavevid1.mp4" },
   //   { src: "/videos/heavevid2.mp4" },
-  // ], []);
+  // ];
+
+  const videos = useMemo(() => [
+    { src: "/videos/heavevid1.mp4" },
+    { src: "/videos/heavevid2.mp4" },
+    { src: "/videos/heavevid3.mp4" },
+    { src: "/videos/heavevid4.mp4" },
+    { src: "/videos/heavevid5.mp4" },
+    { src: "/videos/heavevid6.mp4" },
+    { src: "/videos/heavevid7.mp4" },
+    { src: "/videos/heavevid8.mp4" },
+    { src: "/videos/heavevid9.mp4" },
+    { src: "/videos/heavevid1.mp4" },
+    { src: "/videos/heavevid2.mp4" },
+  ], []);
   
   return (
     <div className="eight-slider">
