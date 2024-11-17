@@ -222,7 +222,7 @@ const Main = () => {
           <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heaveloadingvideo.mp4?v=1730722663143" className="loading-video-content-video" autoPlay="autoplay" muted playsInline="true" />
         </div>
       </section>
-      <div className="experience">
+      {/* <div className="experience">
         <Canvas style={{ pointerEvents: 'none' }} camera={{ position: [2, 2, 5], fov: 35 }}>
           <Suspense >
             <Float floatingRange={0.5} >
@@ -231,7 +231,7 @@ const Main = () => {
           </Suspense>
           <Environment preset="studio" environmentIntensity={0.75} />
         </Canvas>
-      </div>
+      </div> */}
         <div id="section1" >
           <Section1 />
         </div>
