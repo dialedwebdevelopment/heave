@@ -24,7 +24,7 @@ function ParallaxText({ children, baseVelocity = 100 }) {
     baseX.set(baseX.get() + moveBy);
   });
 
-  const videos = [
+  const videos = useMemo(() => [
     { src: "/videos/heavevid1.mp4" },
     { src: "/videos/heavevid2.mp4" },
     { src: "/videos/heavevid3.mp4" },
@@ -34,36 +34,19 @@ function ParallaxText({ children, baseVelocity = 100 }) {
     { src: "/videos/heavevid7.mp4" },
     { src: "/videos/heavevid8.mp4" },
     { src: "/videos/heavevid9.mp4" },
-  ];
-
-  // Generate video elements once and reuse them
-  const videoElements = useMemo(
-    () =>
-      videos.map((video, index) => (
-        <div className="two-mobile-slider-item" key={index}>
-          <video
-            src={video.src}
-            className="two-item-image"
-            autoPlay="autoplay"
-            muted
-            playsInline={true}
-            loop
-          />
-        </div>
-      )),
-    []
-  );
-
-  // Repeat video elements to prevent redundant loading
-  const repeatedVideos = useMemo(
-    () => Array.from({ length: 4 }, () => videoElements).flat(),
-    [videoElements]
-  );
-
+  ], []);
+  
+  // Repeat images to not have issues
+  const repeatedVideos = useMemo(() => [...videos, ...videos, ...videos, ...videos], []);
+  
   return (
     <div className="eight-slider">
       <motion.div className="eight-slider-inside" style={{ x }}>
-        {repeatedVideos}
+        {repeatedVideos.map((videos, index) => (
+          <div className="two-mobile-slider-item" key={index}>
+            <video src={videos.src} className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
+          </div>
+        ))}
       </motion.div>
     </div>
   );
