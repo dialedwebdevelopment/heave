@@ -12,21 +12,6 @@ import { wrap } from "@motionone/utils";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-const videos = [
-  { src: "/videos/heavevid1.mp4" },
-  { src: "/videos/heavevid2.mp4" },
-  { src: "/videos/heavevid3.mp4" },
-  { src: "/videos/heavevid4.mp4" },
-  { src: "/videos/heavevid5.mp4" },
-  { src: "/videos/heavevid6.mp4" },
-  { src: "/videos/heavevid7.mp4" },
-  { src: "/videos/heavevid8.mp4" },
-  { src: "/videos/heavevid9.mp4" },
-];
-
-// Repeat images to not have issues
-const repeatedVideos = [...videos, ...videos, ...videos, ...videos];
-
 function ParallaxText({ children, baseVelocity = 100 }) {
   const baseX = useMotionValue(0);
 
@@ -38,13 +23,28 @@ function ParallaxText({ children, baseVelocity = 100 }) {
     const moveBy = baseVelocity * (delta / 1000); // Adjust movement based on velocity
     baseX.set(baseX.get() + moveBy);
   });
+
+  const videos = [
+    { src: "/videos/heavevid1.mp4" },
+    { src: "/videos/heavevid2.mp4" },
+    { src: "/videos/heavevid3.mp4" },
+    { src: "/videos/heavevid4.mp4" },
+    { src: "/videos/heavevid5.mp4" },
+    { src: "/videos/heavevid6.mp4" },
+    { src: "/videos/heavevid7.mp4" },
+    { src: "/videos/heavevid8.mp4" },
+    { src: "/videos/heavevid9.mp4" },
+  ];
+  
+  // Repeat images to not have issues
+  const repeatedVideos = useMemo(() => [...videos, ...videos, ...videos, ...videos], []);
   
   return (
     <div className="eight-slider">
       <motion.div className="eight-slider-inside" style={{ x }}>
         {repeatedVideos.map((videos, index) => (
           <div className="two-mobile-slider-item" key={index}>
-            <video src={videos.src} className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop preload="auto" />
+            <video src={videos.src} className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
           </div>
         ))}
       </motion.div>
