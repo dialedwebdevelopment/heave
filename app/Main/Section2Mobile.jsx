@@ -16,13 +16,25 @@ function ParallaxText({ children, baseVelocity = 100 }) {
   const baseX = useMotionValue(0);
 
   // Define x-axis transform using a wrapping function
-  const x = useTransform(baseX, (v) => `${wrap(-0, -100, v)}%`);
+  const x = useTransform(baseX, (v) => `${wrap(-2.5, -82.5, v)}%`);
 
   // Animation loop for horizontal movement
   useAnimationFrame((t, delta) => {
     const moveBy = baseVelocity * (delta / 1000); // Adjust movement based on velocity
     baseX.set(baseX.get() + moveBy);
   });
+
+  // const videos = [
+  //   { src: "/videos/heavevid1.mp4" },
+  //   { src: "/videos/heavevid2.mp4" },
+  //   { src: "/videos/heavevid3.mp4" },
+  //   { src: "/videos/heavevid4.mp4" },
+  //   { src: "/videos/heavevid5.mp4" },
+  //   { src: "/videos/heavevid6.mp4" },
+  //   { src: "/videos/heavevid7.mp4" },
+  //   { src: "/videos/heavevid8.mp4" },
+  //   { src: "/videos/heavevid9.mp4" },
+  // ];
 
   const videos = useMemo(() => [
     { src: "/videos/heavevid1.mp4" },
@@ -36,15 +48,12 @@ function ParallaxText({ children, baseVelocity = 100 }) {
     { src: "/videos/heavevid9.mp4" },
   ], []);
   
-  // Repeat images to not have issues
-  const repeatedVideos = useMemo(() => [...videos, ...videos, ...videos, ...videos], []);
-  
   return (
     <div className="eight-slider">
       <motion.div className="eight-slider-inside" style={{ x }}>
         {videos.map((videos, index) => (
           <div className="two-mobile-slider-item" key={index}>
-            <video src={videos.src} className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
+            <video src={videos.src} className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop preload="auto" />
           </div>
         ))}
       </motion.div>
@@ -100,7 +109,7 @@ export const Section2Mobile = () => {
             <div className="right-fade" />
             <div className="top-fade" />
             <div className="bottom-fade" />
-            <ParallaxText baseVelocity={-20} />
+            <ParallaxText baseVelocity={-10} />
             {/* <Marquee gradient={true} gradientColor="#010101" gradientWidth={"10vw"} >
                 <div className="two-item" >
                   <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo1.mp4?v=1730721648346" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop preload="auto" />
