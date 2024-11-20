@@ -19,15 +19,17 @@ export const Section2 = (options) => {
   const contentRowRef2 = useRef()
   const contentRowRef3 = useRef()
 
+  const isMobile = () => window.matchMedia("(max-width: 768px)").matches;
+
   useEffect(() => {
     const titleSplitText = new SplitText(titleRef.current, { type: 'words' });
     gsap.fromTo(titleSplitText.words, { opacity: 0 }, { opacity: 1, stagger: 0.05, duration: 1, scrollTrigger: { trigger: titleRef.current, start: "top 95%" } })
     gsap.fromTo(buttonRef.current, { opacity: 0 }, { opacity: 1, duration: 1, scrollTrigger: { trigger: buttonRef.current, start: "top 95%" } })
     gsap.fromTo(buttonRef2.current, { opacity: 0 }, { delay: 0.25, opacity: 1, duration: 1, scrollTrigger: { trigger: buttonRef.current, start: "top 95%" } })
     gsap.fromTo(sliderWrapperRef.current, { rotate: "27.5deg", translateY: "-30vh", translateX: "2.5vw" }, { rotate: "0deg", translateY: "0vh", translateX: "0vw", scrollTrigger: { trigger: ".two-content-right", start: "top bottom", end: "bottom top", scrub: true } })
-    gsap.fromTo(contentRowRef1.current, { translateY: "40vh" }, { translateY: "-40vh", scrollTrigger: { trigger: ".two-content-right", start: "top bottom", end: "bottom top", scrub: true } })
-    gsap.fromTo(contentRowRef2.current, { translateY: "-40vh" }, { translateY: "40vh", scrollTrigger: { trigger: ".two-content-right", start: "top bottom", end: "bottom top", scrub: true } })
-    gsap.fromTo(contentRowRef3.current, { translateY: "40vh" }, { translateY: "-40vh", scrollTrigger: { trigger: ".two-content-right", start: "top bottom", end: "bottom top", scrub: true } })
+    gsap.fromTo(contentRowRef1.current, { translateY: isMobile ? "20vh" : "40vh" }, { translateY: isMobile ? "-20vh" : "-40vh", scrollTrigger: { trigger: ".two-content-right", start: "top bottom", end: "bottom top", scrub: true } })
+    gsap.fromTo(contentRowRef2.current, { translateY: isMobile ? "-20vh" : "-40vh" }, { translateY: isMobile ? "20vh" : "40vh", scrollTrigger: { trigger: ".two-content-right", start: "top bottom", end: "bottom top", scrub: true } })
+    gsap.fromTo(contentRowRef3.current, { translateY: isMobile ? "20vh" : "40vh" }, { translateY: isMobile ? "-20vh" : "-40vh", scrollTrigger: { trigger: ".two-content-right", start: "top bottom", end: "bottom top", scrub: true } })
   }, [])
 
   const scrollToSectionTop = (sectionId) => {
