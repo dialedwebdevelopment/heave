@@ -95,7 +95,7 @@ export const Section7Mobile = () => {
                     <div className="seven-mobile-item" >
                         <div className="seven-mobile-item-content">
                             <div className="seven-mobile-item-imageframe">
-                                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/LEFT.jpg?v=1730724679942" className="seven-image" alt="Image 1" />
+                                <img src="/images/LEFT.jpg" className="seven-image" alt="Image 1" />
                             </div>
                             <h2 className="small-subheadline white" >Product Highlight</h2>
                             <p className="description white" >We start by selecting and showcasing the product that will be at the center of the meme. The goal is to position it in a way that resonates with the audience, making it instantly recognizable and relatable.</p>
@@ -104,7 +104,7 @@ export const Section7Mobile = () => {
                     <div className="seven-mobile-item" >
                         <div className="seven-mobile-item-content">
                             <div className="seven-mobile-item-imageframe">
-                                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/CENTER.jpg?v=1730724689471" className="seven-image" alt="Image 1" />
+                                <img src="/images/CENTER.jpg" className="seven-image" alt="Image 1" />
                             </div>
                             <h2 className="small-subheadline white" >Meme Magic</h2>
                             <p className="description white" >This is where the magic happens. We craft a clever, engaging, and humorous meme around the product, designed to tap into current trends and cultural moments, ensuring it catches the attention of your target audience.</p>
@@ -113,7 +113,7 @@ export const Section7Mobile = () => {
                     <div className="seven-mobile-item" >
                         <div className="seven-mobile-item-content">
                             <div className="seven-mobile-item-imageframe">
-                                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/RIGHT.jpg?v=1730724691853" className="seven-image" alt="Image 1" />
+                                <img src="/images/RIGHT.jpg" className="seven-image" alt="Image 1" />
                             </div>
                             <h2 className="small-subheadline white" >Distribution</h2>
                             <p className="description white" >Finally, we distribute the meme across platforms, leveraging our network of pages with more than 750 million followers to maximize exposure and engagement, ensuring the product goes viral and reaches new audiences.</p>

@@ -58,10 +58,10 @@ export const Section1 = () => {
         </div>
       </div>
       <div className="one-image">
-          <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main1.webp?v=1730738898250" fetchPriority="high" width={1000} height={1000} className="one-image-img" ref={imageRef1} alt="Main Image" />
-          <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main3.webp?v=1730738903167" fetchPriority="high" width={1000} height={1000} className="one-image-img" ref={imageRef2} alt="Main Image" />
-          <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main2.webp?v=1730738900292" fetchPriority="high" width={1000} height={1000} className="one-image-img" ref={imageRef3} alt="Main Image" />
-          <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/main4.webp?v=1730738905467" fetchPriority="high" width={1000} height={1000} className="one-image-img" ref={imageRef4} alt="Main Image" />
+          <img src="/images/main1.webp" fetchPriority="high" width={1000} height={1000} className="one-image-img" ref={imageRef1} alt="Main Image" />
+          <img src="/images/main3.webp" fetchPriority="high" width={1000} height={1000} className="one-image-img" ref={imageRef2} alt="Main Image" />
+          <img src="/images/main2.webp" fetchPriority="high" width={1000} height={1000} className="one-image-img" ref={imageRef3} alt="Main Image" />
+          <img src="/images/main4.webp" fetchPriority="high" width={1000} height={1000} className="one-image-img" ref={imageRef4} alt="Main Image" />
         </div>
       <div className="one-gradient-background" />
       <div className="one-image-trigger"></div>

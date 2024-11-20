@@ -47,7 +47,7 @@ export const Section5 = () => {
             <div className="five-card-content">
               <h1 className="small-subheadline white" >BeReal</h1>
               <div className="five-card-image">
-                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/casestudy2.webp?v=1731068630056" className="five-card-image-img" alt="Main Image" />
+                <img src="/images/casestudy2.webp" className="five-card-image-img" alt="Main Image" />
               </div>
               <p className="description white" >BeReal, the social media app that encourages authenticity, wanted to engage young audiences and spark conversations around real, unfiltered moments. They challenged us to create content that would increase brand awareness and fuel organic word-of-mouth.</p>
             </div>
@@ -56,7 +56,7 @@ export const Section5 = () => {
             <div className="five-card-content">
               <h1 className="small-subheadline white" >Citizen</h1>
               <div className="five-card-image">
-                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/casestudy3.webp?v=1731068632611" className="five-card-image-img" alt="Main Image" />
+                <img src="/images/casestudy3.webp" className="five-card-image-img" alt="Main Image" />
               </div>
               <p className="description white" >Citizen, a live-time safety app, wanted to leverage a campaign to add more gen-z users on their platform. We combined Citizen’s safety appeal with humor on X, effectively boosting brand awareness and app downloads in a tangible, measurable way.</p>
             </div>
@@ -65,7 +65,7 @@ export const Section5 = () => {
             <div className="five-card-content">
               <h1 className="small-subheadline white" >Hexclad</h1>
               <div className="five-card-image">
-                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/casestudy4.webp?v=1731068635004" className="five-card-image-img" alt="Main Image" />
+                <img src="/images/casestudy4.webp" className="five-card-image-img" alt="Main Image" />
               </div>
               <p className="description white" >HexClad, a top cookware brand, wanted to connect with Gen Z audiences online in a relatable and viral way. Heave orchestrated the development and dissemination of inventive memes that engaged millions into a topic as ordinary as cooking pots and pans.</p>
             </div>
@@ -74,7 +74,7 @@ export const Section5 = () => {
             <div className="five-card-content">
               <h1 className="small-subheadline white" >Jack In The Box</h1>
               <div className="five-card-image">
-                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/casestudy5.webp?v=1731068638414" className="five-card-image-img" alt="Main Image" />
+                <img src="/images/casestudy5.webp" className="five-card-image-img" alt="Main Image" />
               </div>
               <p className="description white" >Jack in the Box, a large US fast food chain, wished to increase awareness of their promotion on Saint Patrick’s Day. We swiftly created and distributed content promoting Jack in the Box’s holiday offer all in one day.</p>
             </div>
@@ -83,7 +83,7 @@ export const Section5 = () => {
             <div className="five-card-content">
               <h1 className="small-subheadline white" >Tabs</h1>
               <div className="five-card-image">
-                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/casestudy6.webp?v=1731068641659" className="five-card-image-img" alt="Main Image" />
+                <img src="/images/casestudy6.webp" className="five-card-image-img" alt="Main Image" />
               </div>
               <p className="description white" >Tabs Chocolate, a DTC e-commerce store, struggled with revenue growth, relying on just one marketing channel. Heave helped Tabs scale their revenue from five to six figures per month through a consistent and coordinated flurry of memes, and organic content.</p>
             </div>
@@ -92,7 +92,7 @@ export const Section5 = () => {
             <div className="five-card-content">
               <h1 className="small-subheadline white" >Baked Bags</h1>
               <div className="five-card-image">
-                <img src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/casestudy1.webp?v=1731068625703" className="five-card-image-img" alt="Main Image" />
+                <img src="/images/casestudy1.webp" className="five-card-image-img" alt="Main Image" />
               </div>
               <p className="description white" >Baked Bags, a CPG snack company, aimed to grow sales of its trendy infused-waffle cone snack through its online store. Heave boosted Baked Bags’ online sales and social presence with clever organic content.</p>
             </div>

@@ -60,48 +60,48 @@ export const Section2 = (options) => {
             <div className="two-content-right-content-row" >
               <div className="two-content-right-content-row-content" ref={contentRowRef1} >
                 <div className="two-item" >
-                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo1.mp4?v=1730721648346" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
+                  <video src="/videos/heavevid1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
                 <div className="two-item" >
-                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo2.mp4?v=1730721652829" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
+                  <video src="/videos/heavevid2.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
                 <div className="two-item" >
-                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo3.mp4?v=1730721657920" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
+                  <video src="/videos/heavevid3.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
                 <div className="two-item" >
-                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo1.mp4?v=1730721648346" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
+                  <video src="/videos/heavevid1.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
               </div>
             </div>
             <div className="two-content-right-content-row">
               <div className="two-content-right-content-row-content" ref={contentRowRef2} >
                 <div className="two-item" >
-                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo4.mp4?v=1730721661781" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
+                  <video src="/videos/heavevid4.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
                 <div className="two-item" >
-                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo5.mp4?v=1730721665211" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
+                  <video src="/videos/heavevid5.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
                 <div className="two-item" >
-                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo6.mp4?v=1730721670541" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
+                  <video src="/videos/heavevid6.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
                 <div className="two-item" >
-                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo4.mp4?v=1730721661781" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
+                  <video src="/videos/heavevid4.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
               </div>
             </div>
             <div className="two-content-right-content-row">
               <div className="two-content-right-content-row-content" ref={contentRowRef3} >
                 <div className="two-item" >
-                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo7.mp4?v=1730721673586" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
+                  <video src="/videos/heavevid7.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
                 <div className="two-item" >
-                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo8.mp4?v=1730721676866" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
+                  <video src="/videos/heavevid8.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
                 <div className="two-item" >
-                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo9.mp4?v=1730721682141" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
+                  <video src="/videos/heavevid9.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
                 <div className="two-item" >
-                  <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heavevideo7.mp4?v=1730721673586" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
+                  <video src="/videos/heavevid7.mp4" className="two-item-image" autoPlay="autoplay" muted playsInline={true} loop />
                 </div>
               </div>
             </div>

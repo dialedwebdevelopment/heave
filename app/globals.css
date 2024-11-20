@@ -290,7 +290,7 @@ body {
 
 .navigation-image {
   height: 2.5vh;
-  width: fit-content;
+  width: auto;
   pointer-events: auto;
   cursor: pointer;
 }

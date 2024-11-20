@@ -19,7 +19,6 @@ import { Section9 } from "./section9";
 import { Section5Mobile } from "./Section5Mobile";
 import { Section7Mobile } from "./Section7Mobile";
 import { Section9Mobile } from "./Section9Mobile";
-import { Section2Mobile } from "./Section2Mobile";
 import { Section8Mobile } from "./Section8Mobile";
 
 const Main = () => {
@@ -219,7 +218,7 @@ const Main = () => {
           <div className="loading-video-bottom-fade" />
           <div className="loading-video-left-fade" />
           <div className="loading-video-right-fade" />
-          <video src="https://cdn.glitch.global/fb77b0c4-3062-4970-a03b-49138657d8c7/heaveloadingvideo.mp4?v=1730722663143" className="loading-video-content-video" autoPlay="autoplay" muted playsInline="true" />
+          <video src="/videos/heaveloadingvideo2.mp4" className="loading-video-content-video" autoPlay="autoplay" muted playsInline="true" />
         </div>
       </section>
       <div className="experience">
@@ -238,7 +237,6 @@ const Main = () => {
         <div id="section2" >
           <Section2 />
         </div>
-        <Section2Mobile />
         <div id="section3" >
           <Section3 />
         </div>
