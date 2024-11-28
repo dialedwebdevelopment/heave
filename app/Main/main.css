@@ -493,6 +493,7 @@
 .five-card {
     width: 40vw;
     height: 60vh;
+    height: 30vw;
     border-radius: 15px;
     display: flex;
     padding: 2vw;
