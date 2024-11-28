@@ -146,7 +146,7 @@ export const Section5Mobile = () => {
                 <div className="five-card-image">
                   <img src="/images/tabso.webp" className="five-card-image-img" alt="Main Image" />
                 </div>
-                <p className="description white" >Tabs Chocolate, a DTC e-commerce store, struggled with revenue growth, relying on just one marketing channel. Heave helped Tabs scale their revenue from five to six figures per month through a consistent and coordinated flurry of memes, and organic content.</p>
+                <p className="description white" >Tabs Chocolate, a DTC e-commerce store, struggled with revenue growth, relying on just one marketing channel. Heave helped Tabs scale their revenue from five to seven figures per month through a consistent and coordinated flurry of memes, and organic content.</p>
             </div>
           </div>
           <div className="five-mobile-item" >

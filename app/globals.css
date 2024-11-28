@@ -68,6 +68,34 @@ body {
   z-index: 5;
 }
 
+.plane-1 {
+  width: 10%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.plane-inside {
+  width: 100%;
+  height: 100%;
+}
+
+.planes-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.plane-desktop {
+  display: flex;
+}
+
+.plane-mobile {
+  display: none;
+}
+
 .cursor {
 	width: 2vw;
 	height: 2vw;
@@ -451,6 +479,23 @@ body {
 .experience {
   height: 200vw;
   /* display: none; */
+}
+
+.plane-1 {
+  width: 35%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.plane-desktop {
+  display: none;
+}
+
+.plane-mobile {
+  display: flex;
 }
 
 .cursor {

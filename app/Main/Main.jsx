@@ -209,6 +209,42 @@ const Main = () => {
     // }
   }, [])
 
+  // PLANES
+
+  const planeRef1 = useRef()
+  const planeRef2 = useRef()
+
+  const planeRef1Mobile = useRef()
+  const planeRef2Mobile = useRef()
+
+  useEffect(() => {
+    gsap.fromTo(planeRef1.current, { y: "-10vh", x: "-10vw" }, { y: "110vh", x: "110vw", scrollTrigger: { trigger: ".two", start: "top bottom", end: "bottom top", scrub: true } })
+    gsap.fromTo(planeRef2.current, { y: "40vh", x: "110vw" }, { y: "80vh", x: "-15vw", scrollTrigger: { trigger: ".nine", start: "top bottom", end: "bottom top", scrub: true } })
+
+    gsap.fromTo(planeRef1Mobile.current, { y: "40vh", x: "-50vw" }, { y: "110vh", x: "150vw", scrollTrigger: { trigger: ".two", start: "top bottom", end: "bottom top", scrub: true } })
+    gsap.fromTo(planeRef2Mobile.current, { y: "40vh", x: "150vw" }, { y: "110vh", x: "-150vw", scrollTrigger: { trigger: ".nine", start: "top bottom", end: "bottom top", scrub: true } })
+  }, [])
+
+  useEffect(() => {
+    const plane = document.querySelector(".plane-inside");
+  
+    gsap.to(plane, {
+      duration: 4,
+      ease: "none",
+      repeat: -1,
+      onUpdate: () => {
+        const randomX = Math.sin(Date.now() / 1000) * 10; // Sinusoidal oscillation
+        const randomY = Math.cos(Date.now() / 1000) * 10; // Cosine oscillation
+        const randomRotation = Math.sin(Date.now() / 1500) * 2.5;
+        gsap.set(plane, {
+          x: randomX,
+          y: randomY,
+          rotation: randomRotation,
+        });
+      }
+    });
+  }, []);
+
   return (
     <ReactLenis root>
       <div className="cursor" />
@@ -221,7 +257,7 @@ const Main = () => {
           <video src="/videos/heaveloadingvideo2.mp4" className="loading-video-content-video" autoPlay="autoplay" muted playsInline="true" />
         </div>
       </section>
-      <div className="experience">
+      {/* <div className="experience">
         <Canvas style={{ pointerEvents: 'none' }} camera={{ position: [2, 2, 5], fov: 35 }}>
           <Suspense >
             <Float floatingRange={0.5} >
@@ -230,6 +266,26 @@ const Main = () => {
           </Suspense>
           <Environment preset="studio" environmentIntensity={0.75} />
         </Canvas>
+      </div> */}
+      <div className="plane-1 plane-desktop" ref={planeRef1} >
+        <div className="plane-inside">
+          <img src="/images/plane1.webp" className="planes-image" alt="Main Image" />
+        </div>
+      </div>
+      <div className="plane-1 plane-desktop" ref={planeRef2} >
+        <div className="plane-inside">
+          <img src="/images/plane2.webp" className="planes-image" alt="Main Image" />
+        </div>
+      </div>
+      <div className="plane-1 plane-mobile" ref={planeRef1Mobile} >
+        <div className="plane-inside">
+          <img src="/images/plane1.webp" className="planes-image" alt="Main Image" />
+        </div>
+      </div>
+      <div className="plane-1 plane-mobile" ref={planeRef2Mobile} >
+        <div className="plane-inside">
+          <img src="/images/plane2.webp" className="planes-image" alt="Main Image" />
+        </div>
       </div>
         <div id="section1" >
           <Section1 />
