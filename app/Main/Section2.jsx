@@ -59,10 +59,7 @@ export const Section2 = (options) => {
           <div className="top-fade" />
           <div className="bottom-fade" />
           <div className="two-content-right-content" ref={sliderWrapperRef} >
-            {/* <div className="left-fade" />
-            <div className="right-fade" />
             <div className="top-fade" />
-            <div className="bottom-fade" /> */}
             <div className="two-content-right-content-row" >
               <div className="two-content-right-content-row-content" ref={contentRowRef1} >
                 <div className="two-item" >
