@@ -68,7 +68,7 @@ export const Navigation = () => {
         <div className="navigation-left" >
             <Link href="/" className="link" >
                 <div className="navigation-left-images">
-                    <Image src="/images/heavelogo.png" className="navigation-image" width={500} height={500} />
+                    <img src="/images/heavelogo.png" className="navigation-image" width={500} height={500} />
                 </div>
             </Link>
             <ul className="navigation-menu">

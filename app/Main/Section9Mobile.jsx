@@ -97,7 +97,7 @@ export const Section9Mobile = () => {
             </div>
             <div className="form-contact-box-border" />
             <div className="form-contact-box-content">
-                <p className="description white">Socials:</p>
+                <p className="description white">Email:</p>
                 <div className="nine-content-left-item-column">
                     <a className="nine-content-left-item-column-text" href="mailto:hello@heavecorp.com" >
                         <p className="description grey">hello@heavecorp.com</p>
