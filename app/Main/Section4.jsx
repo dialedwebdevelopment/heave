@@ -68,7 +68,7 @@ export const Section4 = () => {
                 <MotionNumber value={numbers.likes} locales="en-US" className="subheadline blue" />
                 <p className="subheadline blue" >+</p>
               </div>
-            </div>
+            </div>   
           </div>
           <div className="four-divider" />
           <div className="four-content-item" ref={boxRef3} >
