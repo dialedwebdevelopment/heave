@@ -250,10 +250,10 @@ const Main = () => {
       <div className="cursor" />
       <section className="loading-video" ref={sectionRef} >
         <div className="loading-video-content">
-          <div className="loading-video-top-fade" />
+          {/* <div className="loading-video-top-fade" />
           <div className="loading-video-bottom-fade" />
           <div className="loading-video-left-fade" />
-          <div className="loading-video-right-fade" />
+          <div className="loading-video-right-fade" /> */}
           <video src="/videos/heaveloadingvideo2.mp4" className="loading-video-content-video" autoPlay="autoplay" muted playsInline="true" />
         </div>
       </section>
