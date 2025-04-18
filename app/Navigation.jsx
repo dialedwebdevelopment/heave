@@ -1,14 +1,9 @@
 /* eslint-disable jsx-a11y/alt-text */
 "use client";
-import Image from "next/image";
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
-import gsap from "gsap";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
 export const Navigation = () => {
-    const navigationBar = useRef();
-    const navigationMenu = useRef();
-    const navigationBackground = useRef();
 
     // Navigation menu data - centralized for easier management
     const menuItems = [
@@ -18,30 +13,6 @@ export const Navigation = () => {
         { id: "section7", label: "Process", scrollFunction: "scrollToSectionTop" },
         { id: "section9", label: "Contact", scrollFunction: "scrollToSectionCenter" }
     ];
-
-    // GSAP ANIMATIONS
-    useEffect(() => {
-        let navigationDelay;
-    
-        if (sessionStorage.getItem('animationNavigationSeen')) {
-            // Shorter delays for subsequent refreshes
-            navigationDelay = 0.5;
-        } else {
-            // Original delays for first visit
-            navigationDelay = 3.5;
-            
-            // Set flag that animation has been seen
-            sessionStorage.setItem('animationNavigationSeen', 'true');
-        }
-
-        gsap.fromTo(navigationBar.current, 
-            { yPercent: -100, opacity: 0 }, 
-            { delay: navigationDelay, yPercent: 0, opacity: 1, duration: 0.5 }
-        );
-
-        gsap.set(navigationMenu.current, { xPercent: 100, opacity: 1 });
-        gsap.set(navigationBackground.current, { opacity: 0 });
-    }, []);
 
     // SCROLLED
     const [navScrolled, setNavScrolled] = useState(false);
@@ -85,7 +56,7 @@ export const Navigation = () => {
     };
 
     return (
-        <div className={`navigation ${navScrolled ? "scrolled" : ""}`} ref={navigationBar}>
+        <div className={`navigation ${navScrolled ? "scrolled" : ""}`}>
             <div className="navigation-left">
                 <Link href="/" className="link">
                     <div className="navigation-left-images">
