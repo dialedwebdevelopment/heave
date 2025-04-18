@@ -245,7 +245,7 @@ const Main = () => {
   return (
     <ReactLenis root>
       <div className="cursor" />
-      <section className="loading-video" ref={sectionRef} >
+      {/* <section className="loading-video" ref={sectionRef} >
         <div className="loading-video-content">
           <div className="loading-video-bottom-fade"></div>
           <div className="loading-video-top-fade"></div>
@@ -253,7 +253,7 @@ const Main = () => {
           <div className="loading-video-right-fade"></div>
           <img src="/images/hvl3.gif" className="loading-video-content-video" alt="" />
         </div>
-      </section>
+      </section> */}
       <div className="plane-1 plane-desktop" ref={planeRef1} >
         <div className="plane-inside">
           <img src="/images/plane1.webp" className="planes-image" alt="Main Image" />
@@ -274,9 +274,9 @@ const Main = () => {
           <img src="/images/plane2.webp" className="planes-image" alt="Main Image" />
         </div>
       </div>
-        <div id="section1" >
+        {/* <div id="section1" >
           <Section1 />
-        </div>
+        </div> */}
         <div id="section2" >
           <Section2 />
         </div>
