@@ -23,7 +23,21 @@ const Main = () => {
   const sectionRef = useRef()
 
   useLayoutEffect(() => {
-    gsap.fromTo(sectionRef.current, { opacity: 1 }, { opacity: 0, pointerEvents: "none", duration: 0.5, delay: 4, onComplete: () => {sectionRef.current.style.display = "none";} })
+
+    let loadingScreenDelay;
+    
+    if (sessionStorage.getItem('animationSeen')) {
+      // Shorter delays for subsequent refreshes
+      loadingScreenDelay = 0.25;
+    } else {
+      // Original delays for first visit
+      loadingScreenDelay = 4;
+      
+      // Set flag that animation has been seen
+      sessionStorage.setItem('animationSeen', 'true');
+    }
+    
+    gsap.fromTo(sectionRef.current, { opacity: 1 }, { opacity: 0, pointerEvents: "none", duration: 0.5, delay: loadingScreenDelay, onComplete: () => {sectionRef.current.style.display = "none";} })
   }, [])
 
   // LENIS
@@ -245,7 +259,7 @@ const Main = () => {
   return (
     <ReactLenis root>
       <div className="cursor" />
-      {/* <section className="loading-video" ref={sectionRef} >
+      <section className="loading-video" ref={sectionRef} >
         <div className="loading-video-content">
           <div className="loading-video-bottom-fade"></div>
           <div className="loading-video-top-fade"></div>
@@ -253,8 +267,8 @@ const Main = () => {
           <div className="loading-video-right-fade"></div>
           <img src="/images/hvl3.gif" className="loading-video-content-video" alt="" />
         </div>
-      </section> */}
-      {/* <div className="plane-1 plane-desktop" ref={planeRef1} >
+      </section>
+      <div className="plane-1 plane-desktop" ref={planeRef1} >
         <div className="plane-inside">
           <img src="/images/plane1.webp" className="planes-image" alt="Main Image" />
         </div>
@@ -273,13 +287,13 @@ const Main = () => {
         <div className="plane-inside">
           <img src="/images/plane2.webp" className="planes-image" alt="Main Image" />
         </div>
-      </div> */}
-        {/* <div id="section1" >
+      </div>
+        <div id="section1" >
           <Section1 />
-        </div> */}
-        {/* <div id="section2" >
+        </div>
+        <div id="section2" >
           <Section2 />
-        </div> */}
+        </div>
         <div id="section3" >
           <Section3 />
         </div>
