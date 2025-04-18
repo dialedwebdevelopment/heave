@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import "./section1.css";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -86,8 +87,8 @@ const Section1 = () => {
           <img 
             key={index}
             src={image.path} 
-            width={1000} 
-            height={1000} 
+            width={700} 
+            height={700} 
             className="one-image-img" 
             ref={image.ref} 
             alt={`Main Image ${index + 1}`} 

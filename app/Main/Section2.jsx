@@ -5,6 +5,7 @@ import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
+import "./section2.css";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
