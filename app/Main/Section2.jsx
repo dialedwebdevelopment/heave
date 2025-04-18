@@ -8,7 +8,7 @@ import { ChevronRight } from "lucide-react";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-export const Section2 = (options) => {
+const Section2 = (options) => {
 
   const titleRef = useRef()
   const buttonRef = useRef()
@@ -113,3 +113,5 @@ export const Section2 = (options) => {
     </section>
   );
 };
+
+export default Section2;

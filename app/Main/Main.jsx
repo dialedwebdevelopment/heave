@@ -3,20 +3,36 @@ import React, { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { vec2 } from "vecteur";
 import { ReactLenis, useLenis } from 'lenis/react'
-import { Section1 } from "./Section1";
 import "./main.css";
-import { Section2 } from "./Section2";
-import { Section3 } from "./Section3";
-import { Section4 } from "./Section4";
-import { Section5 } from "./Section5";
-import { Section7 } from "./Section7";
-import { Section8 } from "./Section8";
-import { SectionFooter } from "./SectionFooter";
-import { Section9 } from "./section9";
-import { Section5Mobile } from "./Section5Mobile";
-import { Section7Mobile } from "./Section7Mobile";
-import { Section9Mobile } from "./Section9Mobile";
-import { Section8Mobile } from "./Section8Mobile";
+// import { Section1 } from "./Section1";
+// import { Section2 } from "./Section2";
+// import { Section3 } from "./Section3";
+// import { Section4 } from "./Section4";
+// import { Section5 } from "./Section5";
+// import { Section7 } from "./Section7";
+// import { Section8 } from "./Section8";
+// import { SectionFooter } from "./SectionFooter";
+// import { Section9 } from "./section9";
+// import { Section5Mobile } from "./Section5Mobile";
+// import { Section7Mobile } from "./Section7Mobile";
+// import { Section9Mobile } from "./Section9Mobile";
+// import { Section8Mobile } from "./Section8Mobile";
+
+import dynamic from "next/dynamic";
+
+const Section1 = dynamic(() => import("./Section1"),  );
+const Section2 = dynamic(() => import("./Section2"),  );
+const Section3 = dynamic(() => import("./Section3"),  );
+const Section4 = dynamic(() => import("./Section4"),  );
+const Section5 = dynamic(() => import("./Section5"),  );
+const Section7 = dynamic(() => import("./Section7"),  );
+const Section8 = dynamic(() => import("./Section8"),  );
+const SectionFooter = dynamic(() => import("./SectionFooter"),  );
+const Section9 = dynamic(() => import("./section9"),  );
+const Section5Mobile = dynamic(() => import("./Section5Mobile"),  );
+const Section7Mobile = dynamic(() => import("./Section7Mobile"),  );
+const Section9Mobile = dynamic(() => import("./Section9Mobile"),  );
+const Section8Mobile = dynamic(() => import("./Section8Mobile"),  );
 
 const Main = () => {
 
@@ -239,7 +255,7 @@ const Main = () => {
   }, [])
 
   return (
-    <ReactLenis root>
+    <>
       <div className="cursor" />
       <section className="loading-video" ref={sectionRef} >
         <div className="loading-video-content">
@@ -301,7 +317,7 @@ const Main = () => {
           <Section9Mobile />
         </div>
         <SectionFooter />
-    </ReactLenis>
+    </>
   );
 };
 

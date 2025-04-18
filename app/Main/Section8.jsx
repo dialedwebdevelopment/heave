@@ -80,7 +80,7 @@ function ParallaxText({ children, baseVelocity = 100 }) {
   );
 }
 
-export const Section8 = () => {
+const Section8 = () => {
 
   return (
     <section className="eight">
@@ -93,3 +93,5 @@ export const Section8 = () => {
     </section>
   );
 };
+
+export default Section8;

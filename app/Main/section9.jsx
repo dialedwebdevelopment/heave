@@ -6,7 +6,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-export const Section9 = () => {
+const Section9 = () => {
 
   const titleRef = useRef()
   const formBox1 = useRef()
@@ -112,3 +112,5 @@ export const Section9 = () => {
     </section>
   );
 };
+
+export default Section9;

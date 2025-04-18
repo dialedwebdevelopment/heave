@@ -7,7 +7,7 @@ import { motion, useTransform, useScroll } from "framer-motion";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-export const Section5 = () => {
+const Section5 = () => {
 
   // REFS
   const titleRef = useRef()
@@ -103,3 +103,5 @@ export const Section5 = () => {
     </section>
   );
 };
+
+export default Section5;

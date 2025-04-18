@@ -5,7 +5,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-export const Section1 = () => {
+const Section1 = () => {
 
   const [textAnimationTrigger, setTextAnimationTrigger] = useState(false);
 
@@ -99,3 +99,5 @@ export const Section1 = () => {
     </section>
   );
 };
+
+export default Section1;

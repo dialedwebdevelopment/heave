@@ -8,7 +8,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-export const Section7 = () => {
+const Section7 = () => {
   const [activeIndex, setActiveIndex] = useState(null); // Track the active accordion
   const imageRefs = [useRef(null), useRef(null), useRef(null)]; // Create refs for each image box
   const lenis = useRef(null); // Create a ref to hold Lenis instance
@@ -149,3 +149,5 @@ export const Section7 = () => {
     </section>
   );
 };
+
+export default Section7;

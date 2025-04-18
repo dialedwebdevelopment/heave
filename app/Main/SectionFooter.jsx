@@ -4,7 +4,7 @@ import { TextPlugin, SplitText, ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(SplitText, ScrollTrigger, TextPlugin);
 
-export const SectionFooter = () => {
+const SectionFooter = () => {
 
   // const titleRef = useRef()
 
@@ -22,3 +22,5 @@ export const SectionFooter = () => {
     </section>
   );
 };
+
+export default SectionFooter;

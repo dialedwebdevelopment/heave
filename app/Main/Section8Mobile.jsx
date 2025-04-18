@@ -8,7 +8,7 @@ import Marquee from "react-fast-marquee";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-export const Section8Mobile = () => {
+const Section8Mobile = () => {
 
   return (
     <section className="eight-mobile">
@@ -71,3 +71,5 @@ export const Section8Mobile = () => {
     </section>
   );
 };
+
+export default Section8Mobile;

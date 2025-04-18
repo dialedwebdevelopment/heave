@@ -7,7 +7,7 @@ import MotionNumber from "motion-number";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-export const Section4 = () => {
+const Section4 = () => {
   
   const titleRef = useRef()
   const boxRef1 = useRef()
@@ -86,3 +86,5 @@ export const Section4 = () => {
     </section>
   );
 };
+
+export default Section4;

@@ -9,7 +9,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-export const Section5Mobile = () => {
+const Section5Mobile = () => {
 
   // REFS
   const titleRef= useRef()
@@ -170,3 +170,5 @@ export const Section5Mobile = () => {
     </section>
   );
 };
+
+export default Section5Mobile;

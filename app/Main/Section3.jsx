@@ -6,7 +6,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-export const Section3 = () => {
+const Section3 = () => {
 
   const [isMobile, setIsMobile] = useState(false);
   const textRef = useRef()
@@ -100,3 +100,5 @@ export const Section3 = () => {
     </section>
   );
 };
+
+export default Section3;
