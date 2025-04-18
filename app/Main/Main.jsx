@@ -26,7 +26,7 @@ const Main = () => {
 
     let loadingScreenDelay;
     
-    if (sessionStorage.getItem('animationSeen')) {
+    if (sessionStorage.getItem('animationLoadingScreenSeen')) {
       // Shorter delays for subsequent refreshes
       loadingScreenDelay = 0.25;
     } else {
@@ -34,7 +34,7 @@ const Main = () => {
       loadingScreenDelay = 4;
       
       // Set flag that animation has been seen
-      sessionStorage.setItem('animationSeen', 'true');
+      sessionStorage.setItem('animationLoadingScreenSeen', 'true');
     }
     
     gsap.fromTo(sectionRef.current, { opacity: 1 }, { opacity: 0, pointerEvents: "none", duration: 0.5, delay: loadingScreenDelay, onComplete: () => {sectionRef.current.style.display = "none";} })

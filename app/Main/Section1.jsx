@@ -21,7 +21,7 @@ export const Section1 = () => {
     // Check if this is the first visit or a refresh
     let titleDelay, boxTextDelay, nullDelay;
     
-    if (sessionStorage.getItem('animationSeen')) {
+    if (sessionStorage.getItem('animationHeroSeen')) {
       // Shorter delays for subsequent refreshes
       titleDelay = 0.25;
       boxTextDelay = 0.75;
@@ -33,7 +33,7 @@ export const Section1 = () => {
       nullDelay = 3;
       
       // Set flag that animation has been seen
-      sessionStorage.setItem('animationSeen', 'true');
+      sessionStorage.setItem('animationHeroSeen', 'true');
     }
 
     const split = new SplitText(titleRef.current, { type: "chars" });

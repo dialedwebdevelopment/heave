@@ -23,7 +23,7 @@ export const Navigation = () => {
     useEffect(() => {
         let navigationDelay;
     
-        if (sessionStorage.getItem('animationSeen')) {
+        if (sessionStorage.getItem('animationNavigationSeen')) {
             // Shorter delays for subsequent refreshes
             navigationDelay = 0.5;
         } else {
@@ -31,7 +31,7 @@ export const Navigation = () => {
             navigationDelay = 3.5;
             
             // Set flag that animation has been seen
-            sessionStorage.setItem('animationSeen', 'true');
+            sessionStorage.setItem('animationNavigationSeen', 'true');
         }
 
         gsap.fromTo(navigationBar.current, 
