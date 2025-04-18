@@ -236,25 +236,25 @@ const Main = () => {
     gsap.fromTo(planeRef2Mobile.current, { y: "40vh", x: "150vw" }, { y: "110vh", x: "-150vw", scrollTrigger: { trigger: ".nine", start: "top bottom", end: "bottom top", scrub: true } })
   }, [])
 
-  useEffect(() => {
-    const plane = document.querySelector(".plane-inside");
+  // useEffect(() => {
+  //   const plane = document.querySelector(".plane-inside");
   
-    gsap.to(plane, {
-      duration: 4,
-      ease: "none",
-      repeat: -1,
-      onUpdate: () => {
-        const randomX = Math.sin(Date.now() / 1000) * 10; // Sinusoidal oscillation
-        const randomY = Math.cos(Date.now() / 1000) * 10; // Cosine oscillation
-        const randomRotation = Math.sin(Date.now() / 1500) * 2.5;
-        gsap.set(plane, {
-          x: randomX,
-          y: randomY,
-          rotation: randomRotation,
-        });
-      }
-    });
-  }, []);
+  //   gsap.to(plane, {
+  //     duration: 4,
+  //     ease: "none",
+  //     repeat: -1,
+  //     onUpdate: () => {
+  //       const randomX = Math.sin(Date.now() / 1000) * 10; // Sinusoidal oscillation
+  //       const randomY = Math.cos(Date.now() / 1000) * 10; // Cosine oscillation
+  //       const randomRotation = Math.sin(Date.now() / 1500) * 2.5;
+  //       gsap.set(plane, {
+  //         x: randomX,
+  //         y: randomY,
+  //         rotation: randomRotation,
+  //       });
+  //     }
+  //   });
+  // }, []);
 
   return (
     <ReactLenis root>
