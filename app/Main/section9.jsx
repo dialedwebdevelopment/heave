@@ -58,7 +58,7 @@ export const Section9 = () => {
     e.preventDefault();
 
     const { name, phone, company, position, message } = formData;
-    const mailtoLink = `mailto:hello@heavecorp.com?subject=Contact from ${name}&body=Name: ${name}%0D%0APhone: ${phone}%0D%0ACompany: ${company}%0D%0APosition: ${position}%0D%0AMessage: ${message}`;
+    const mailtoLink = `mailto:david@heavecorp.com?subject=Contact from ${name}&body=Name: ${name}%0D%0APhone: ${phone}%0D%0ACompany: ${company}%0D%0APosition: ${position}%0D%0AMessage: ${message}`;
 
     window.location.href = mailtoLink;
   };
@@ -87,8 +87,8 @@ export const Section9 = () => {
             <div ref={leftRef3} className="nine-content-left-item">
               <p className="description white">Email:</p>
               <div className="nine-content-left-item-column">
-                <a className="nine-content-left-item-column-text" href="mailto:hello@heavecorp.com" >
-                  <p className="description grey hover-text-grey">hello@heavecorp.com</p>
+                <a className="nine-content-left-item-column-text" href="mailto:david@heavecorp.com" >
+                  <p className="description grey hover-text-grey">david@heavecorp.com</p>
                 </a>
               </div>
             </div>

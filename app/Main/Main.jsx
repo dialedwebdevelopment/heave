@@ -1,5 +1,5 @@
 "use client";
-import React, { Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { vec2 } from "vecteur";
 import { ReactLenis, useLenis } from 'lenis/react'
@@ -12,9 +12,6 @@ import { Section5 } from "./Section5";
 import { Section7 } from "./Section7";
 import { Section8 } from "./Section8";
 import { SectionFooter } from "./SectionFooter";
-import { Canvas } from "@react-three/fiber";
-import { Environment, Float } from "@react-three/drei";
-import Model from "./Plane3D/Model";
 import { Section9 } from "./section9";
 import { Section5Mobile } from "./Section5Mobile";
 import { Section7Mobile } from "./Section7Mobile";
@@ -250,20 +247,13 @@ const Main = () => {
       <div className="cursor" />
       <section className="loading-video" ref={sectionRef} >
         <div className="loading-video-content">
-          {/* <video src="/videos/heaveloadingvideo2.mp4" className="loading-video-content-video" autoPlay muted playsInline controls={false} /> */}
+          <div className="loading-video-bottom-fade"></div>
+          <div className="loading-video-top-fade"></div>
+          <div className="loading-video-left-fade"></div>
+          <div className="loading-video-right-fade"></div>
           <img src="/images/hvl3.gif" className="loading-video-content-video" alt="" />
         </div>
       </section>
-      {/* <div className="experience">
-        <Canvas style={{ pointerEvents: 'none' }} camera={{ position: [2, 2, 5], fov: 35 }}>
-          <Suspense >
-            <Float floatingRange={0.5} >
-                <Model />
-            </Float>
-          </Suspense>
-          <Environment preset="studio" environmentIntensity={0.75} />
-        </Canvas>
-      </div> */}
       <div className="plane-1 plane-desktop" ref={planeRef1} >
         <div className="plane-inside">
           <img src="/images/plane1.webp" className="planes-image" alt="Main Image" />
