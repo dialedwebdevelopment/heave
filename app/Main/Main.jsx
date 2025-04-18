@@ -254,7 +254,7 @@ const Main = () => {
           <img src="/images/hvl3.gif" className="loading-video-content-video" alt="" />
         </div>
       </section> */}
-      <div className="plane-1 plane-desktop" ref={planeRef1} >
+      {/* <div className="plane-1 plane-desktop" ref={planeRef1} >
         <div className="plane-inside">
           <img src="/images/plane1.webp" className="planes-image" alt="Main Image" />
         </div>
@@ -273,13 +273,13 @@ const Main = () => {
         <div className="plane-inside">
           <img src="/images/plane2.webp" className="planes-image" alt="Main Image" />
         </div>
-      </div>
+      </div> */}
         {/* <div id="section1" >
           <Section1 />
         </div> */}
-        <div id="section2" >
+        {/* <div id="section2" >
           <Section2 />
-        </div>
+        </div> */}
         <div id="section3" >
           <Section3 />
         </div>
