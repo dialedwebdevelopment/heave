@@ -24,42 +24,24 @@ const Section8Mobile = dynamic(() => import("./Section8Mobile"),  );
 const Main = () => {
 
   const sectionRef = useRef()
-// In your Main component
-const videoRef = useRef();
-const imageRef = useRef(); // Add this new ref for the image
 
-useLayoutEffect(() => {
-  let loadingScreenDelay;
-  
-  if (sessionStorage.getItem('animationLoadingScreenSeen')) {
-    // Shorter delays for subsequent refreshes
-    loadingScreenDelay = 0.25;
+  useLayoutEffect(() => {
+
+    let loadingScreenDelay;
     
-    // Show image, hide video on refresh
-    if (videoRef.current) videoRef.current.style.display = "none";
-    if (imageRef.current) imageRef.current.style.display = "block";
-  } else {
-    // Original delays for first visit
-    loadingScreenDelay = 4;
-    
-    // Show video, hide image on first visit
-    if (videoRef.current) videoRef.current.style.display = "block";
-    if (imageRef.current) imageRef.current.style.display = "none";
-    
-    // Play the video
-    videoRef.current.play();
-    
-    // Set flag that animation has been seen
-    sessionStorage.setItem('animationLoadingScreenSeen', 'true');
-  }
-  
-  gsap.fromTo(sectionRef.current, 
-    { opacity: 1 }, 
-    { opacity: 0, pointerEvents: "none", duration: 0.5, delay: loadingScreenDelay, 
-       
+    if (sessionStorage.getItem('animationLoadingScreenSeen')) {
+      // Shorter delays for subsequent refreshes
+      loadingScreenDelay = 0.25;
+    } else {
+      // Original delays for first visit
+      loadingScreenDelay = 4;
+      
+      // Set flag that animation has been seen
+      sessionStorage.setItem('animationLoadingScreenSeen', 'true');
     }
-  );
-}, []);
+    
+    gsap.fromTo(sectionRef.current, { opacity: 1 }, { opacity: 0, pointerEvents: "none", duration: 0.5, delay: loadingScreenDelay, onComplete: () => {sectionRef.current.style.display = "none";} })
+  }, [])
 
   // LENIS
 
@@ -268,22 +250,7 @@ useLayoutEffect(() => {
           <div className="loading-video-top-fade"></div>
           <div className="loading-video-left-fade"></div>
           <div className="loading-video-right-fade"></div>
-          {/* <img src="/images/hvl3.gif" className="loading-video-content-video" alt="" /> */}
-          <img 
-      src="/images/heaveloadingimage.webp" // Replace with your desired image path
-      className="loading-video-content-video" 
-      ref={imageRef}
-      alt="Loading screen" 
-    />
-    
-    {/* Video for first visit */}
-    <video 
-      src="/videos/heaveloadinganimation.mp4" 
-      className="loading-video-content-video" 
-      ref={videoRef}
-      playsInline 
-      muted
-    />
+          <img src="/images/hvl3.gif" className="loading-video-content-video" alt="" />
         </div>
       </section>
       <div className="plane-1 plane-desktop" ref={planeRef1} >
