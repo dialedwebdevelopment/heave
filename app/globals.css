@@ -130,6 +130,12 @@ body {
 	}
 }
 
+/* ANIMATION PRESET */
+
+.opacityanimation {
+  opacity: 0;
+}
+
 /* COLORS */
 
 .white {

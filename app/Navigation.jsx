@@ -60,7 +60,7 @@ export const Navigation = () => {
             <div className="navigation-left">
                 <Link href="/" className="link">
                     <div className="navigation-left-images">
-                        <img src="/images/heavelogo.png" className="navigation-image" width={500} height={500} />
+                        <img src="/images/heavelogo.png" className="navigation-image" width={100} height={100} />
                     </div>
                 </Link>
                 <ul className="navigation-menu">

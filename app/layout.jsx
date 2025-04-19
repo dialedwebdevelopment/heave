@@ -9,8 +9,39 @@ const poppins = Poppins({
 })
 
 export const metadata = {
-  title: "Heave",
+  title: "Heave | Elevating brands through organic marketing",
   description: "We elevate brands through viral marketing strategies we’ve mastered in the past.",
+  keywords: [
+    "organic marketing",
+    "Gen Z marketing",
+    "Millennial marketing",
+    "authentic brand storytelling",
+    "cultural relevance marketing",
+    "brand alignment strategies",
+    "audience engagement",
+    "brand growth strategies",
+    "digital brand building",
+    "social-first campaigns",
+    "community-driven marketing",
+    "brand storytelling agency",
+    "authentic content creation",
+    "purpose-driven branding",
+    "creative brand strategy",
+    "modern brand marketing",
+    "organic growth strategies",
+    "audience-first marketing",
+    "content-led marketing",
+    "branding for Gen Z"
+  ],  
+  applicationName: 'Heave',
+  openGraph: {
+    title: "Heave | Elevating brands through organic marketing",
+    description: "We elevate brands through viral marketing strategies we’ve mastered in the past.",
+    url: "https://www.heavecorp.com/",
+    siteName: "Heave",
+    images: ["/images/heavecorp_logo.jpeg"],
+    type: 'website',
+  },
 };
 
 export const viewport = {
