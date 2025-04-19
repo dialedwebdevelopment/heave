@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { Suspense, useEffect, useLayoutEffect, useRef } from "react";
+import React, { useRef } from "react";
 import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import NextImage from "next/image";
 import { motion, useScroll, useSpring, useTransform, useMotionValue, useVelocity, useAnimationFrame } from "framer-motion";
 import { wrap } from "@motionone/utils";
+import "./section8.css";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 

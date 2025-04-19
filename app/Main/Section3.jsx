@@ -30,9 +30,9 @@ const Section3 = () => {
   useEffect(() => {
     const titleSplitText = new SplitText(textRef.current, { type: 'words' });
     gsap.fromTo(titleSplitText.words, { opacity: 0, }, { opacity: 1, stagger: 0.01, scrollTrigger: { trigger: ".three-content", start: "top bottom", end: "center 50%", scrub: true } })
-    gsap.fromTo(imageRef1.current, { opacity: 0, }, { opacity: 1, scrollTrigger: { trigger: imageRef1.current, start: "top 97.5%", end: "center center", scrub: true } })
-    gsap.fromTo(imageRef2.current, { opacity: 0, }, { opacity: 1, scrollTrigger: { trigger: imageRef2.current, start: "top 97.5%", end: "center center", scrub: true } })
-    gsap.fromTo(imageRef3.current, { opacity: 0, }, { opacity: 1, scrollTrigger: { trigger: imageRef3.current, start: "top 97.5%", end: "center center", scrub: true } })
+    gsap.to(imageRef1.current, { opacity: 1, scrollTrigger: { trigger: imageRef1.current, start: "top 97.5%", end: "center center", scrub: true } })
+    gsap.to(imageRef2.current, { opacity: 1, scrollTrigger: { trigger: imageRef2.current, start: "top 97.5%", end: "center center", scrub: true } })
+    gsap.to(imageRef3.current, { opacity: 1, scrollTrigger: { trigger: imageRef3.current, start: "top 97.5%", end: "center center", scrub: true } })
   }, [])
 
   // CARDS MOUSE ANIMATION
@@ -95,7 +95,7 @@ const Section3 = () => {
   return (
     <section className="section three">
       <div className="three-content">
-        <h1 className="subheadline three-subheadline white" ref={textRef} >We don’t just create campaigns, we <span className="blue" > ignite {!isMobile && <br />} movements</span>. <img src="/images/heavelogo3.webp" width={500} height={500} className="three-image three-image-1" ref={imageRef1} alt="alt" /> Leveraging our <span className="blue" >vast network</span> <img src="/images/heavelogo2.webp" width={500} height={500} className="three-image three-image-2" ref={imageRef2} alt="alt" /> of influencers and digital platforms, we elevate your brand from concept to<span className="blue" > viral success</span>, <img src="/images/heavelogo1.webp" width={500} height={500} className="three-image three-image-3" ref={imageRef3} alt="alt" /> keeping your audience captivated and engaged.</h1>
+        <h1 className="subheadline three-subheadline white" ref={textRef} >We don’t just create campaigns, we <span className="blue" > ignite {!isMobile && <br />} movements</span>. <img src="/images/heavelogo3.webp" width={300} height={300} className="three-image three-image-1 opacityanimation" ref={imageRef1} alt="alt" /> Leveraging our <span className="blue" >vast network</span> <img src="/images/heavelogo2.webp" width={300} height={300} className="three-image three-image-2 opacityanimation" ref={imageRef2} alt="alt" /> of influencers and digital platforms, we elevate your brand from concept to<span className="blue" > viral success</span>, <img src="/images/heavelogo1.webp" width={300} height={300} className="three-image three-image-3 opacityanimation" ref={imageRef3} alt="alt" /> keeping your audience captivated and engaged.</h1>
       </div>
       <div className="section-border"></div>
     </section>

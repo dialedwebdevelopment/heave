@@ -9,80 +9,111 @@ import "./section4.css";
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 const Section4 = () => {
+  const titleRef = useRef();
   
-  const titleRef = useRef()
-  const boxRef1 = useRef()
-  const boxRef2 = useRef()
-  const boxRef3 = useRef()
+  // Create an array of box references
+  const boxRefs = Array(3).fill().map(() => useRef());
+  
+  // Define statistics data
+  const statsData = [
+    { label: "Impressions", key: "impressions", initialValue: 4700000000 },
+    { label: "Likes", key: "likes", initialValue: 110000000 },
+    { label: "Shares", key: "shares", initialValue: 30000000 }
+  ];
 
+  // Initialize state with data from statsData
+  const [numbers, setNumbers] = useState(
+    statsData.reduce((acc, stat) => {
+      acc[stat.key] = stat.initialValue;
+      return acc;
+    }, {})
+  );
+
+  // Text and box animations
   useEffect(() => {
+    // Title animation
     const titleSplitText = new SplitText(titleRef.current, { type: 'words' });
-    gsap.fromTo(titleSplitText.words, { opacity: 0 }, { opacity: 1, stagger: 0.05, duration: 1, scrollTrigger: { trigger: titleRef.current, start: "top 95%" } })
+    gsap.fromTo(
+      titleSplitText.words, 
+      { opacity: 0 }, 
+      { 
+        opacity: 1, 
+        stagger: 0.05, 
+        duration: 1, 
+        scrollTrigger: { 
+          trigger: titleRef.current, 
+          start: "top 95%" 
+        } 
+      }
+    );
 
-    gsap.fromTo(boxRef1.current, { yPercent: 25, opacity: 0, willChange: 'filter, transform', filter: 'blur(10px)' }, { yPercent: 0, opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: boxRef1.current, start: "top bottom"  } })
-    gsap.fromTo(boxRef2.current, { yPercent: 25, opacity: 0, willChange: 'filter, transform', filter: 'blur(10px)' }, { delay: 0.25, yPercent: 0, opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: boxRef1.current, start: "top bottom"  } })
-    gsap.fromTo(boxRef3.current, { yPercent: 25, opacity: 0, willChange: 'filter, transform', filter: 'blur(10px)' }, { delay: 0.5, yPercent: 0, opacity: 1, filter: 'blur(0px)', duration: 0.5, scrollTrigger: { trigger: boxRef1.current, start: "top bottom"  } })
-  }, [])
+    // Box animations with staggered delays
+    boxRefs.forEach((boxRef, index) => {
+      gsap.to(boxRef.current, { 
+        delay: index * 0.25, 
+        opacity: 1, 
+        duration: 1.25, 
+        ease: "sine", 
+        scrollTrigger: { 
+          trigger: boxRefs[0].current, 
+          start: "top bottom" 
+        } 
+      });
+    });
+  }, []);
 
-  const [numbers, setNumbers] = useState({
-    likes: 110000000,
-    shares: 30000000,
-    impressions: 4700000000,
-  });
-
-  // Randomly update numbers every 4 seconds
+  // Randomly update numbers every 1.5 seconds
   useEffect(() => {
     const updateNumbers = () => {
-      setNumbers(prev => ({
-        likes: prev.likes + Math.floor(Math.random() * (250 - 100 + 1)) + 100,
-        shares: prev.shares + Math.floor(Math.random() * (250 - 100 + 1)) + 100,
-        follows: prev.follows + Math.floor(Math.random() * (250 - 100 + 1)) + 100,
-        impressions: prev.impressions + Math.floor(Math.random() * (250 - 100 + 1)) + 100,
-      }));
+      setNumbers(prev => {
+        const newNumbers = { ...prev };
+        
+        // Update all statistics
+        Object.keys(newNumbers).forEach(key => {
+          const increment = Math.floor(Math.random() * (250 - 100 + 1)) + 100;
+          newNumbers[key] += increment;
+        });
+        
+        return newNumbers;
+      });
     };
 
-    const interval = setInterval(updateNumbers, 1500); // Update every 4 seconds
-    return () => clearInterval(interval); // Cleanup interval on unmount
+    const interval = setInterval(updateNumbers, 1500);
+    return () => clearInterval(interval);
   }, []);
 
   return (
     <section className="section four">
       <div className="four-content">
         <div className="textbox four-textbox">
-          <h1 className="subheadline white" ref={titleRef} >Our Live Statistics <span className="blue" > This Year </span></h1>
+          <h1 className="subheadline white" ref={titleRef}>
+            Our Live Statistics <span className="blue">This Year</span>
+          </h1>
         </div>
         <div className="four-content-row">
-          <div className="four-content-item" ref={boxRef1} >
-            <div className="four-content-item-box" >
-              <p className="description" >Impressions</p> 
-              <div className="four-number">
-                <MotionNumber value={numbers.impressions} locales="en-US" className="subheadline blue" />
-                <p className="subheadline blue" >+</p>
+          {statsData.map((stat, index) => (
+            <React.Fragment key={stat.key}>
+              <div 
+                className="four-content-item opacityanimation" 
+                ref={boxRefs[index]}
+              >
+                <div className="four-content-item-box">
+                  <p className="description">{stat.label}</p>
+                  <div className="four-number">
+                    <MotionNumber 
+                      value={numbers[stat.key]} 
+                      locales="en-US" 
+                      className="subheadline blue" 
+                    />
+                    <p className="subheadline blue">+</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="four-divider" />
-          <div className="four-content-item" ref={boxRef2} >
-            <div className="four-content-item-box" >
-              <p className="description" >Likes</p>
-              <div className="four-number">
-                <MotionNumber value={numbers.likes} locales="en-US" className="subheadline blue" />
-                <p className="subheadline blue" >+</p>
-              </div>
-            </div>   
-          </div>
-          <div className="four-divider" />
-          <div className="four-content-item" ref={boxRef3} >
-            <div className="four-content-item-box" >
-              <p className="description" >Shares</p>
-              <div className="four-number">
-                <MotionNumber value={numbers.shares} locales="en-US" className="subheadline blue" />
-                <p className="subheadline blue" >+</p>
-              </div>
-            </div>
-          </div>
-          </div>
+              {index < statsData.length - 1 && <div className="four-divider" />}
+            </React.Fragment>
+          ))}
         </div>
+      </div>
       <div className="section-border"></div>
     </section>
   );
