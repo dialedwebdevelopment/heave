@@ -8,33 +8,65 @@ import "./section9.css";
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 const Section9Mobile = () => {
-
-  const titleRefMobile = useRef()
-  const formBox1Mobile = useRef()
-  const formBox2Mobile = useRef()
-  const formBox3Mobile = useRef()
-  const formBox4Mobile = useRef()
-  const formBox5Mobile = useRef()
-  const formButtonMobile = useRef()
-
-  const leftRef1Mobile = useRef()
-  const leftRef2Mobile = useRef()
+  const titleRefMobile = useRef();
+  
+  // Create refs for form elements using an array
+  const formRefs = {
+    box1: useRef(),
+    box2: useRef(),
+    box3: useRef(),
+    box4: useRef(),
+    box5: useRef(),
+    button: useRef()
+  };
+  
+  // Create refs for left section elements
+  const leftRefs = [useRef(), useRef()];
 
   // GSAP ANIMATIONS
   useEffect(() => {
+    // Title animation
     const titleSplitTextMobile = new SplitText(titleRefMobile.current, { type: 'words' });
-    gsap.fromTo(titleSplitTextMobile.words, { opacity: 0 }, { opacity: 1, stagger: 0.05, duration: 1, scrollTrigger: { trigger: titleRefMobile.current, start: "top 95%" } })
+    gsap.fromTo(
+      titleSplitTextMobile.words, 
+      { opacity: 0 }, 
+      { 
+        opacity: 1, 
+        stagger: 0.05, 
+        duration: 1, 
+        scrollTrigger: { 
+          trigger: titleRefMobile.current, 
+          start: "top 95%" 
+        } 
+      }
+    );
 
-    gsap.to(formBox1Mobile.current, { opacity: 1, duration: 1.25, ease: "sine", scrollTrigger: { trigger: formBox1Mobile.current, start: "top 75%" } })
-    gsap.to(formBox2Mobile.current, { opacity: 1, duration: 1.25, ease: "sine", scrollTrigger: { trigger: formBox2Mobile.current, start: "top 75%" } })
-    gsap.to(formBox3Mobile.current, { opacity: 1, duration: 1.25, ease: "sine", scrollTrigger: { trigger: formBox3Mobile.current, start: "top 75%" } })
-    gsap.to(formBox4Mobile.current, { opacity: 1, duration: 1.25, ease: "sine", scrollTrigger: { trigger: formBox4Mobile.current, start: "top 75%" } })
-    gsap.to(formBox5Mobile.current, { opacity: 1, duration: 1.25, ease: "sine", scrollTrigger: { trigger: formBox5Mobile.current, start: "top 75%" } })
-    gsap.to(formButtonMobile.current, { opacity: 1, duration: 1.25, ease: "sine", scrollTrigger: { trigger: formButtonMobile.current, start: "top 75%" } })
+    // Form elements animation - using loop instead of repetitive code
+    Object.values(formRefs).forEach(ref => {
+      gsap.to(ref.current, { 
+        opacity: 1, 
+        duration: 1.25, 
+        ease: "sine", 
+        scrollTrigger: { 
+          trigger: ref.current, 
+          start: "top 75%" 
+        } 
+      });
+    });
 
-    gsap.to(leftRef1Mobile.current, { opacity: 1, duration: 1.25, ease: "sine", scrollTrigger: { trigger: leftRef1Mobile.current, start: "top 95%" } })
-    gsap.to(leftRef2Mobile.current, { opacity: 1, duration: 1.25, ease: "sine", scrollTrigger: { trigger: leftRef2Mobile.current, start: "top 95%" } })
-  }, [])
+    // Left section animation - using loop instead of repetitive code
+    leftRefs.forEach(ref => {
+      gsap.to(ref.current, { 
+        opacity: 1, 
+        duration: 1.25, 
+        ease: "sine", 
+        scrollTrigger: { 
+          trigger: ref.current, 
+          start: "top 95%" 
+        } 
+      });
+    });
+  }, []);
 
   // CONTACT
   const [formData, setFormData] = useState({
@@ -47,10 +79,10 @@ const Section9Mobile = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setFormData(prevData => ({
+      ...prevData,
       [name]: value,
-    });
+    }));
   };
 
   const handleSubmit = (e) => {
@@ -62,48 +94,89 @@ const Section9Mobile = () => {
     window.location.href = mailtoLink;
   };
 
+  // Form fields data for dynamic rendering
+  const formFields = [
+    { ref: formRefs.box1, type: "text", name: "name", placeholder: "Name...", required: true },
+    { ref: formRefs.box2, type: "tel", name: "phone", placeholder: "Phone number...", required: true },
+    { ref: formRefs.box3, type: "text", name: "company", placeholder: "Company...", required: true },
+    { ref: formRefs.box4, type: "text", name: "position", placeholder: "Position...", required: true },
+    { ref: formRefs.box5, type: "text", name: "message", placeholder: "Anything else to add?", required: true }
+  ];
+
+  // Social links data for dynamic rendering
+  const socialLinks = [
+    { href: "https://www.instagram.com/heave", text: "Instagram" },
+    { href: "https://www.linkedin.com/company/heavecorp/", text: "LinkedIn" },
+    { href: "https://x.com/heaveads", text: "Twitter" }
+  ];
+
   return (
     <section className="section nine-mobile">
-      {/* <div className="section-border" /> */}
       <div className="nine-content">
         <div className="nine-content-left">
-          <h1 className="subheadline white form-mobile-text-center" ref={titleRefMobile} >Let’s create the <span className="blue" >future together!</span></h1>
-          <p ref={leftRef1Mobile} className="description white form-mobile-text-center opacityanimation" >If you want to contact us, feel free to drop us a line or your pitch deck...</p>
+          <h1 className="subheadline white form-mobile-text-center" ref={titleRefMobile}>
+            Let's create the <span className="blue">future together!</span>
+          </h1>
+          <p 
+            ref={leftRefs[0]} 
+            className="description white form-mobile-text-center opacityanimation"
+          >
+            If you want to contact us, feel free to drop us a line or your pitch deck...
+          </p>
+          
           <form className="nine-contactbox" onSubmit={handleSubmit}>
-            <div ref={formBox1Mobile} >
-            <input type="text" name="name" placeholder="Name..." required value={formData.name} onChange={handleChange} />
-            </div>
-            <input ref={formBox2Mobile} className="opacityanimation" type="tel" name="phone" placeholder="Phone number..." required value={formData.phone} onChange={handleChange} />
-            <input ref={formBox3Mobile} className="opacityanimation" type="text" name="company" placeholder="Company..." required value={formData.company} onChange={handleChange} />
-            <input ref={formBox4Mobile} className="opacityanimation" type="text" name="position" placeholder="Position..." required value={formData.position} onChange={handleChange} />
-            <input ref={formBox5Mobile} className="opacityanimation" type="text" name="message" placeholder="Anything else to add?" required value={formData.message} onChange={handleChange} />
-            <button ref={formButtonMobile} className="form-button opacityanimation" type="submit">
+            {formFields.map((field, index) => (
+              <div key={index} ref={field.ref} className={index > 0 ? "opacityanimation" : ""}>
+                <input
+                  type={field.type}
+                  name={field.name}
+                  placeholder={field.placeholder}
+                  required={field.required}
+                  value={formData[field.name]}
+                  onChange={handleChange}
+                />
+              </div>
+            ))}
+            
+            <button 
+              ref={formRefs.button} 
+              className="form-button opacityanimation" 
+              type="submit"
+            >
               <p className="description">Submit</p>
             </button>
           </form>
-          <div className="form-contact-box opacityanimation" ref={leftRef2Mobile} >
+          
+          <div className="form-contact-box opacityanimation" ref={leftRefs[1]}>
             <div className="form-contact-box-content">
-                <p className="description white">Socials:</p>
-                <div className="nine-content-left-item-column">
-                    <a className="nine-content-left-item-column-text" href="https://www.instagram.com/heave" target="_blank" >
-                        <p className="description grey">Instagram</p>
-                    </a>
-                    <a className="nine-content-left-item-column-text" href="https://www.linkedin.com/company/heavecorp/" target="_blank" >
-                        <p className="description grey">LinkedIn</p>
-                    </a>
-                    <a className="nine-content-left-item-column-text" href="https://x.com/heaveads" target="_blank" >
-                        <p className="description grey">Twitter</p>
-                    </a>
-                </div>
+              <p className="description white">Socials:</p>
+              <div className="nine-content-left-item-column">
+                {socialLinks.map((link, index) => (
+                  <a 
+                    key={index}
+                    className="nine-content-left-item-column-text" 
+                    href={link.href} 
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <p className="description grey">{link.text}</p>
+                  </a>
+                ))}
+              </div>
             </div>
+            
             <div className="form-contact-box-border" />
+            
             <div className="form-contact-box-content">
-                <p className="description white">Email:</p>
-                <div className="nine-content-left-item-column">
-                    <a className="nine-content-left-item-column-text" href="mailto:david@heavecorp.com" >
-                        <p className="description grey">david@heavecorp.com</p>
-                    </a>
-                </div>
+              <p className="description white">Email:</p>
+              <div className="nine-content-left-item-column">
+                <a 
+                  className="nine-content-left-item-column-text" 
+                  href="mailto:david@heavecorp.com"
+                >
+                  <p className="description grey">david@heavecorp.com</p>
+                </a>
+              </div>
             </div>
           </div>
         </div>
