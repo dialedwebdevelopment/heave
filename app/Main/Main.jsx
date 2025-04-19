@@ -4,19 +4,6 @@ import gsap from "gsap";
 import { vec2 } from "vecteur";
 import { ReactLenis, useLenis } from 'lenis/react'
 import "./main.css";
-// import { Section1 } from "./Section1";
-// import { Section2 } from "./Section2";
-// import { Section3 } from "./Section3";
-// import { Section4 } from "./Section4";
-// import { Section5 } from "./Section5";
-// import { Section7 } from "./Section7";
-// import { Section8 } from "./Section8";
-// import { SectionFooter } from "./SectionFooter";
-// import { Section9 } from "./section9";
-// import { Section5Mobile } from "./Section5Mobile";
-// import { Section7Mobile } from "./Section7Mobile";
-// import { Section9Mobile } from "./Section9Mobile";
-// import { Section8Mobile } from "./Section8Mobile";
 
 import dynamic from "next/dynamic";
 

@@ -4,6 +4,7 @@ import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import MotionNumber from "motion-number";
+import "./section4.css";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
