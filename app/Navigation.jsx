@@ -58,9 +58,9 @@ export const Navigation = () => {
     return (
         <div className={`navigation ${navScrolled ? "scrolled" : ""}`}>
             <div className="navigation-left">
-                <Link href="/" className="link">
+                <Link href="/" className="link" aria-label="Home" >
                     <div className="navigation-left-images">
-                        <img src="/images/heavelogo.png" className="navigation-image" width={100} height={100} />
+                        <img src="/images/heavelogo.png" className="navigation-image" width={100} height={100} alt="navigation logo" />
                     </div>
                 </Link>
                 <ul className="navigation-menu">
