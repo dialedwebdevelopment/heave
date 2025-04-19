@@ -14,6 +14,20 @@ const Section7 = () => {
   const lenis = useRef(null);
   const titleRef = useRef();
   
+  // Create individual refs for images
+  const imageRef0 = useRef(null);
+  const imageRef1 = useRef(null);
+  const imageRef2 = useRef(null);
+  
+  // Create individual refs for accordions
+  const accordionRef0 = useRef(null);
+  const accordionRef1 = useRef(null);
+  const accordionRef2 = useRef(null);
+  
+  // Group refs into arrays for easier access
+  const imageRefs = [imageRef0, imageRef1, imageRef2];
+  const accordionRefs = [accordionRef0, accordionRef1, accordionRef2];
+  
   // Content data for accordions and images
   const contentData = [
     {
@@ -32,10 +46,6 @@ const Section7 = () => {
       content: "Finally, we distribute the meme across platforms, leveraging our network of pages with more than 750 million followers to maximize exposure and engagement, ensuring the product goes viral and reaches new audiences."
     }
   ];
-  
-  // Create refs for each image and accordion
-  const imageRefs = Array(contentData.length).fill().map(() => useRef(null));
-  const accordionRefs = Array(contentData.length).fill().map(() => useRef(null));
 
   // Initialize Lenis smooth scrolling
   useEffect(() => {
@@ -111,27 +121,31 @@ const Section7 = () => {
 
     // Image and accordion animations using loops
     imageRefs.forEach(ref => {
-      gsap.to(ref.current, {
-        opacity: 1,
-        duration: 1.25,
-        ease: "sine",
-        scrollTrigger: {
-          trigger: ref.current,
-          start: "top 95%"
-        }
-      });
+      if (ref.current) {
+        gsap.to(ref.current, {
+          opacity: 1,
+          duration: 1.25,
+          ease: "sine",
+          scrollTrigger: {
+            trigger: ref.current,
+            start: "top 95%"
+          }
+        });
+      }
     });
 
     accordionRefs.forEach(ref => {
-      gsap.to(ref.current, {
-        opacity: 1,
-        duration: 1.25,
-        ease: "sine",
-        scrollTrigger: {
-          trigger: ref.current,
-          start: "top 95%"
-        }
-      });
+      if (ref.current) {
+        gsap.to(ref.current, {
+          opacity: 1,
+          duration: 1.25,
+          ease: "sine",
+          scrollTrigger: {
+            trigger: ref.current,
+            start: "top 95%"
+          }
+        });
+      }
     });
   }, []);
 

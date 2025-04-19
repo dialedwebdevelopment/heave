@@ -11,8 +11,13 @@ gsap.registerPlugin(SplitText, ScrollTrigger);
 const Section4 = () => {
   const titleRef = useRef();
   
-  // Create an array of box references
-  const boxRefs = Array(3).fill().map(() => useRef());
+  // Create individual refs instead of using map (which caused the error)
+  const boxRef0 = useRef();
+  const boxRef1 = useRef();
+  const boxRef2 = useRef();
+  
+  // Store refs in an array after creating them individually
+  const boxRefs = [boxRef0, boxRef1, boxRef2];
   
   // Define statistics data
   const statsData = [
