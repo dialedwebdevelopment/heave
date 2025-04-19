@@ -83,15 +83,18 @@ const Section1 = () => {
         </div>
       </div>
       <div className="one-image">
-        {imageData.map((image, index) => (
+      {imageData.map((image, index) => (
           <img 
-            key={index}
+            key={image.id}
             src={image.path} 
             width={700} 
             height={700} 
-            className="one-image-img" 
-            ref={image.ref} 
-            alt={`Main Image ${index + 1}`} 
+            className="one-image-img"
+            ref={image.ref}
+            alt={`Main Image ${index + 1}`}
+            loading={index === 0 ? "eager" : "lazy"}
+            fetchpriority={index === 0 ? "high" : "auto"}
+            decoding="async"
           />
         ))}
       </div>
