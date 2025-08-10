@@ -1,0 +1,155 @@
+.section-seven {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+    padding-top: 15vh;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 100%);
+}
+
+.section-seven-background {
+    width: 50vh;
+    height: 135vh;
+    border-radius: 100%;
+    background-color: #fefeff20;
+    filter: blur(100px);
+    opacity: 1;
+    position: absolute;
+    right: 170vh;
+    margin-top: -75vh;
+    z-index: 0;
+    transform: rotate(-60deg);
+    z-index: 0;
+}
+
+.section-seven-image-background {
+    width: 50vw;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    background-color: #4caeff20;
+    filter: blur(100px);
+    opacity: 1;
+    position: absolute;
+    z-index: 0;
+}
+
+.section-seven-content {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.section-seven-left,
+.section-seven-right {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.section-seven-left {
+    padding: 0 7.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 4vw;
+    align-items: center;
+    gap: 2vh;
+}
+
+.section-seven-textbox {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.section-seven-button {
+    width: 90% !important;
+}
+
+.section-seven-logo {
+    width: 20vw;
+    height: auto;
+}
+
+.section-seven-image {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+
+    .section-seven {
+        padding-top: 25vw;
+        height: fit-content;
+        gap: 25vw;
+        overflow: hidden;
+    }
+
+    .section-seven-background {
+        width: 60vw;
+        height: 225vw;
+        filter: blur(50px);
+        right: 90vw;
+        margin-top: -140vw;
+    }
+
+    .section-seven-image-background {
+        width: 70vw;
+        aspect-ratio: auto;
+        height: 120vw;
+        filter: blur(50px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .section-seven-content {
+        height: fit-content;
+        flex-direction: column;
+        gap: 10vw;
+    }
+
+    .section-seven-left,
+    .section-seven-right {
+        position: relative;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .section-seven-left {
+        padding: 0 5vw;
+    }
+
+    .section-seven-right {
+        padding-left: 5vw;
+    }
+
+    .section-seven-textbox {
+        text-align: center;
+        align-items: center;
+        gap: 5vw;
+    }
+
+    .section-seven-button {
+        width: 90% !important;
+    }
+
+    .section-seven-logo {
+        width: 40vw;
+        height: auto;
+    }
+
+    .section-seven-image {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: auto;
+    }
+
+}

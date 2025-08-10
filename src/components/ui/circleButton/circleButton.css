@@ -1,0 +1,158 @@
+.circle-button {
+    width: fit-content;
+    height: 2.75vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1vw;
+    padding-right: 0.5vw;
+    border-radius: 999px;
+    gap: 2.5vw;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background-color: white;
+    color: #010101;
+    overflow: hidden;
+}
+
+.circle-button-text-mask {
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 1.2em;
+}
+
+.circle-button-text {
+    --text-duplicate-distance: 1.375vw;
+    text-shadow: 0px var(--text-duplicate-distance) white;
+    display: block;
+    line-height: 1;
+}
+
+.circle-button-icon {
+    z-index: 1;
+    width: 2vw;
+    height: 2vw;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.circle-button-icon-bg {
+    background-color: #4caeff;
+    border-radius: 999px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: background-color 0.525s cubic-bezier(0.625, 0.05, 0, 1);
+}
+
+.circle-button-icon-wrap {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.circle-button-icon-list {
+    flex: none;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    transform: translateX(0);
+    width: 300%;
+    position: absolute;
+    left: 0;
+}
+
+.circle-icon {
+    flex: none;
+    width: 2vw;
+    height: 2vw;
+    color: #010101;
+    padding: 0.5vw;
+    transition: color 0.525s cubic-bezier(0.625, 0.05, 0, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-button-bg {
+    z-index: 0;
+    background-color: #4caeff;
+    width: 120%;
+    height: 120%;
+    position: absolute;
+    bottom: 0%;
+    left: -10%;
+    transform: translate(0, 175%) rotate(15deg);
+}
+
+[data-button-anim-target] {
+    transition: transform 0.525s cubic-bezier(0.625, 0.05, 0, 1), background-color 0.525s cubic-bezier(0.625, 0.05, 0, 1);
+}
+
+@media (hover:hover) and (pointer:fine) {
+    .circle-button:hover .circle-button-text {
+        transform: translate(0px, calc(-1 * var(--text-duplicate-distance)));
+    }
+    
+    .circle-button:hover .circle-button-icon-bg {
+        transform: rotate(90deg);
+        background-color: white;
+    }
+    
+    .circle-button:hover .circle-button-icon-list {
+        transform: translateX(-33.33%);
+    }
+    
+    .circle-button:hover .circle-button-bg {
+        transform: translate(0px, 0%) rotate(0deg);
+    }
+    
+    .circle-button:hover .circle-icon {
+        color: #010101;
+    }
+}
+
+@media (max-width: 768px) {
+    .circle-button {
+        width: fit-content;
+        height: 7.5vw;
+        padding: 0 2.5vw;
+        padding-right: 1.5vw;
+        gap: 2.5vw;
+    }
+
+    .circle-button-icon {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .circle-icon {
+        width: 5vw;
+        height: 5vw;
+    }
+    
+    .circle-button-icon-list {
+        width: 100%;
+        position: relative;
+        left: auto;
+    }
+    
+    .circle-button-text {
+        --text-duplicate-distance: 7.5vw;
+    }
+}

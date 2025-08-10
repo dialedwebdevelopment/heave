@@ -1,0 +1,209 @@
+
+.five {
+    padding: 0vh 0vw;
+    height: 275vh;
+    position: relative;
+    overflow: visible;
+}
+
+.five-tall {
+    height: 750vh !important;
+}
+
+.five-mobile {
+    display: none;
+}
+  
+.five-sticky {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    height: 100vh; /* h-screen */
+    padding-top: 30vh;
+    overflow: hidden; /* overflow-hidden */
+}
+  
+.five-sticky-text-contents {
+    position: absolute;
+    top: 15vh;
+    left: 7.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5vh;
+}
+  
+.five-sticky-content {
+    display: flex;
+    gap: 2vw;
+    will-change: transform;
+}
+  
+.five-card {
+    width: 40vw;
+    height: 60vh;
+    height: 30vw;
+    border-radius: 15px;
+    display: flex;
+    padding: 2vw;
+    background-color: rgba(255, 255, 255, 0.075);
+}
+
+.five-card-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2vw;
+}
+
+.five-card-image {
+    width: 100%;
+    height: 40vh;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.five-card-image-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.five-card-image-img-small {
+    width: 50%;
+    height: 50%;
+    object-fit: contain; 
+}
+
+.five-card-invisible {
+    width: 6.5vw;
+}
+
+.carousel-button {
+    width: 2vw;
+    height: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+.carousel-button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.carousel-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.carousel-button-icon {
+    width: 35%;
+    height: 35%;
+}
+
+@media (max-width: 768px) {
+
+
+.five {
+    display: none;
+}
+
+.five-mobile {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    padding-top: 25vw;
+    gap: 5vw;
+    height: fit-content;
+}
+
+.five-mobile-textbox {
+    padding: 0 5vw;
+    text-align: center;
+}
+
+.five-mobile-row {
+    display: flex;
+}
+
+.five-mobile-carousel {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+}
+
+.five-mobile-item {
+    flex: 0 0 90vw;
+    height: 100vw;
+    padding: 10vw;
+    margin-left: 2.5vw;
+    background-color: rgba(255, 255, 255, 0.075);
+    border-radius: 25px;
+    position: relative;
+}
+
+.five-mobile-item-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vw;
+    position: relative;
+}
+
+.five-mobile-carousel-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2.5vw;
+}
+.carousel-button {
+    width: 7.5vw;
+    height: 7.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+}
+.carousel-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.carousel-button-icon {
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+.five-card-image-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.five-card-image-img-small {
+    width: 50%;
+    height: 50%; 
+    object-fit: contain;
+}
+
+}

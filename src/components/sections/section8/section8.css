@@ -1,0 +1,153 @@
+
+.eight {
+    padding: 0vw;
+    height: fit-content;
+    position: relative;
+    overflow: visible;
+    padding-bottom: 0vh;
+}
+
+.eight-mobile {
+    display: none;
+}
+
+.eight-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    padding: 15vh 0;
+    padding-top: 5vh;
+}
+
+.eight-slider-content {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    padding: 5vh 0;
+    position: relative;
+}
+
+.eight-slider-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eight-slider-icon {
+    color: white;
+    width: 0.85vw;
+    height: 0.85vw;
+}
+
+.eight-slider-content:hover .eight-slider-overlay {
+    opacity: 1;
+}
+
+.eight-slider {
+    overflow: hidden;
+    letter-spacing: 0;
+    line-height: 1.5;
+    margin: 0;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+}
+  
+.eight-slider-inside {
+    display: flex;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.eight-slider-item {
+    margin-right: 5vw;
+}
+
+.eight-slider-item-image {
+    height: 7.5vh;
+    width: fit-content;
+    object-fit: contain;
+    opacity: 1;
+}
+
+.slider-left-fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15vw;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, #010101 100%);
+    z-index: 1;
+}
+.slider-right-fade {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15vw;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #010101 100%);
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+
+.bottom-fade {
+    height: 10vw;
+}
+.top-fade {
+    height: 10vw;
+}
+.left-fade {
+    width: 10vw;
+}
+.right-fade {
+    width: 10vw;
+}
+
+
+.eight {
+    display: none;
+}
+
+.eight-mobile {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    position: relative;
+    width: 100%;
+}
+
+.eight-content {
+    gap: 2.5vw;
+    padding: 25vw 0;
+    width: 100%;
+}
+
+.eight-slider-item {
+    margin-right: 10vw;
+}
+
+.eight-slider-item-image {
+    height: 10vw;
+    width: auto;
+    object-fit: contain;
+    opacity: 1;
+}
+
+.slider-left-fade {
+    width: 10vw;
+}
+.slider-right-fade {
+    width: 10vw;
+}
+
+}

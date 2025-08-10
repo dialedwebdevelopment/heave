@@ -1,0 +1,68 @@
+.loading-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  background-color: #010101;
+}
+
+.loading-video-content {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #010101;
+  -webkit-mask-image: 
+    linear-gradient(to right, transparent 0%, black 2.5vw, black calc(100% - 2.5vw), transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 2.5vw, black calc(100% - 2.5vw), transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image: 
+    linear-gradient(to right, transparent 0%, black 2.5vw, black calc(100% - 2.5vw), transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 2.5vw, black calc(100% - 2.5vw), transparent 100%);
+  mask-composite: intersect;
+}
+
+
+.loading-video-content-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .loading-video {
+    height: 225vw;
+    justify-content: start;
+    padding-top: 70vw;
+  }
+
+  .loading-video-content {
+    width: 75%;
+    height: auto;
+    -webkit-mask-image: 
+      linear-gradient(to right, transparent 0%, black 5vw, black calc(100% - 5vw), transparent 100%),
+      linear-gradient(to bottom, transparent 0%, black 5vw, black calc(100% - 5vw), transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image: 
+      linear-gradient(to right, transparent 0%, black 5vw, black calc(100% - 5vw), transparent 100%),
+      linear-gradient(to bottom, transparent 0%, black 5vw, black calc(100% - 5vw), transparent 100%);
+    mask-composite: intersect;
+  }
+
+  .loading-video-content-video {
+    object-fit: contain;
+  }
+}
