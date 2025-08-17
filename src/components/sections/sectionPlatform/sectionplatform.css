@@ -1,0 +1,145 @@
+.section-platform {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    padding: 15vh 7.5vw;
+    display: flex;
+    gap: 5vw;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.section-platform-background {
+    position: absolute;
+    top: -15%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.25;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 40%, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 40%, black 60%, transparent 100%);
+}
+
+.platform-left,
+.platform-right {
+    position: relative;
+    width: 45%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.platform-top,
+.platform-textbox {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+}
+
+.platform-textbox {
+    gap: 1vh;
+}
+
+.platform-textbox p {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.platform-right {
+    width: 55%;
+}
+
+.platform-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: auto;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.075);
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    padding: 1vw;
+    backdrop-filter: blur(10px);
+}
+
+.platform-image {
+    height: 100%;
+    border-radius: 15px;
+}
+
+.animation-container {
+    animation:
+        fadeInOpacity 0.8s ease-in-out forwards,
+        fadeInTranslate 0.6s forwards;
+}
+
+@keyframes fadeInOpacity {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInTranslate {
+    from {
+        transform: translateY(0.75vh);
+    }
+
+    to {
+        transform: translateY(0vh);
+    }
+}
+
+@media (max-width: 768px) {
+    .section-platform {
+        height: fit-content;
+        padding: 25vw 5vw;
+        padding-bottom: 0;
+        flex-direction: column;
+    }
+
+    .platform-left,
+    .platform-right {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 17.5vw;
+    }
+
+    .section-platform-background {
+        top: -80vw;
+        left: 0;
+        width: auto;
+        height: 200vw;
+    }
+
+    .platform-top,
+    .platform-textbox {
+        gap: 4vw;
+    }
+
+    .platform-textbox {
+        gap: 2vw;
+    }
+
+    .platform-frame {
+        position: relative;
+        top: auto;
+        left: auto;
+        height: auto;
+        width: 100%;
+        padding: 3.5vw;
+        padding-bottom: 2.5vw;
+    }
+
+    .platform-image {
+        height: auto;
+        width: 100%;
+        border-radius: 15px;
+    }
+}

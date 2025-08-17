@@ -1,0 +1,114 @@
+.section-brands {
+    position: relative;
+    width: 100%;
+    padding: 15vh 7.5vw;
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5vw;
+    width: 100%;
+}
+
+.brand-item {
+    position: relative;
+    height: 50vh;
+    border-radius: 15px;
+    overflow: hidden;
+    /* background-color: rgba(255, 255, 255, 0.075); */
+}
+
+.brand-item-clickable {
+    cursor: pointer;
+}
+
+.brand-item-clickable:hover .brand-image {
+    transform: scale(1.05);
+}
+
+.brand-text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    gap: 2vh;
+    background-color: rgba(255, 255, 255, 0.075);
+    padding: 2vw;
+}
+
+.brand-textbox {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.section-brands-button {
+    opacity: 1;
+}
+
+.brand-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(1);
+    transition: transform 0.4s ease;
+}
+
+.brand-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: auto;
+    object-fit: contain;
+    z-index: 2;
+    border-radius: 999px;
+}
+
+@media (max-width: 768px) {
+    .section-brands {
+        padding: 25vw 5vw;
+    }
+
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 3vw;
+    }
+
+    .brand-item {
+        height: 43.5vw;
+    }
+
+    .brand-item:nth-child(1),
+    .brand-item:nth-child(2) {
+        grid-column: span 2;
+    }
+
+    .brand-item:nth-child(1) {
+        height: fit-content;
+    }
+
+    .brand-item:nth-child(2) {
+        height: 43.5vw;
+    }
+
+    .brand-text-content {
+        padding: 0vw;
+        padding-bottom: 3vw;
+        gap: 3vw;
+        height: auto;
+        background-color: transparent;
+    }
+
+    .brand-textbox {
+        gap: 0vw;
+    }
+
+    .brand-logo {
+        width: 20vw;
+    }
+}
